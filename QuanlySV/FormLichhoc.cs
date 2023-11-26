@@ -36,7 +36,7 @@ namespace QuanlySV
             string url = "/api/MasterData/GetScheduleForUser?userId=" + Config.userId + "&month=" + month + "&year=" + year;
             var res = await CallAPICenter.CallAPIGet(url);
             List<CollectionScheduleDtl> lstScheduleOfMonth = Util.ConvertListToType<CollectionScheduleDtl>(res.Data);
-            for (int i = 1; i < dayofweek; i++)
+            for (int i = 0; i < dayofweek; i++)
             {
                 UserControlBlank userControl = new UserControlBlank();
                 daycontainer.Controls.Add(userControl);
@@ -45,7 +45,7 @@ namespace QuanlySV
             {
                 UserControlDays ucDays = new UserControlDays();
                 ucDays.days(i);
-                var lstScheduleOfDay = lstScheduleOfMonth.Where(x => DateTime.Parse(x.Day).Day == i).ToList();
+                var lstScheduleOfDay = lstScheduleOfMonth?.Where(x => DateTime.Parse(x.Day).Day == i).ToList();
                 ucDays.ShowListSchedule(lstScheduleOfDay);
                 daycontainer.Controls.Add(ucDays);
             }

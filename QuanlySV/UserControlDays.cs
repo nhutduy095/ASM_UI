@@ -32,7 +32,7 @@ namespace QuanlySV
         public void ShowListSchedule(List<CollectionScheduleDtl> lstData)
         {
             lstScheduleDtl=lstData;
-            var data = lstData.Select(x => new { DtlId = x.DtlId, RoomId = x.SubjectId + "-" + x.Shift }).ToList();
+            var data = lstData?.Select(x => new { DtlId = x.DtlId, RoomId = x.SubjectId + "-" + x.Shift }).ToList();
             listBox1.DisplayMember = "RoomId";
             listBox1.ValueMember = "DtlId";
             listBox1.DataSource = data;
