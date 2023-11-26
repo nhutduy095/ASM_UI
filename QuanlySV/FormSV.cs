@@ -21,5 +21,26 @@ namespace QuanlySV
         {
 
         }
+
+        private void scheduleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormLichhoc frm = new FormLichhoc();
+            frm.ShowDialog();
+        }
+
+        private void regServiceToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormRegService frm = new FormRegService();
+            frm.ShowDialog();
+        }
+
+        private void PointToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormBangdiem frm = new FormBangdiem();
+            frm.ShowDialog();
+        }
     }
 }

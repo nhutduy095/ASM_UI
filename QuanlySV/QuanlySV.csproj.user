@@ -10,7 +10,7 @@
     <Compile Update="FormBangdiem.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="FormLichday.cs">
+    <Compile Update="FormLichdayCopy.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="FormLichhoc.cs">
@@ -25,8 +25,20 @@
     <Compile Update="FormGV.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="FormRegService.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormScheduleDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="FormSV.cs">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="UserControlBlank.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UserControlDays.cs">
+      <SubType>UserControl</SubType>
     </Compile>
   </ItemGroup>
 </Project>

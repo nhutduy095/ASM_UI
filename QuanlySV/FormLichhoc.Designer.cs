@@ -28,378 +28,314 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.label2 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.label18 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.SuspendLayout();
+            label1 = new Label();
+            comboBox1 = new ComboBox();
+            label2 = new Label();
+            linkLabel1 = new LinkLabel();
+            label18 = new Label();
+            panel1 = new Panel();
+            btnsearch = new Button();
+            dateTimePicker1 = new DateTimePicker();
+            panel2 = new Panel();
+            btnPre = new Button();
+            btnNext = new Button();
+            panel3 = new Panel();
+            daycontainer = new FlowLayoutPanel();
+            panel5 = new Panel();
+            panel7 = new Panel();
+            saturday = new Label();
+            friday = new Label();
+            thursday = new Label();
+            Wednesday = new Label();
+            tuesday = new Label();
+            monday = new Label();
+            sunday = new Label();
+            panel1.SuspendLayout();
+            panel2.SuspendLayout();
+            panel3.SuspendLayout();
+            panel5.SuspendLayout();
+            SuspendLayout();
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Image = global::QuanlySV.Properties.Resources.tk;
-            this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label1.Location = new System.Drawing.Point(42, 110);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(124, 28);
-            this.label1.TabIndex = 25;
-            this.label1.Text = "         Kỳ học :";
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Image = Properties.Resources.tk;
+            label1.ImageAlign = ContentAlignment.MiddleLeft;
+            label1.Location = new Point(108, 43);
+            label1.Name = "label1";
+            label1.Size = new Size(98, 21);
+            label1.TabIndex = 25;
+            label1.Text = "         Kỳ học :";
             // 
             // comboBox1
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(276, 110);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(355, 28);
-            this.comboBox1.TabIndex = 26;
-            this.comboBox1.Text = "Fall 2023";
-            // 
-            // numericUpDown1
-            // 
-            this.numericUpDown1.Location = new System.Drawing.Point(276, 168);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(355, 27);
-            this.numericUpDown1.TabIndex = 27;
-            this.numericUpDown1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(313, 43);
+            comboBox1.Margin = new Padding(3, 2, 3, 2);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(311, 23);
+            comboBox1.TabIndex = 26;
+            comboBox1.Text = "Fall 2023";
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Image = global::QuanlySV.Properties.Resources.th__1_;
-            this.label2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label2.Location = new System.Drawing.Point(42, 167);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(147, 28);
-            this.label2.TabIndex = 28;
-            this.label2.Text = "         Thời gian :";
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.groupBox1.Controls.Add(this.pictureBox4);
-            this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Location = new System.Drawing.Point(42, 224);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(906, 127);
-            this.groupBox1.TabIndex = 29;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "UDPM - .NET - PRO131";
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox4.Image = global::QuanlySV.Properties.Resources.x18198154_10208600482868814_3469513_n_png_pagespeed_ic_1;
-            this.pictureBox4.Location = new System.Drawing.Point(43, 26);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(63, 59);
-            this.pictureBox4.TabIndex = 33;
-            this.pictureBox4.TabStop = false;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(814, 58);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(70, 20);
-            this.label7.TabIndex = 4;
-            this.label7.Text = "Chi tiết >";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(337, 23);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(101, 20);
-            this.label6.TabIndex = 3;
-            this.label6.Text = "13 / 11 / 2023";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(337, 58);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(103, 20);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "Lớp SD_18322";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(337, 97);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(38, 20);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Ca 1";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(15, 85);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(140, 20);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Phòng T802 (Nhà T)";
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.groupBox2.Controls.Add(this.pictureBox1);
-            this.groupBox2.Controls.Add(this.label8);
-            this.groupBox2.Controls.Add(this.label9);
-            this.groupBox2.Controls.Add(this.label10);
-            this.groupBox2.Controls.Add(this.label11);
-            this.groupBox2.Controls.Add(this.label12);
-            this.groupBox2.Location = new System.Drawing.Point(42, 368);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(906, 127);
-            this.groupBox2.TabIndex = 30;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "VOVINAM - VIE103";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox1.Image = global::QuanlySV.Properties.Resources.x18198154_10208600482868814_3469513_n_png_pagespeed_ic_1;
-            this.pictureBox1.Location = new System.Drawing.Point(43, 26);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(63, 59);
-            this.pictureBox1.TabIndex = 34;
-            this.pictureBox1.TabStop = false;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(814, 58);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(70, 20);
-            this.label8.TabIndex = 4;
-            this.label8.Text = "Chi tiết >";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(337, 23);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(101, 20);
-            this.label9.TabIndex = 3;
-            this.label9.Text = "14 / 11 / 2023";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(337, 58);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(103, 20);
-            this.label10.TabIndex = 2;
-            this.label10.Text = "Lớp SD_18322";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(337, 97);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(38, 20);
-            this.label11.TabIndex = 1;
-            this.label11.Text = "Ca 1";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(15, 85);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(58, 20);
-            this.label12.TabIndex = 0;
-            this.label12.Text = "SAN 32";
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.groupBox3.Controls.Add(this.pictureBox2);
-            this.groupBox3.Controls.Add(this.label13);
-            this.groupBox3.Controls.Add(this.label14);
-            this.groupBox3.Controls.Add(this.label15);
-            this.groupBox3.Controls.Add(this.label16);
-            this.groupBox3.Controls.Add(this.label17);
-            this.groupBox3.Location = new System.Drawing.Point(42, 511);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(906, 127);
-            this.groupBox3.TabIndex = 31;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Tiếng Anh 2.2 - ENT 2226.82";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox2.Image = global::QuanlySV.Properties.Resources.x18198154_10208600482868814_3469513_n_png_pagespeed_ic_1;
-            this.pictureBox2.Location = new System.Drawing.Point(43, 23);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(63, 59);
-            this.pictureBox2.TabIndex = 35;
-            this.pictureBox2.TabStop = false;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(814, 58);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(70, 20);
-            this.label13.TabIndex = 4;
-            this.label13.Text = "Chi tiết >";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(337, 23);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(101, 20);
-            this.label14.TabIndex = 3;
-            this.label14.Text = "14 / 11 / 2023";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(337, 58);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(103, 20);
-            this.label15.TabIndex = 2;
-            this.label15.Text = "Lớp SD_18322";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(337, 97);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(38, 20);
-            this.label16.TabIndex = 1;
-            this.label16.Text = "Ca 2";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(15, 85);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(140, 20);
-            this.label17.TabIndex = 0;
-            this.label17.Text = "Phòng T803 (Nhà T)";
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.Image = Properties.Resources.th__1_;
+            label2.ImageAlign = ContentAlignment.MiddleLeft;
+            label2.Location = new Point(108, 86);
+            label2.Name = "label2";
+            label2.Size = new Size(118, 21);
+            label2.TabIndex = 28;
+            label2.Text = "         Thời gian :";
             // 
             // linkLabel1
             // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Image = global::QuanlySV.Properties.Resources.pngtree_vector_question_mark_icon_png_image_5154481;
-            this.linkLabel1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.linkLabel1.Location = new System.Drawing.Point(25, 665);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(164, 20);
-            this.linkLabel1.TabIndex = 32;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "       Hệ quản lý đào tạo";
+            linkLabel1.AutoSize = true;
+            linkLabel1.Image = Properties.Resources.pngtree_vector_question_mark_icon_png_image_5154481;
+            linkLabel1.ImageAlign = ContentAlignment.MiddleLeft;
+            linkLabel1.Location = new Point(12, 25);
+            linkLabel1.Name = "linkLabel1";
+            linkLabel1.Size = new Size(128, 15);
+            linkLabel1.TabIndex = 32;
+            linkLabel1.TabStop = true;
+            linkLabel1.Text = "       Hệ quản lý đào tạo";
             // 
             // label18
             // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label18.ForeColor = System.Drawing.Color.Blue;
-            this.label18.Location = new System.Drawing.Point(403, 9);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(127, 41);
-            this.label18.TabIndex = 33;
-            this.label18.Text = "Lịch học";
+            label18.AutoSize = true;
+            label18.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            label18.ForeColor = Color.Blue;
+            label18.Location = new Point(351, 9);
+            label18.Name = "label18";
+            label18.Size = new Size(102, 32);
+            label18.TabIndex = 33;
+            label18.Text = "Lịch học";
+            // 
+            // panel1
+            // 
+            panel1.Controls.Add(btnsearch);
+            panel1.Controls.Add(dateTimePicker1);
+            panel1.Controls.Add(label18);
+            panel1.Controls.Add(comboBox1);
+            panel1.Controls.Add(label2);
+            panel1.Controls.Add(label1);
+            panel1.Dock = DockStyle.Top;
+            panel1.Location = new Point(0, 0);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(1063, 131);
+            panel1.TabIndex = 34;
+            // 
+            // btnsearch
+            // 
+            btnsearch.Location = new Point(662, 43);
+            btnsearch.Name = "btnsearch";
+            btnsearch.Size = new Size(96, 66);
+            btnsearch.TabIndex = 35;
+            btnsearch.Text = "Search";
+            btnsearch.UseVisualStyleBackColor = true;
+            // 
+            // dateTimePicker1
+            // 
+            dateTimePicker1.Location = new Point(313, 86);
+            dateTimePicker1.Name = "dateTimePicker1";
+            dateTimePicker1.Size = new Size(311, 23);
+            dateTimePicker1.TabIndex = 34;
+            // 
+            // panel2
+            // 
+            panel2.Controls.Add(btnPre);
+            panel2.Controls.Add(btnNext);
+            panel2.Controls.Add(linkLabel1);
+            panel2.Dock = DockStyle.Bottom;
+            panel2.Location = new Point(0, 791);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(1063, 54);
+            panel2.TabIndex = 35;
+            // 
+            // btnPre
+            // 
+            btnPre.Location = new Point(799, 15);
+            btnPre.Name = "btnPre";
+            btnPre.Size = new Size(75, 23);
+            btnPre.TabIndex = 34;
+            btnPre.Text = "Previous";
+            btnPre.UseVisualStyleBackColor = true;
+            btnPre.Click += btnPre_Click;
+            // 
+            // btnNext
+            // 
+            btnNext.Location = new Point(880, 15);
+            btnNext.Name = "btnNext";
+            btnNext.Size = new Size(75, 23);
+            btnNext.TabIndex = 33;
+            btnNext.Text = "Next";
+            btnNext.UseVisualStyleBackColor = true;
+            btnNext.Click += btnNext_Click;
+            // 
+            // panel3
+            // 
+            panel3.Controls.Add(daycontainer);
+            panel3.Controls.Add(panel5);
+            panel3.Dock = DockStyle.Fill;
+            panel3.Location = new Point(0, 131);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(1063, 660);
+            panel3.TabIndex = 36;
+            // 
+            // daycontainer
+            // 
+            daycontainer.Dock = DockStyle.Fill;
+            daycontainer.Location = new Point(0, 60);
+            daycontainer.Name = "daycontainer";
+            daycontainer.Size = new Size(1063, 600);
+            daycontainer.TabIndex = 2;
+            // 
+            // panel5
+            // 
+            panel5.Controls.Add(panel7);
+            panel5.Controls.Add(saturday);
+            panel5.Controls.Add(friday);
+            panel5.Controls.Add(thursday);
+            panel5.Controls.Add(Wednesday);
+            panel5.Controls.Add(tuesday);
+            panel5.Controls.Add(monday);
+            panel5.Controls.Add(sunday);
+            panel5.Dock = DockStyle.Top;
+            panel5.Location = new Point(0, 0);
+            panel5.Name = "panel5";
+            panel5.Size = new Size(1063, 60);
+            panel5.TabIndex = 1;
+            // 
+            // panel7
+            // 
+            panel7.Location = new Point(142, 60);
+            panel7.Name = "panel7";
+            panel7.Size = new Size(133, 93);
+            panel7.TabIndex = 1;
+            // 
+            // saturday
+            // 
+            saturday.AutoSize = true;
+            saturday.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            saturday.ForeColor = SystemColors.ActiveCaptionText;
+            saturday.Location = new Point(873, 20);
+            saturday.Name = "saturday";
+            saturday.Size = new Size(82, 23);
+            saturday.TabIndex = 6;
+            saturday.Text = "Saturday";
+            // 
+            // friday
+            // 
+            friday.AutoSize = true;
+            friday.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            friday.ForeColor = SystemColors.ActiveCaptionText;
+            friday.Location = new Point(757, 20);
+            friday.Name = "friday";
+            friday.Size = new Size(63, 23);
+            friday.TabIndex = 5;
+            friday.Text = "Friday";
+            // 
+            // thursday
+            // 
+            thursday.AutoSize = true;
+            thursday.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            thursday.ForeColor = SystemColors.ActiveCaptionText;
+            thursday.Location = new Point(582, 20);
+            thursday.Name = "thursday";
+            thursday.Size = new Size(86, 23);
+            thursday.TabIndex = 4;
+            thursday.Text = "Thursday";
+            // 
+            // Wednesday
+            // 
+            Wednesday.AutoSize = true;
+            Wednesday.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            Wednesday.ForeColor = SystemColors.ActiveCaptionText;
+            Wednesday.Location = new Point(439, 20);
+            Wednesday.Name = "Wednesday";
+            Wednesday.Size = new Size(101, 23);
+            Wednesday.TabIndex = 3;
+            Wednesday.Text = "Wednesday";
+            // 
+            // tuesday
+            // 
+            tuesday.AutoSize = true;
+            tuesday.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            tuesday.ForeColor = SystemColors.ActiveCaptionText;
+            tuesday.Location = new Point(313, 20);
+            tuesday.Name = "tuesday";
+            tuesday.Size = new Size(77, 23);
+            tuesday.TabIndex = 2;
+            tuesday.Text = "Tuesday";
+            // 
+            // monday
+            // 
+            monday.AutoSize = true;
+            monday.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            monday.ForeColor = SystemColors.ActiveCaptionText;
+            monday.Location = new Point(165, 20);
+            monday.Name = "monday";
+            monday.Size = new Size(77, 23);
+            monday.TabIndex = 1;
+            monday.Text = "Monday";
+            // 
+            // sunday
+            // 
+            sunday.AutoSize = true;
+            sunday.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            sunday.ForeColor = SystemColors.ActiveCaptionText;
+            sunday.Location = new Point(27, 20);
+            sunday.Name = "sunday";
+            sunday.Size = new Size(70, 23);
+            sunday.TabIndex = 0;
+            sunday.Text = "Sunday";
             // 
             // FormLichhoc
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(992, 694);
-            this.Controls.Add(this.label18);
-            this.Controls.Add(this.linkLabel1);
-            this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.numericUpDown1);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.label1);
-            this.Name = "FormLichhoc";
-            this.Text = "QUẢN LÝ SINH VIÊN";
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(255, 224, 192);
+            ClientSize = new Size(1063, 845);
+            Controls.Add(panel3);
+            Controls.Add(panel2);
+            Controls.Add(panel1);
+            Margin = new Padding(3, 2, 3, 2);
+            Name = "FormLichhoc";
+            Text = "QUẢN LÝ SINH VIÊN";
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
+            panel3.ResumeLayout(false);
+            panel5.ResumeLayout(false);
+            panel5.PerformLayout();
+            ResumeLayout(false);
         }
 
         #endregion
         private Label label1;
         private ComboBox comboBox1;
-        private NumericUpDown numericUpDown1;
         private Label label2;
-        private GroupBox groupBox1;
-        private Label label7;
-        private Label label6;
-        private Label label5;
-        private Label label4;
-        private Label label3;
-        private GroupBox groupBox2;
-        private Label label8;
-        private Label label9;
-        private Label label10;
-        private Label label11;
-        private Label label12;
-        private GroupBox groupBox3;
-        private Label label13;
-        private Label label14;
-        private Label label15;
-        private Label label16;
-        private Label label17;
         private LinkLabel linkLabel1;
-        private PictureBox pictureBox4;
-        private PictureBox pictureBox1;
-        private PictureBox pictureBox2;
         private Label label18;
+        private Panel panel1;
+        private Button btnsearch;
+        private DateTimePicker dateTimePicker1;
+        private Panel panel2;
+        private Panel panel3;
+        private Panel panel5;
+        private Label Wednesday;
+        private Label tuesday;
+        private Label monday;
+        private Label sunday;
+        private Label saturday;
+        private Label friday;
+        private Label thursday;
+        private Panel panel7;
+        private FlowLayoutPanel daycontainer;
+        private Button btnPre;
+        private Button btnNext;
     }
 }
