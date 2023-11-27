@@ -99,13 +99,16 @@ D:\BaiTap\HK4-2\ASM_UI\QuanlySV\obj\Debug\net6.0-windows\QuanlySV.FormBangdiem.r
 D:\BaiTap\HK4-2\ASM_UI\QuanlySV\obj\Debug\net6.0-windows\QuanlySV.FormGV.resources
 D:\BaiTap\HK4-2\ASM_UI\QuanlySV\obj\Debug\net6.0-windows\QuanlySV.Form3.resources
 D:\BaiTap\HK4-2\ASM_UI\QuanlySV\obj\Debug\net6.0-windows\QuanlySV.FormLichhoc.resources
-D:\BaiTap\HK4-2\ASM_UI\QuanlySV\obj\Debug\net6.0-windows\QuanlySV.FormLichhocCopy.resources
 D:\BaiTap\HK4-2\ASM_UI\QuanlySV\obj\Debug\net6.0-windows\QuanlySV.FormLogin.resources
 D:\BaiTap\HK4-2\ASM_UI\QuanlySV\obj\Debug\net6.0-windows\QuanlySV.FormQLSV.resources
 D:\BaiTap\HK4-2\ASM_UI\QuanlySV\obj\Debug\net6.0-windows\QuanlySV.FormRegService.resources
 D:\BaiTap\HK4-2\ASM_UI\QuanlySV\obj\Debug\net6.0-windows\QuanlySV.FormScheduleDetail.resources
 D:\BaiTap\HK4-2\ASM_UI\QuanlySV\obj\Debug\net6.0-windows\QuanlySV.FormSV.resources
+D:\BaiTap\HK4-2\ASM_UI\QuanlySV\obj\Debug\net6.0-windows\QuanlySV.ListDiemSV.resources
+D:\BaiTap\HK4-2\ASM_UI\QuanlySV\obj\Debug\net6.0-windows\QuanlySV.MonHoc.resources
+D:\BaiTap\HK4-2\ASM_UI\QuanlySV\obj\Debug\net6.0-windows\QuanlySV.NhapDiem.resources
 D:\BaiTap\HK4-2\ASM_UI\QuanlySV\obj\Debug\net6.0-windows\QuanlySV.Properties.Resources.resources
+D:\BaiTap\HK4-2\ASM_UI\QuanlySV\obj\Debug\net6.0-windows\QuanlySV.Student_Manage.resources
 D:\BaiTap\HK4-2\ASM_UI\QuanlySV\obj\Debug\net6.0-windows\QuanlySV.UserControlBlank.resources
 D:\BaiTap\HK4-2\ASM_UI\QuanlySV\obj\Debug\net6.0-windows\QuanlySV.UserControlDays.resources
 D:\BaiTap\HK4-2\ASM_UI\QuanlySV\obj\Debug\net6.0-windows\QuanlySV.csproj.GenerateResource.cache

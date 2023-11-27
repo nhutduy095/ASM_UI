@@ -30,16 +30,18 @@
         {
             label1 = new Label();
             groupBox1 = new GroupBox();
-            label2 = new Label();
-            label3 = new Label();
-            label4 = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            comboBox1 = new ComboBox();
-            label5 = new Label();
-            label6 = new Label();
+            comboBox3 = new ComboBox();
             comboBox2 = new ComboBox();
+            comboBox1 = new ComboBox();
             textBox3 = new TextBox();
+            textBox2 = new TextBox();
+            textBox1 = new TextBox();
+            label7 = new Label();
+            label6 = new Label();
+            label5 = new Label();
+            label4 = new Label();
+            label3 = new Label();
+            label2 = new Label();
             groupBox2 = new GroupBox();
             button1 = new Button();
             textBox5 = new TextBox();
@@ -52,8 +54,6 @@
             button3 = new Button();
             button2 = new Button();
             dataGridView1 = new DataGridView();
-            label7 = new Label();
-            comboBox3 = new ComboBox();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             groupBox3.SuspendLayout();
@@ -65,7 +65,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Mistral", 25.8000011F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = Color.FromArgb(192, 0, 0);
-            label1.Location = new Point(513, 28);
+            label1.Location = new Point(468, 23);
             label1.Name = "label1";
             label1.Size = new Size(361, 53);
             label1.TabIndex = 0;
@@ -86,58 +86,28 @@
             groupBox1.Controls.Add(label3);
             groupBox1.Controls.Add(label2);
             groupBox1.Font = new Font("Times New Roman", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            groupBox1.Location = new Point(69, 96);
+            groupBox1.Location = new Point(14, 96);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(852, 191);
             groupBox1.TabIndex = 1;
             groupBox1.TabStop = false;
             groupBox1.Text = "Nhập thông tin";
             // 
-            // label2
+            // comboBox3
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Script MT Bold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(21, 44);
-            label2.Name = "label2";
-            label2.Size = new Size(122, 24);
-            label2.TabIndex = 0;
-            label2.Text = "Mã Sinh Viên";
+            comboBox3.FormattingEnabled = true;
+            comboBox3.Location = new Point(557, 139);
+            comboBox3.Name = "comboBox3";
+            comboBox3.Size = new Size(259, 27);
+            comboBox3.TabIndex = 2;
             // 
-            // label3
+            // comboBox2
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Script MT Bold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.Location = new Point(21, 93);
-            label3.Name = "label3";
-            label3.Size = new Size(98, 24);
-            label3.TabIndex = 0;
-            label3.Text = "Họ và Tên";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Script MT Bold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label4.Location = new Point(21, 143);
-            label4.Name = "label4";
-            label4.Size = new Size(89, 24);
-            label4.TabIndex = 0;
-            label4.Text = "Môn Học";
-            // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(148, 30);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(251, 34);
-            textBox1.TabIndex = 1;
-            // 
-            // textBox2
-            // 
-            textBox2.Location = new Point(148, 81);
-            textBox2.Multiline = true;
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(251, 34);
-            textBox2.TabIndex = 1;
+            comboBox2.FormattingEnabled = true;
+            comboBox2.Location = new Point(556, 41);
+            comboBox2.Name = "comboBox2";
+            comboBox2.Size = new Size(259, 27);
+            comboBox2.TabIndex = 2;
             // 
             // comboBox1
             // 
@@ -147,15 +117,39 @@
             comboBox1.Size = new Size(251, 27);
             comboBox1.TabIndex = 2;
             // 
-            // label5
+            // textBox3
             // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Script MT Bold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label5.Location = new Point(475, 44);
-            label5.Name = "label5";
-            label5.Size = new Size(75, 24);
-            label5.TabIndex = 0;
-            label5.Text = "Học Kỳ";
+            textBox3.Location = new Point(556, 81);
+            textBox3.Multiline = true;
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(259, 34);
+            textBox3.TabIndex = 1;
+            // 
+            // textBox2
+            // 
+            textBox2.Location = new Point(148, 81);
+            textBox2.Multiline = true;
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(251, 34);
+            textBox2.TabIndex = 1;
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(148, 30);
+            textBox1.Multiline = true;
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(251, 34);
+            textBox1.TabIndex = 1;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Script MT Bold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label7.Location = new Point(475, 143);
+            label7.Name = "label7";
+            label7.Size = new Size(56, 24);
+            label7.TabIndex = 0;
+            label7.Text = "Khoa";
             // 
             // label6
             // 
@@ -167,21 +161,45 @@
             label6.TabIndex = 0;
             label6.Text = "Điểm";
             // 
-            // comboBox2
+            // label5
             // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(556, 41);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(259, 27);
-            comboBox2.TabIndex = 2;
+            label5.AutoSize = true;
+            label5.Font = new Font("Script MT Bold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label5.Location = new Point(475, 44);
+            label5.Name = "label5";
+            label5.Size = new Size(75, 24);
+            label5.TabIndex = 0;
+            label5.Text = "Học Kỳ";
             // 
-            // textBox3
+            // label4
             // 
-            textBox3.Location = new Point(556, 81);
-            textBox3.Multiline = true;
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(259, 34);
-            textBox3.TabIndex = 1;
+            label4.AutoSize = true;
+            label4.Font = new Font("Script MT Bold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label4.Location = new Point(21, 143);
+            label4.Name = "label4";
+            label4.Size = new Size(89, 24);
+            label4.TabIndex = 0;
+            label4.Text = "Môn Học";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Script MT Bold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.Location = new Point(21, 93);
+            label3.Name = "label3";
+            label3.Size = new Size(98, 24);
+            label3.TabIndex = 0;
+            label3.Text = "Họ và Tên";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Script MT Bold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.Location = new Point(21, 44);
+            label2.Name = "label2";
+            label2.Size = new Size(122, 24);
+            label2.TabIndex = 0;
+            label2.Text = "Mã Sinh Viên";
             // 
             // groupBox2
             // 
@@ -189,9 +207,9 @@
             groupBox2.Controls.Add(textBox5);
             groupBox2.Controls.Add(label8);
             groupBox2.Font = new Font("Times New Roman", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            groupBox2.Location = new Point(993, 96);
+            groupBox2.Location = new Point(901, 96);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(250, 191);
+            groupBox2.Size = new Size(287, 291);
             groupBox2.TabIndex = 9;
             groupBox2.TabStop = false;
             groupBox2.Text = "Tìm kiếm sinh viên";
@@ -199,16 +217,16 @@
             // button1
             // 
             button1.Font = new Font("Sylfaen", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            button1.Location = new Point(53, 127);
+            button1.Location = new Point(76, 154);
             button1.Name = "button1";
-            button1.Size = new Size(151, 41);
+            button1.Size = new Size(151, 98);
             button1.TabIndex = 11;
             button1.Text = "Tìm Kiếm";
             button1.UseVisualStyleBackColor = true;
             // 
             // textBox5
             // 
-            textBox5.Location = new Point(30, 80);
+            textBox5.Location = new Point(53, 81);
             textBox5.Multiline = true;
             textBox5.Name = "textBox5";
             textBox5.Size = new Size(196, 34);
@@ -218,7 +236,7 @@
             // 
             label8.AutoSize = true;
             label8.Font = new Font("Script MT Bold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label8.Location = new Point(41, 45);
+            label8.Location = new Point(64, 46);
             label8.Name = "label8";
             label8.Size = new Size(175, 24);
             label8.TabIndex = 9;
@@ -232,7 +250,7 @@
             groupBox3.Controls.Add(button4);
             groupBox3.Controls.Add(button3);
             groupBox3.Controls.Add(button2);
-            groupBox3.Location = new Point(69, 288);
+            groupBox3.Location = new Point(14, 288);
             groupBox3.Name = "groupBox3";
             groupBox3.Size = new Size(855, 99);
             groupBox3.TabIndex = 10;
@@ -307,37 +325,20 @@
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(69, 403);
+            dataGridView1.Dock = DockStyle.Bottom;
+            dataGridView1.Location = new Point(0, 415);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.RowTemplate.Height = 29;
-            dataGridView1.Size = new Size(1174, 352);
+            dataGridView1.Size = new Size(1206, 352);
             dataGridView1.TabIndex = 11;
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Script MT Bold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label7.Location = new Point(475, 143);
-            label7.Name = "label7";
-            label7.Size = new Size(56, 24);
-            label7.TabIndex = 0;
-            label7.Text = "Khoa";
-            // 
-            // comboBox3
-            // 
-            comboBox3.FormattingEnabled = true;
-            comboBox3.Location = new Point(557, 139);
-            comboBox3.Name = "comboBox3";
-            comboBox3.Size = new Size(259, 27);
-            comboBox3.TabIndex = 2;
             // 
             // NhapDiem
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(255, 192, 128);
-            ClientSize = new Size(1458, 767);
+            ClientSize = new Size(1206, 767);
             Controls.Add(dataGridView1);
             Controls.Add(groupBox3);
             Controls.Add(groupBox2);
