@@ -42,43 +42,46 @@
             // label1
             // 
             label1.AutoSize = true;
+            label1.BackColor = Color.FromArgb(192, 255, 255);
             label1.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.ForeColor = Color.DeepSkyBlue;
-            label1.Location = new Point(145, 21);
+            label1.ForeColor = Color.Navy;
+            label1.Location = new Point(166, 28);
             label1.Name = "label1";
-            label1.Size = new Size(211, 30);
+            label1.Size = new Size(273, 38);
             label1.TabIndex = 1;
             label1.Text = "Đăng nhập hệ thống";
             // 
             // label2
             // 
             label2.AutoSize = true;
+            label2.BackColor = Color.FromArgb(192, 255, 255);
             label2.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.ForeColor = Color.DeepSkyBlue;
-            label2.Location = new Point(41, 80);
+            label2.ForeColor = Color.Navy;
+            label2.Location = new Point(47, 107);
             label2.Name = "label2";
-            label2.Size = new Size(121, 20);
+            label2.Size = new Size(145, 25);
             label2.TabIndex = 2;
             label2.Text = "Email đăng nhập";
             // 
             // label3
             // 
             label3.AutoSize = true;
+            label3.BackColor = Color.FromArgb(192, 255, 255);
             label3.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.ForeColor = Color.DeepSkyBlue;
-            label3.Location = new Point(41, 155);
+            label3.ForeColor = Color.Navy;
+            label3.Location = new Point(47, 207);
             label3.Name = "label3";
-            label3.Size = new Size(70, 20);
+            label3.Size = new Size(86, 25);
             label3.TabIndex = 3;
             label3.Text = "Mật khẩu";
             // 
             // button1
             // 
             button1.BackColor = Color.FromArgb(0, 192, 0);
-            button1.Location = new Point(121, 275);
-            button1.Margin = new Padding(3, 2, 3, 2);
+            button1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            button1.Location = new Point(138, 367);
             button1.Name = "button1";
-            button1.Size = new Size(248, 32);
+            button1.Size = new Size(283, 43);
             button1.TabIndex = 4;
             button1.Text = "Đăng nhập";
             button1.UseVisualStyleBackColor = false;
@@ -87,48 +90,46 @@
             // button2
             // 
             button2.BackColor = Color.FromArgb(0, 192, 0);
-            button2.Location = new Point(121, 321);
-            button2.Margin = new Padding(3, 2, 3, 2);
+            button2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            button2.Location = new Point(138, 428);
             button2.Name = "button2";
-            button2.Size = new Size(248, 32);
+            button2.Size = new Size(283, 43);
             button2.TabIndex = 5;
             button2.Text = "Thoát";
             button2.UseVisualStyleBackColor = false;
             // 
             // txtUserName
             // 
-            txtUserName.Location = new Point(41, 115);
-            txtUserName.Margin = new Padding(3, 2, 3, 2);
+            txtUserName.Location = new Point(47, 153);
             txtUserName.Name = "txtUserName";
-            txtUserName.Size = new Size(275, 23);
+            txtUserName.Size = new Size(314, 27);
             txtUserName.TabIndex = 6;
             // 
             // txtPassword
             // 
-            txtPassword.Location = new Point(41, 190);
-            txtPassword.Margin = new Padding(3, 2, 3, 2);
+            txtPassword.Location = new Point(47, 253);
             txtPassword.Name = "txtPassword";
-            txtPassword.Size = new Size(275, 23);
+            txtPassword.Size = new Size(314, 27);
             txtPassword.TabIndex = 7;
             // 
             // linkLabel1
             // 
             linkLabel1.AutoSize = true;
             linkLabel1.LinkColor = Color.Red;
-            linkLabel1.Location = new Point(394, 242);
+            linkLabel1.Location = new Point(450, 323);
             linkLabel1.Name = "linkLabel1";
-            linkLabel1.Size = new Size(94, 15);
+            linkLabel1.Size = new Size(116, 20);
             linkLabel1.TabIndex = 8;
             linkLabel1.TabStop = true;
             linkLabel1.Text = "Quên mật khẩu?";
             // 
             // FormLogin
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(623, 392);
+            ClientSize = new Size(712, 523);
             Controls.Add(linkLabel1);
             Controls.Add(txtPassword);
             Controls.Add(txtUserName);
@@ -137,7 +138,6 @@
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
-            Margin = new Padding(3, 2, 3, 2);
             Name = "FormLogin";
             Text = "Form2";
             ResumeLayout(false);
