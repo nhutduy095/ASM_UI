@@ -58,7 +58,7 @@
             panel1.Location = new Point(0, 0);
             panel1.Margin = new Padding(3, 4, 3, 4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(914, 56);
+            panel1.Size = new Size(929, 56);
             panel1.TabIndex = 0;
             // 
             // label1
@@ -80,7 +80,7 @@
             panel2.Location = new Point(0, 56);
             panel2.Margin = new Padding(3, 4, 3, 4);
             panel2.Name = "panel2";
-            panel2.Size = new Size(914, 119);
+            panel2.Size = new Size(929, 119);
             panel2.TabIndex = 1;
             // 
             // panel5
@@ -94,13 +94,13 @@
             panel5.Location = new Point(403, 0);
             panel5.Margin = new Padding(3, 4, 3, 4);
             panel5.Name = "panel5";
-            panel5.Size = new Size(511, 119);
+            panel5.Size = new Size(526, 119);
             panel5.TabIndex = 1;
             // 
             // textBox1
             // 
             textBox1.Anchor = AnchorStyles.None;
-            textBox1.Location = new Point(333, 44);
+            textBox1.Location = new Point(341, 45);
             textBox1.Margin = new Padding(3, 4, 3, 4);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(175, 27);
@@ -111,7 +111,7 @@
             label3.Anchor = AnchorStyles.None;
             label3.AutoSize = true;
             label3.Font = new Font("Segoe Print", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.Location = new Point(244, 43);
+            label3.Location = new Point(252, 43);
             label3.Name = "label3";
             label3.Size = new Size(90, 31);
             label3.TabIndex = 2;
@@ -121,7 +121,7 @@
             // 
             cboService.Anchor = AnchorStyles.None;
             cboService.FormattingEnabled = true;
-            cboService.Location = new Point(85, 44);
+            cboService.Location = new Point(93, 44);
             cboService.Margin = new Padding(3, 4, 3, 4);
             cboService.Name = "cboService";
             cboService.Size = new Size(153, 28);
@@ -132,7 +132,7 @@
             label2.Anchor = AnchorStyles.None;
             label2.AutoSize = true;
             label2.Font = new Font("Segoe Print", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(-2, 44);
+            label2.Location = new Point(6, 43);
             label2.Name = "label2";
             label2.Size = new Size(89, 31);
             label2.TabIndex = 0;
@@ -196,7 +196,7 @@
             panel3.Location = new Point(0, 175);
             panel3.Margin = new Padding(3, 4, 3, 4);
             panel3.Name = "panel3";
-            panel3.Size = new Size(914, 425);
+            panel3.Size = new Size(929, 301);
             panel3.TabIndex = 2;
             // 
             // dataGridView1
@@ -208,14 +208,14 @@
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(914, 425);
+            dataGridView1.Size = new Size(929, 301);
             dataGridView1.TabIndex = 0;
             // 
             // FormRegService
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(914, 600);
+            ClientSize = new Size(929, 476);
             Controls.Add(panel3);
             Controls.Add(panel2);
             Controls.Add(panel1);
