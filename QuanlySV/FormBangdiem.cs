@@ -36,7 +36,7 @@ namespace QuanlySV
             }
             if (resData.Data== null)
             {
-                MessageBox.Show("Khong có dữ liệu để hiển thị");
+                MessageBox.Show("Không có dữ liệu để hiển thị");
                 return;
             }
             DataPointMst data = Util.ConvertToType<DataPointMst>(resData.Data);
