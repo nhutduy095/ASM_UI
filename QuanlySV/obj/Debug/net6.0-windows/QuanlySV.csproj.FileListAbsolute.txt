@@ -94,10 +94,8 @@ D:\BaiTap\HK4-2\ASM_UI\QuanlySV\bin\Debug\net6.0-windows\System.Net.Http.Primiti
 D:\BaiTap\HK4-2\ASM_UI\QuanlySV\bin\Debug\net6.0-windows\Newtonsoft.Json.dll
 D:\BaiTap\HK4-2\ASM_UI\QuanlySV\obj\Debug\net6.0-windows\QuanlySV.csproj.AssemblyReference.cache
 D:\BaiTap\HK4-2\ASM_UI\QuanlySV\obj\Debug\net6.0-windows\QuanlySV.Form1.resources
-D:\BaiTap\HK4-2\ASM_UI\QuanlySV\obj\Debug\net6.0-windows\QuanlySV.Form2.resources
 D:\BaiTap\HK4-2\ASM_UI\QuanlySV\obj\Debug\net6.0-windows\QuanlySV.FormBangdiem.resources
 D:\BaiTap\HK4-2\ASM_UI\QuanlySV\obj\Debug\net6.0-windows\QuanlySV.FormGV.resources
-D:\BaiTap\HK4-2\ASM_UI\QuanlySV\obj\Debug\net6.0-windows\QuanlySV.Form3.resources
 D:\BaiTap\HK4-2\ASM_UI\QuanlySV\obj\Debug\net6.0-windows\QuanlySV.FormLichhoc.resources
 D:\BaiTap\HK4-2\ASM_UI\QuanlySV\obj\Debug\net6.0-windows\QuanlySV.FormLogin.resources
 D:\BaiTap\HK4-2\ASM_UI\QuanlySV\obj\Debug\net6.0-windows\QuanlySV.FormQLSV.resources

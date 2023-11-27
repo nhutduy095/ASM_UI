@@ -57,6 +57,7 @@
             studentManageToolStripMenuItem.Name = "studentManageToolStripMenuItem";
             studentManageToolStripMenuItem.Size = new Size(296, 52);
             studentManageToolStripMenuItem.Text = " Manage System";
+            studentManageToolStripMenuItem.Click += studentManageToolStripMenuItem_Click;
             // 
             // danhSáchSinhViênToolStripMenuItem
             // 

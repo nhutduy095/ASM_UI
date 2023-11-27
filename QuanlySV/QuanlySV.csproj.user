@@ -4,13 +4,7 @@
     <Compile Update="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Form2.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="FormBangdiem.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="FormLichdayCopy.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="FormLichhoc.cs">
