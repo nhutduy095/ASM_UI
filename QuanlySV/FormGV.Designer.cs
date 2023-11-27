@@ -29,65 +29,64 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormGV));
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.lịchDạyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.bảngĐiểmToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.điểmDanhToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuStrip1.SuspendLayout();
-            this.SuspendLayout();
+            menuStrip1 = new MenuStrip();
+            lịchDạyToolStripMenuItem = new ToolStripMenuItem();
+            bảngĐiểmToolStripMenuItem = new ToolStripMenuItem();
+            điểmDanhToolStripMenuItem = new ToolStripMenuItem();
+            menuStrip1.SuspendLayout();
+            SuspendLayout();
             // 
             // menuStrip1
             // 
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.lịchDạyToolStripMenuItem,
-            this.bảngĐiểmToolStripMenuItem,
-            this.điểmDanhToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(13, 5, 0, 5);
-            this.menuStrip1.Size = new System.Drawing.Size(692, 63);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
+            menuStrip1.ImageScalingSize = new Size(20, 20);
+            menuStrip1.Items.AddRange(new ToolStripItem[] { lịchDạyToolStripMenuItem, bảngĐiểmToolStripMenuItem, điểmDanhToolStripMenuItem });
+            menuStrip1.Location = new Point(0, 0);
+            menuStrip1.Name = "menuStrip1";
+            menuStrip1.Padding = new Padding(13, 5, 0, 5);
+            menuStrip1.Size = new Size(1081, 62);
+            menuStrip1.TabIndex = 0;
+            menuStrip1.Text = "menuStrip1";
             // 
             // lịchDạyToolStripMenuItem
             // 
-            this.lịchDạyToolStripMenuItem.Font = new System.Drawing.Font("Sitka Banner", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lịchDạyToolStripMenuItem.Name = "lịchDạyToolStripMenuItem";
-            this.lịchDạyToolStripMenuItem.Size = new System.Drawing.Size(152, 53);
-            this.lịchDạyToolStripMenuItem.Text = "Lịch dạy";
+            lịchDạyToolStripMenuItem.BackColor = Color.FromArgb(255, 128, 0);
+            lịchDạyToolStripMenuItem.Font = new Font("Sitka Banner", 19.8F, FontStyle.Bold, GraphicsUnit.Point);
+            lịchDạyToolStripMenuItem.Name = "lịchDạyToolStripMenuItem";
+            lịchDạyToolStripMenuItem.Size = new Size(146, 52);
+            lịchDạyToolStripMenuItem.Text = "Lịch dạy";
             // 
             // bảngĐiểmToolStripMenuItem
             // 
-            this.bảngĐiểmToolStripMenuItem.Font = new System.Drawing.Font("Sitka Banner", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.bảngĐiểmToolStripMenuItem.Name = "bảngĐiểmToolStripMenuItem";
-            this.bảngĐiểmToolStripMenuItem.Size = new System.Drawing.Size(185, 53);
-            this.bảngĐiểmToolStripMenuItem.Text = "Bảng điểm";
+            bảngĐiểmToolStripMenuItem.BackColor = Color.FromArgb(255, 128, 0);
+            bảngĐiểmToolStripMenuItem.Font = new Font("Sitka Banner", 19.8F, FontStyle.Bold, GraphicsUnit.Point);
+            bảngĐiểmToolStripMenuItem.Name = "bảngĐiểmToolStripMenuItem";
+            bảngĐiểmToolStripMenuItem.Size = new Size(225, 52);
+            bảngĐiểmToolStripMenuItem.Text = "Quản Lý Điểm";
             // 
             // điểmDanhToolStripMenuItem
             // 
-            this.điểmDanhToolStripMenuItem.Font = new System.Drawing.Font("Sitka Banner", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.điểmDanhToolStripMenuItem.Name = "điểmDanhToolStripMenuItem";
-            this.điểmDanhToolStripMenuItem.Size = new System.Drawing.Size(188, 53);
-            this.điểmDanhToolStripMenuItem.Text = "Điểm danh";
+            điểmDanhToolStripMenuItem.BackColor = Color.FromArgb(255, 128, 0);
+            điểmDanhToolStripMenuItem.Font = new Font("Sitka Banner", 19.8F, FontStyle.Bold, GraphicsUnit.Point);
+            điểmDanhToolStripMenuItem.Name = "điểmDanhToolStripMenuItem";
+            điểmDanhToolStripMenuItem.Size = new Size(306, 52);
+            điểmDanhToolStripMenuItem.Text = "Thông tin Sinh Viên";
             // 
             // FormGV
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(17F, 48F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(692, 499);
-            this.Controls.Add(this.menuStrip1);
-            this.Font = new System.Drawing.Font("Sitka Banner", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
-            this.Name = "FormGV";
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(17F, 48F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImageLayout = ImageLayout.Stretch;
+            ClientSize = new Size(1081, 682);
+            Controls.Add(menuStrip1);
+            Font = new Font("Sitka Banner", 19.8F, FontStyle.Bold, GraphicsUnit.Point);
+            MainMenuStrip = menuStrip1;
+            Margin = new Padding(6, 7, 6, 7);
+            Name = "FormGV";
+            menuStrip1.ResumeLayout(false);
+            menuStrip1.PerformLayout();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

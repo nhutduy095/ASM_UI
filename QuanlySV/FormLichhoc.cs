@@ -27,7 +27,7 @@ namespace QuanlySV
         private async void Display()
         {
             daycontainer.Controls.Clear();
-           DateTime now = DateTime.Now;
+            DateTime now = DateTime.Now;
             DateTime startofmonth = new DateTime(now.Year, now.Month, 1);
             month = now.Month;
             year = now.Year;

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace QuanlySV
 {
-    public partial class FormLichhocCopy : Form
+    public partial class ListDiemSV : Form
     {
-        public FormLichhocCopy()
+        public ListDiemSV()
         {
             InitializeComponent();
         }

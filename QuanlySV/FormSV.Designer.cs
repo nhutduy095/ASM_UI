@@ -40,10 +40,9 @@
             // button10
             // 
             button10.Image = (Image)resources.GetObject("button10.Image");
-            button10.Location = new Point(717, 1);
-            button10.Margin = new Padding(3, 2, 3, 2);
+            button10.Location = new Point(819, 1);
             button10.Name = "button10";
-            button10.Size = new Size(61, 45);
+            button10.Size = new Size(70, 60);
             button10.TabIndex = 29;
             button10.UseVisualStyleBackColor = true;
             // 
@@ -54,44 +53,47 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { scheduleToolStripMenuItem, PointToolStripMenuItem, regServiceToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(778, 47);
+            menuStrip1.Padding = new Padding(7, 3, 0, 3);
+            menuStrip1.Size = new Size(889, 59);
             menuStrip1.TabIndex = 30;
             menuStrip1.Text = "menuStrip1";
             // 
             // scheduleToolStripMenuItem
             // 
+            scheduleToolStripMenuItem.BackColor = Color.FromArgb(255, 128, 0);
             scheduleToolStripMenuItem.Name = "scheduleToolStripMenuItem";
-            scheduleToolStripMenuItem.Size = new Size(124, 43);
+            scheduleToolStripMenuItem.Size = new Size(155, 53);
             scheduleToolStripMenuItem.Text = "Lịch Học";
             scheduleToolStripMenuItem.Click += scheduleToolStripMenuItem_Click;
             // 
             // PointToolStripMenuItem
             // 
+            PointToolStripMenuItem.BackColor = Color.FromArgb(255, 128, 0);
             PointToolStripMenuItem.Name = "PointToolStripMenuItem";
-            PointToolStripMenuItem.Size = new Size(87, 43);
+            PointToolStripMenuItem.Size = new Size(109, 53);
             PointToolStripMenuItem.Text = "Điểm";
             PointToolStripMenuItem.Click += PointToolStripMenuItem_Click;
             // 
             // regServiceToolStripMenuItem
             // 
+            regServiceToolStripMenuItem.BackColor = Color.FromArgb(255, 128, 0);
             regServiceToolStripMenuItem.Name = "regServiceToolStripMenuItem";
-            regServiceToolStripMenuItem.Size = new Size(210, 43);
+            regServiceToolStripMenuItem.Size = new Size(268, 53);
             regServiceToolStripMenuItem.Text = "Đăng Ký Dịch Vụ";
             regServiceToolStripMenuItem.Click += regServiceToolStripMenuItem_Click;
             // 
             // FormSV
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Coral;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
-            BackgroundImageLayout = ImageLayout.Center;
-            ClientSize = new Size(778, 454);
+            BackgroundImageLayout = ImageLayout.Stretch;
+            ClientSize = new Size(889, 605);
             Controls.Add(button10);
             Controls.Add(menuStrip1);
             DoubleBuffered = true;
             MainMenuStrip = menuStrip1;
-            Margin = new Padding(3, 2, 3, 2);
             Name = "FormSV";
             Text = "Form4";
             Load += FormSV_Load;

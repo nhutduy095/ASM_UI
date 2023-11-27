@@ -59,34 +59,34 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Font = new Font("Jokerman", 10.2F, FontStyle.Italic, GraphicsUnit.Point);
             label1.Image = Properties.Resources.tk;
             label1.ImageAlign = ContentAlignment.MiddleLeft;
-            label1.Location = new Point(108, 43);
+            label1.Location = new Point(123, 57);
             label1.Name = "label1";
-            label1.Size = new Size(98, 21);
+            label1.Size = new Size(117, 25);
             label1.TabIndex = 25;
             label1.Text = "         Kỳ học :";
             // 
             // comboBox1
             // 
+            comboBox1.Font = new Font("Gabriola", 12F, FontStyle.Italic, GraphicsUnit.Point);
             comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(313, 43);
-            comboBox1.Margin = new Padding(3, 2, 3, 2);
+            comboBox1.Location = new Point(358, 57);
             comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(311, 23);
+            comboBox1.Size = new Size(355, 45);
             comboBox1.TabIndex = 26;
             comboBox1.Text = "Fall 2023";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.Font = new Font("Jokerman", 10.2F, FontStyle.Italic, GraphicsUnit.Point);
             label2.Image = Properties.Resources.th__1_;
             label2.ImageAlign = ContentAlignment.MiddleLeft;
-            label2.Location = new Point(108, 86);
+            label2.Location = new Point(123, 115);
             label2.Name = "label2";
-            label2.Size = new Size(118, 21);
+            label2.Size = new Size(136, 25);
             label2.TabIndex = 28;
             label2.Text = "         Thời gian :";
             // 
@@ -95,9 +95,9 @@
             linkLabel1.AutoSize = true;
             linkLabel1.Image = Properties.Resources.pngtree_vector_question_mark_icon_png_image_5154481;
             linkLabel1.ImageAlign = ContentAlignment.MiddleLeft;
-            linkLabel1.Location = new Point(12, 25);
+            linkLabel1.Location = new Point(14, 33);
             linkLabel1.Name = "linkLabel1";
-            linkLabel1.Size = new Size(128, 15);
+            linkLabel1.Size = new Size(164, 20);
             linkLabel1.TabIndex = 32;
             linkLabel1.TabStop = true;
             linkLabel1.Text = "       Hệ quản lý đào tạo";
@@ -105,11 +105,11 @@
             // label18
             // 
             label18.AutoSize = true;
-            label18.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            label18.Font = new Font("Lucida Handwriting", 22.2F, FontStyle.Bold, GraphicsUnit.Point);
             label18.ForeColor = Color.Blue;
-            label18.Location = new Point(351, 9);
+            label18.Location = new Point(401, 5);
             label18.Name = "label18";
-            label18.Size = new Size(102, 32);
+            label18.Size = new Size(192, 48);
             label18.TabIndex = 33;
             label18.Text = "Lịch học";
             // 
@@ -123,24 +123,31 @@
             panel1.Controls.Add(label1);
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
+            panel1.Margin = new Padding(3, 4, 3, 4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1063, 131);
+            panel1.Size = new Size(1215, 175);
             panel1.TabIndex = 34;
             // 
             // btnsearch
             // 
-            btnsearch.Location = new Point(662, 43);
+            btnsearch.BackgroundImageLayout = ImageLayout.Center;
+            btnsearch.Font = new Font("Jokerman", 12F, FontStyle.Italic, GraphicsUnit.Point);
+            btnsearch.ImageAlign = ContentAlignment.MiddleLeft;
+            btnsearch.Location = new Point(762, 82);
+            btnsearch.Margin = new Padding(3, 4, 3, 4);
             btnsearch.Name = "btnsearch";
-            btnsearch.Size = new Size(96, 66);
+            btnsearch.Size = new Size(105, 58);
             btnsearch.TabIndex = 35;
             btnsearch.Text = "Search";
             btnsearch.UseVisualStyleBackColor = true;
             // 
             // dateTimePicker1
             // 
-            dateTimePicker1.Location = new Point(313, 86);
+            dateTimePicker1.Font = new Font("Gabriola", 12F, FontStyle.Italic, GraphicsUnit.Point);
+            dateTimePicker1.Location = new Point(358, 115);
+            dateTimePicker1.Margin = new Padding(3, 4, 3, 4);
             dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(311, 23);
+            dateTimePicker1.Size = new Size(355, 41);
             dateTimePicker1.TabIndex = 34;
             // 
             // panel2
@@ -149,16 +156,18 @@
             panel2.Controls.Add(btnNext);
             panel2.Controls.Add(linkLabel1);
             panel2.Dock = DockStyle.Bottom;
-            panel2.Location = new Point(0, 791);
+            panel2.Location = new Point(0, 1055);
+            panel2.Margin = new Padding(3, 4, 3, 4);
             panel2.Name = "panel2";
-            panel2.Size = new Size(1063, 54);
+            panel2.Size = new Size(1215, 72);
             panel2.TabIndex = 35;
             // 
             // btnPre
             // 
-            btnPre.Location = new Point(799, 15);
+            btnPre.Location = new Point(913, 20);
+            btnPre.Margin = new Padding(3, 4, 3, 4);
             btnPre.Name = "btnPre";
-            btnPre.Size = new Size(75, 23);
+            btnPre.Size = new Size(86, 31);
             btnPre.TabIndex = 34;
             btnPre.Text = "Previous";
             btnPre.UseVisualStyleBackColor = true;
@@ -166,9 +175,10 @@
             // 
             // btnNext
             // 
-            btnNext.Location = new Point(880, 15);
+            btnNext.Location = new Point(1006, 20);
+            btnNext.Margin = new Padding(3, 4, 3, 4);
             btnNext.Name = "btnNext";
-            btnNext.Size = new Size(75, 23);
+            btnNext.Size = new Size(86, 31);
             btnNext.TabIndex = 33;
             btnNext.Text = "Next";
             btnNext.UseVisualStyleBackColor = true;
@@ -179,17 +189,19 @@
             panel3.Controls.Add(daycontainer);
             panel3.Controls.Add(panel5);
             panel3.Dock = DockStyle.Fill;
-            panel3.Location = new Point(0, 131);
+            panel3.Location = new Point(0, 175);
+            panel3.Margin = new Padding(3, 4, 3, 4);
             panel3.Name = "panel3";
-            panel3.Size = new Size(1063, 660);
+            panel3.Size = new Size(1215, 880);
             panel3.TabIndex = 36;
             // 
             // daycontainer
             // 
             daycontainer.Dock = DockStyle.Fill;
-            daycontainer.Location = new Point(0, 60);
+            daycontainer.Location = new Point(0, 80);
+            daycontainer.Margin = new Padding(3, 4, 3, 4);
             daycontainer.Name = "daycontainer";
-            daycontainer.Size = new Size(1063, 600);
+            daycontainer.Size = new Size(1215, 800);
             daycontainer.TabIndex = 2;
             // 
             // panel5
@@ -204,15 +216,17 @@
             panel5.Controls.Add(sunday);
             panel5.Dock = DockStyle.Top;
             panel5.Location = new Point(0, 0);
+            panel5.Margin = new Padding(3, 4, 3, 4);
             panel5.Name = "panel5";
-            panel5.Size = new Size(1063, 60);
+            panel5.Size = new Size(1215, 80);
             panel5.TabIndex = 1;
             // 
             // panel7
             // 
-            panel7.Location = new Point(142, 60);
+            panel7.Location = new Point(162, 80);
+            panel7.Margin = new Padding(3, 4, 3, 4);
             panel7.Name = "panel7";
-            panel7.Size = new Size(133, 93);
+            panel7.Size = new Size(152, 124);
             panel7.TabIndex = 1;
             // 
             // saturday
@@ -220,9 +234,9 @@
             saturday.AutoSize = true;
             saturday.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
             saturday.ForeColor = SystemColors.ActiveCaptionText;
-            saturday.Location = new Point(873, 20);
+            saturday.Location = new Point(998, 27);
             saturday.Name = "saturday";
-            saturday.Size = new Size(82, 23);
+            saturday.Size = new Size(111, 31);
             saturday.TabIndex = 6;
             saturday.Text = "Saturday";
             // 
@@ -231,9 +245,9 @@
             friday.AutoSize = true;
             friday.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
             friday.ForeColor = SystemColors.ActiveCaptionText;
-            friday.Location = new Point(757, 20);
+            friday.Location = new Point(865, 27);
             friday.Name = "friday";
-            friday.Size = new Size(63, 23);
+            friday.Size = new Size(84, 31);
             friday.TabIndex = 5;
             friday.Text = "Friday";
             // 
@@ -242,9 +256,9 @@
             thursday.AutoSize = true;
             thursday.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
             thursday.ForeColor = SystemColors.ActiveCaptionText;
-            thursday.Location = new Point(582, 20);
+            thursday.Location = new Point(665, 27);
             thursday.Name = "thursday";
-            thursday.Size = new Size(86, 23);
+            thursday.Size = new Size(116, 31);
             thursday.TabIndex = 4;
             thursday.Text = "Thursday";
             // 
@@ -253,9 +267,9 @@
             Wednesday.AutoSize = true;
             Wednesday.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
             Wednesday.ForeColor = SystemColors.ActiveCaptionText;
-            Wednesday.Location = new Point(439, 20);
+            Wednesday.Location = new Point(502, 27);
             Wednesday.Name = "Wednesday";
-            Wednesday.Size = new Size(101, 23);
+            Wednesday.Size = new Size(138, 31);
             Wednesday.TabIndex = 3;
             Wednesday.Text = "Wednesday";
             // 
@@ -264,9 +278,9 @@
             tuesday.AutoSize = true;
             tuesday.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
             tuesday.ForeColor = SystemColors.ActiveCaptionText;
-            tuesday.Location = new Point(313, 20);
+            tuesday.Location = new Point(358, 27);
             tuesday.Name = "tuesday";
-            tuesday.Size = new Size(77, 23);
+            tuesday.Size = new Size(104, 31);
             tuesday.TabIndex = 2;
             tuesday.Text = "Tuesday";
             // 
@@ -275,9 +289,9 @@
             monday.AutoSize = true;
             monday.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
             monday.ForeColor = SystemColors.ActiveCaptionText;
-            monday.Location = new Point(165, 20);
+            monday.Location = new Point(189, 27);
             monday.Name = "monday";
-            monday.Size = new Size(77, 23);
+            monday.Size = new Size(105, 31);
             monday.TabIndex = 1;
             monday.Text = "Monday";
             // 
@@ -286,22 +300,21 @@
             sunday.AutoSize = true;
             sunday.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
             sunday.ForeColor = SystemColors.ActiveCaptionText;
-            sunday.Location = new Point(27, 20);
+            sunday.Location = new Point(31, 27);
             sunday.Name = "sunday";
-            sunday.Size = new Size(70, 23);
+            sunday.Size = new Size(96, 31);
             sunday.TabIndex = 0;
             sunday.Text = "Sunday";
             // 
             // FormLichhoc
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(255, 224, 192);
-            ClientSize = new Size(1063, 845);
+            ClientSize = new Size(1215, 1127);
             Controls.Add(panel3);
             Controls.Add(panel2);
             Controls.Add(panel1);
-            Margin = new Padding(3, 2, 3, 2);
             Name = "FormLichhoc";
             Text = "QUẢN LÝ SINH VIÊN";
             panel1.ResumeLayout(false);
