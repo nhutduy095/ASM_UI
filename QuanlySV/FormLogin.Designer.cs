@@ -29,108 +29,122 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLogin));
-            label1 = new Label();
-            label2 = new Label();
-            label3 = new Label();
-            button1 = new Button();
-            button2 = new Button();
             txtUserName = new TextBox();
             txtPassword = new TextBox();
-            linkLabel1 = new LinkLabel();
+            label1 = new Label();
+            label2 = new Label();
+            btnCancel = new Button();
+            btnSignin = new Button();
+            pictureBox1 = new PictureBox();
+            pictureBox2 = new PictureBox();
+            checkBox1 = new CheckBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.BackColor = Color.FromArgb(192, 255, 255);
-            label1.Font = new Font("Monotype Corsiva", 28.2F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            label1.ForeColor = Color.FromArgb(255, 128, 0);
-            label1.Location = new Point(209, 9);
-            label1.Name = "label1";
-            label1.Size = new Size(164, 56);
-            label1.TabIndex = 1;
-            label1.Text = "LOGIN";
-            label1.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.BackColor = Color.FromArgb(192, 255, 255);
-            label2.Font = new Font("Segoe Print", 16.2F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            label2.ForeColor = Color.Navy;
-            label2.Location = new Point(47, 107);
-            label2.Name = "label2";
-            label2.Size = new Size(269, 50);
-            label2.TabIndex = 2;
-            label2.Text = "Email đăng nhập";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.BackColor = Color.FromArgb(192, 255, 255);
-            label3.Font = new Font("Segoe Print", 16.2F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            label3.ForeColor = Color.Navy;
-            label3.Location = new Point(47, 210);
-            label3.Name = "label3";
-            label3.Size = new Size(169, 50);
-            label3.TabIndex = 3;
-            label3.Text = "Mật khẩu";
-            // 
-            // button1
-            // 
-            button1.BackColor = Color.Lime;
-            button1.Font = new Font("Segoe Script", 16.2F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            button1.Location = new Point(138, 367);
-            button1.Name = "button1";
-            button1.Size = new Size(283, 55);
-            button1.TabIndex = 4;
-            button1.Text = "Đăng nhập";
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
-            // 
-            // button2
-            // 
-            button2.BackColor = Color.Lime;
-            button2.Font = new Font("Segoe Script", 16.2F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            button2.Location = new Point(138, 428);
-            button2.Name = "button2";
-            button2.Size = new Size(283, 55);
-            button2.TabIndex = 5;
-            button2.Text = "Thoát";
-            button2.UseVisualStyleBackColor = false;
             // 
             // txtUserName
             // 
-            txtUserName.BackColor = Color.FromArgb(255, 128, 0);
-            txtUserName.Location = new Point(47, 160);
+            txtUserName.BackColor = Color.White;
+            txtUserName.Location = new Point(479, 190);
             txtUserName.Multiline = true;
             txtUserName.Name = "txtUserName";
-            txtUserName.Size = new Size(444, 44);
+            txtUserName.Size = new Size(184, 40);
             txtUserName.TabIndex = 6;
             // 
             // txtPassword
             // 
-            txtPassword.BackColor = Color.FromArgb(255, 128, 0);
-            txtPassword.Location = new Point(47, 261);
+            txtPassword.BackColor = Color.White;
+            txtPassword.Location = new Point(479, 240);
             txtPassword.Multiline = true;
             txtPassword.Name = "txtPassword";
-            txtPassword.Size = new Size(444, 44);
+            txtPassword.Size = new Size(184, 40);
             txtPassword.TabIndex = 7;
             // 
-            // linkLabel1
+            // label1
             // 
-            linkLabel1.ActiveLinkColor = Color.Black;
-            linkLabel1.AutoSize = true;
-            linkLabel1.Font = new Font("Script MT Bold", 13.8F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            linkLabel1.ForeColor = Color.Black;
-            linkLabel1.LinkColor = Color.Black;
-            linkLabel1.Location = new Point(85, 319);
-            linkLabel1.Name = "linkLabel1";
-            linkLabel1.Size = new Size(159, 28);
-            linkLabel1.TabIndex = 8;
-            linkLabel1.TabStop = true;
-            linkLabel1.Text = "Quên mật khẩu?";
-            linkLabel1.VisitedLinkColor = Color.Black;
+            label1.AutoSize = true;
+            label1.BackColor = Color.Transparent;
+            label1.Font = new Font("Times New Roman", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.ForeColor = Color.White;
+            label1.Location = new Point(371, 204);
+            label1.Name = "label1";
+            label1.Size = new Size(32, 26);
+            label1.TabIndex = 8;
+            label1.Text = "Id";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.BackColor = Color.Transparent;
+            label2.Font = new Font("Times New Roman", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.ForeColor = Color.White;
+            label2.Location = new Point(371, 253);
+            label2.Name = "label2";
+            label2.Size = new Size(102, 26);
+            label2.TabIndex = 8;
+            label2.Text = "Password";
+            // 
+            // btnCancel
+            // 
+            btnCancel.BackColor = SystemColors.Control;
+            btnCancel.FlatAppearance.BorderColor = Color.Black;
+            btnCancel.Font = new Font("Times New Roman", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
+            btnCancel.ForeColor = Color.White;
+            btnCancel.Image = (Image)resources.GetObject("btnCancel.Image");
+            btnCancel.Location = new Point(546, 331);
+            btnCancel.Name = "btnCancel";
+            btnCancel.Size = new Size(117, 44);
+            btnCancel.TabIndex = 11;
+            btnCancel.Text = "Cancel";
+            btnCancel.UseVisualStyleBackColor = false;
+            // 
+            // btnSignin
+            // 
+            btnSignin.BackColor = SystemColors.Control;
+            btnSignin.FlatAppearance.BorderColor = Color.Black;
+            btnSignin.Font = new Font("Times New Roman", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
+            btnSignin.ForeColor = Color.White;
+            btnSignin.Image = (Image)resources.GetObject("btnSignin.Image");
+            btnSignin.Location = new Point(422, 331);
+            btnSignin.Name = "btnSignin";
+            btnSignin.Size = new Size(117, 44);
+            btnSignin.TabIndex = 11;
+            btnSignin.Text = "Sign in";
+            btnSignin.UseVisualStyleBackColor = false;
+            btnSignin.Click += btnSignin_Click;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.BackColor = Color.Transparent;
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(341, 204);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(32, 26);
+            pictureBox1.TabIndex = 12;
+            pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.BackColor = Color.Transparent;
+            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
+            pictureBox2.Location = new Point(341, 247);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(31, 28);
+            pictureBox2.TabIndex = 13;
+            pictureBox2.TabStop = false;
+            // 
+            // checkBox1
+            // 
+            checkBox1.AutoSize = true;
+            checkBox1.BackColor = Color.Transparent;
+            checkBox1.Font = new Font("Times New Roman", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
+            checkBox1.ForeColor = Color.White;
+            checkBox1.Location = new Point(479, 295);
+            checkBox1.Name = "checkBox1";
+            checkBox1.Size = new Size(123, 23);
+            checkBox1.TabIndex = 14;
+            checkBox1.Text = "Remember Id";
+            checkBox1.UseVisualStyleBackColor = false;
             // 
             // FormLogin
             // 
@@ -138,30 +152,33 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(606, 526);
-            Controls.Add(linkLabel1);
-            Controls.Add(txtPassword);
-            Controls.Add(txtUserName);
-            Controls.Add(button2);
-            Controls.Add(button1);
-            Controls.Add(label3);
+            ClientSize = new Size(675, 437);
+            Controls.Add(checkBox1);
+            Controls.Add(pictureBox2);
+            Controls.Add(pictureBox1);
+            Controls.Add(btnSignin);
+            Controls.Add(btnCancel);
             Controls.Add(label2);
             Controls.Add(label1);
+            Controls.Add(txtPassword);
+            Controls.Add(txtUserName);
             Name = "FormLogin";
             Text = "Form2";
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private Label label1;
-        private Label label2;
-        private Label label3;
-        private Button button1;
-        private Button button2;
         private TextBox txtUserName;
         private TextBox txtPassword;
-        private LinkLabel linkLabel1;
+        private Label label1;
+        private Label label2;
+        private Button btnCancel;
+        private Button btnSignin;
+        private PictureBox pictureBox1;
+        private PictureBox pictureBox2;
+        private CheckBox checkBox1;
     }
 }

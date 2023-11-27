@@ -28,7 +28,7 @@
     <Compile Update="FormSV.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="ListDiemSV.cs">
+    <Compile Update="ListService.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="MonHoc.cs">

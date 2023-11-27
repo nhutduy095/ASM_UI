@@ -30,71 +30,71 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormQLSV));
             menuStrip1 = new MenuStrip();
-            studentManageToolStripMenuItem = new ToolStripMenuItem();
-            danhSáchSinhViênToolStripMenuItem = new ToolStripMenuItem();
-            danhSáchLớpToolStripMenuItem = new ToolStripMenuItem();
-            điểmTrungBìnhSinhViênToolStripMenuItem = new ToolStripMenuItem();
-            serviceManageToolStripMenuItem = new ToolStripMenuItem();
-            dịchVụSinhViênĐăngKýToolStripMenuItem = new ToolStripMenuItem();
+            tsManageSys = new ToolStripMenuItem();
+            tsLstStudents = new ToolStripMenuItem();
+            tsLstSubjects = new ToolStripMenuItem();
+            tsServiceManage = new ToolStripMenuItem();
+            tsLstService = new ToolStripMenuItem();
+            tsServiceConfirm = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // menuStrip1
             // 
             menuStrip1.ImageScalingSize = new Size(20, 20);
-            menuStrip1.Items.AddRange(new ToolStripItem[] { studentManageToolStripMenuItem, serviceManageToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { tsManageSys, tsServiceManage });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Size = new Size(1428, 56);
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
             // 
-            // studentManageToolStripMenuItem
+            // tsManageSys
             // 
-            studentManageToolStripMenuItem.BackColor = Color.FromArgb(255, 128, 0);
-            studentManageToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { danhSáchSinhViênToolStripMenuItem, danhSáchLớpToolStripMenuItem, điểmTrungBìnhSinhViênToolStripMenuItem });
-            studentManageToolStripMenuItem.Font = new Font("Sylfaen", 22.2F, FontStyle.Bold, GraphicsUnit.Point);
-            studentManageToolStripMenuItem.Name = "studentManageToolStripMenuItem";
-            studentManageToolStripMenuItem.Size = new Size(296, 52);
-            studentManageToolStripMenuItem.Text = " Manage System";
-            studentManageToolStripMenuItem.Click += studentManageToolStripMenuItem_Click;
+            tsManageSys.BackColor = Color.FromArgb(255, 128, 0);
+            tsManageSys.DropDownItems.AddRange(new ToolStripItem[] { tsLstStudents, tsLstSubjects });
+            tsManageSys.Font = new Font("Sylfaen", 22.2F, FontStyle.Bold, GraphicsUnit.Point);
+            tsManageSys.Name = "tsManageSys";
+            tsManageSys.Size = new Size(296, 52);
+            tsManageSys.Text = " Manage System";
+            tsManageSys.Click += studentManageToolStripMenuItem_Click;
             // 
-            // danhSáchSinhViênToolStripMenuItem
+            // tsLstStudents
             // 
-            danhSáchSinhViênToolStripMenuItem.Font = new Font("Sitka Banner", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point);
-            danhSáchSinhViênToolStripMenuItem.Name = "danhSáchSinhViênToolStripMenuItem";
-            danhSáchSinhViênToolStripMenuItem.Size = new Size(485, 54);
-            danhSáchSinhViênToolStripMenuItem.Text = "Danh Sách Sinh Viên";
+            tsLstStudents.Font = new Font("Sitka Banner", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point);
+            tsLstStudents.Name = "tsLstStudents";
+            tsLstStudents.Size = new Size(404, 54);
+            tsLstStudents.Text = "Danh Sách Sinh Viên";
             // 
-            // danhSáchLớpToolStripMenuItem
+            // tsLstSubjects
             // 
-            danhSáchLớpToolStripMenuItem.Font = new Font("Sitka Banner", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point);
-            danhSáchLớpToolStripMenuItem.Name = "danhSáchLớpToolStripMenuItem";
-            danhSáchLớpToolStripMenuItem.Size = new Size(485, 54);
-            danhSáchLớpToolStripMenuItem.Text = "Danh Sách Môn Học";
+            tsLstSubjects.Font = new Font("Sitka Banner", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point);
+            tsLstSubjects.Name = "tsLstSubjects";
+            tsLstSubjects.Size = new Size(404, 54);
+            tsLstSubjects.Text = "Danh Sách Môn Học";
             // 
-            // điểmTrungBìnhSinhViênToolStripMenuItem
+            // tsServiceManage
             // 
-            điểmTrungBìnhSinhViênToolStripMenuItem.Font = new Font("Sitka Banner", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point);
-            điểmTrungBìnhSinhViênToolStripMenuItem.Name = "điểmTrungBìnhSinhViênToolStripMenuItem";
-            điểmTrungBìnhSinhViênToolStripMenuItem.Size = new Size(485, 54);
-            điểmTrungBìnhSinhViênToolStripMenuItem.Text = "Danh Sách Điểm Sinh Viên";
+            tsServiceManage.BackColor = Color.FromArgb(255, 128, 0);
+            tsServiceManage.DropDownItems.AddRange(new ToolStripItem[] { tsLstService, tsServiceConfirm });
+            tsServiceManage.Font = new Font("Sylfaen", 22.2F, FontStyle.Bold, GraphicsUnit.Point);
+            tsServiceManage.Name = "tsServiceManage";
+            tsServiceManage.Size = new Size(291, 52);
+            tsServiceManage.Text = "Service Manage";
             // 
-            // serviceManageToolStripMenuItem
+            // tsLstService
             // 
-            serviceManageToolStripMenuItem.BackColor = Color.FromArgb(255, 128, 0);
-            serviceManageToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { dịchVụSinhViênĐăngKýToolStripMenuItem });
-            serviceManageToolStripMenuItem.Font = new Font("Sylfaen", 22.2F, FontStyle.Bold, GraphicsUnit.Point);
-            serviceManageToolStripMenuItem.Name = "serviceManageToolStripMenuItem";
-            serviceManageToolStripMenuItem.Size = new Size(291, 52);
-            serviceManageToolStripMenuItem.Text = "Service Manage";
+            tsLstService.Font = new Font("Sitka Banner", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point);
+            tsLstService.Name = "tsLstService";
+            tsLstService.Size = new Size(374, 54);
+            tsLstService.Text = "Danh sách Dịch Vụ";
             // 
-            // dịchVụSinhViênĐăngKýToolStripMenuItem
+            // tsServiceConfirm
             // 
-            dịchVụSinhViênĐăngKýToolStripMenuItem.Font = new Font("Sitka Banner", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point);
-            dịchVụSinhViênĐăngKýToolStripMenuItem.Name = "dịchVụSinhViênĐăngKýToolStripMenuItem";
-            dịchVụSinhViênĐăngKýToolStripMenuItem.Size = new Size(489, 54);
-            dịchVụSinhViênĐăngKýToolStripMenuItem.Text = "Dịch Vụ Sinh Viên Đăng Ký";
+            tsServiceConfirm.Font = new Font("Sitka Banner", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point);
+            tsServiceConfirm.Name = "tsServiceConfirm";
+            tsServiceConfirm.Size = new Size(374, 54);
+            tsServiceConfirm.Text = "Xác Nhận Dịch Vụ";
             // 
             // FormQLSV
             // 
@@ -118,11 +118,11 @@
         #endregion
 
         private MenuStrip menuStrip1;
-        private ToolStripMenuItem studentManageToolStripMenuItem;
-        private ToolStripMenuItem serviceManageToolStripMenuItem;
-        private ToolStripMenuItem danhSáchSinhViênToolStripMenuItem;
-        private ToolStripMenuItem danhSáchLớpToolStripMenuItem;
-        private ToolStripMenuItem điểmTrungBìnhSinhViênToolStripMenuItem;
-        private ToolStripMenuItem dịchVụSinhViênĐăngKýToolStripMenuItem;
+        private ToolStripMenuItem tsManageSys;
+        private ToolStripMenuItem tsServiceManage;
+        private ToolStripMenuItem tsLstStudents;
+        private ToolStripMenuItem tsLstSubjects;
+        private ToolStripMenuItem tsLstService;
+        private ToolStripMenuItem tsServiceConfirm;
     }
 }

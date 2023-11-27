@@ -68,8 +68,8 @@
             điểmDanhToolStripMenuItem.BackColor = Color.FromArgb(255, 128, 0);
             điểmDanhToolStripMenuItem.Font = new Font("Sitka Banner", 19.8F, FontStyle.Bold, GraphicsUnit.Point);
             điểmDanhToolStripMenuItem.Name = "điểmDanhToolStripMenuItem";
-            điểmDanhToolStripMenuItem.Size = new Size(306, 52);
-            điểmDanhToolStripMenuItem.Text = "Thông tin Sinh Viên";
+            điểmDanhToolStripMenuItem.Size = new Size(186, 52);
+            điểmDanhToolStripMenuItem.Text = "Điểm Danh";
             // 
             // FormGV
             // 
