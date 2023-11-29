@@ -32,14 +32,13 @@
             menuStrip1 = new MenuStrip();
             lịchDạyToolStripMenuItem = new ToolStripMenuItem();
             bảngĐiểmToolStripMenuItem = new ToolStripMenuItem();
-            điểmDanhToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // menuStrip1
             // 
             menuStrip1.ImageScalingSize = new Size(20, 20);
-            menuStrip1.Items.AddRange(new ToolStripItem[] { lịchDạyToolStripMenuItem, bảngĐiểmToolStripMenuItem, điểmDanhToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { lịchDạyToolStripMenuItem, bảngĐiểmToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Padding = new Padding(13, 5, 0, 5);
@@ -62,14 +61,6 @@
             bảngĐiểmToolStripMenuItem.Name = "bảngĐiểmToolStripMenuItem";
             bảngĐiểmToolStripMenuItem.Size = new Size(225, 52);
             bảngĐiểmToolStripMenuItem.Text = "Quản Lý Điểm";
-            // 
-            // điểmDanhToolStripMenuItem
-            // 
-            điểmDanhToolStripMenuItem.BackColor = Color.FromArgb(255, 128, 0);
-            điểmDanhToolStripMenuItem.Font = new Font("Sitka Banner", 19.8F, FontStyle.Bold, GraphicsUnit.Point);
-            điểmDanhToolStripMenuItem.Name = "điểmDanhToolStripMenuItem";
-            điểmDanhToolStripMenuItem.Size = new Size(186, 52);
-            điểmDanhToolStripMenuItem.Text = "Điểm Danh";
             // 
             // FormGV
             // 
@@ -94,6 +85,5 @@
         private MenuStrip menuStrip1;
         private ToolStripMenuItem lịchDạyToolStripMenuItem;
         private ToolStripMenuItem bảngĐiểmToolStripMenuItem;
-        private ToolStripMenuItem điểmDanhToolStripMenuItem;
     }
 }
