@@ -22,7 +22,7 @@ namespace QuanlySV
             InitializeComponent();
         }
 
-        private async void button1_Click(object sender, EventArgs e)
+        private async void btnSignin_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(txtUserName.Text))
             {
@@ -47,17 +47,18 @@ namespace QuanlySV
             }
             LoginRespone data = Util.ConvertToType<LoginRespone>(res.Data);
             UserInfo userInfo = Util.ConvertToType<UserInfo>(data.UserInfo);
-            Config.Token=data.Token;
+            Config.Token = data.Token;
             Config.userInfo = userInfo;
             Config.userType = userInfo.UserType;
-            Config.userId=userInfo.UserId;
+            Config.userId = userInfo.UserId;
             if (userInfo.UserType == "S")
             {
                 FormSV frm = new FormSV();
                 frm.Show();
                 this.Hide();
 
-            }else if (userInfo.UserType == "T")
+            }
+            else if (userInfo.UserType == "T")
             {
                 FormGV frm = new FormGV();
                 frm.Show();
@@ -72,5 +73,7 @@ namespace QuanlySV
             ////var a = await CallAPICenter.CallAPIPost(req, "/api/Auth/Test");
             //var a = await CallAPICenter.CallAPIGet("/api/MasterData/GetCollectionClassByID?classId=SD18322");
         }
+
+       
     }
 }
