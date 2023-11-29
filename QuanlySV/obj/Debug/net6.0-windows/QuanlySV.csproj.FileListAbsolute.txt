@@ -120,3 +120,5 @@ D:\BaicuaVk\HK4_2\ASM_UI\QuanlySV\obj\Debug\net6.0-windows\refint\QuanlySV.dll
 D:\BaicuaVk\HK4_2\ASM_UI\QuanlySV\obj\Debug\net6.0-windows\QuanlySV.pdb
 D:\BaicuaVk\HK4_2\ASM_UI\QuanlySV\obj\Debug\net6.0-windows\QuanlySV.genruntimeconfig.cache
 D:\BaicuaVk\HK4_2\ASM_UI\QuanlySV\obj\Debug\net6.0-windows\ref\QuanlySV.dll
+D:\BaicuaVk\HK4_2\ASM_UI\QuanlySV\obj\Debug\net6.0-windows\QuanlySV.ListService.resources
+D:\BaicuaVk\HK4_2\ASM_UI\QuanlySV\obj\Debug\net6.0-windows\QuanlySV.SrvConfirm.resources
