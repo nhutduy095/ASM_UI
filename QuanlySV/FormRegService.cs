@@ -48,5 +48,15 @@ namespace QuanlySV
             var data = await CallAPICenter.CallAPIPost(new RequestPaging() { Page = 1, PerPage = 100 }, "/api/MasterData/CreateOrUpdateServiceReg");
 
         }
+
+        private void cboService_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btndelete_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
