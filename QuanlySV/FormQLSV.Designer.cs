@@ -57,7 +57,6 @@
             tsManageSys.Name = "tsManageSys";
             tsManageSys.Size = new Size(296, 52);
             tsManageSys.Text = " Manage System";
-            tsManageSys.Click += studentManageToolStripMenuItem_Click;
             // 
             // tsLstStudents
             // 
@@ -86,14 +85,14 @@
             // 
             tsLstService.Font = new Font("Sitka Banner", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point);
             tsLstService.Name = "tsLstService";
-            tsLstService.Size = new Size(374, 54);
-            tsLstService.Text = "Danh sách Dịch Vụ";
+            tsLstService.Size = new Size(401, 54);
+            tsLstService.Text = "Quản Lý Các Dịch Vụ";
             // 
             // tsServiceConfirm
             // 
             tsServiceConfirm.Font = new Font("Sitka Banner", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point);
             tsServiceConfirm.Name = "tsServiceConfirm";
-            tsServiceConfirm.Size = new Size(374, 54);
+            tsServiceConfirm.Size = new Size(401, 54);
             tsServiceConfirm.Text = "Xác Nhận Dịch Vụ";
             // 
             // FormQLSV
