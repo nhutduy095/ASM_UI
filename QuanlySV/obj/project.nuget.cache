@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "WkJWHqukgenE33iFd8fIpcP2rEFLEi0g1a6Vy+6BEw95vHfeloVD+8vG2MVUYxb4Vl5ceZdDqAOwdtXgtCXVgA==",
+  "dgSpecHash": "3zzQpApq6vkz58eAiQQykLx7LOO1RZHNRRIbjopqoUU6ctxi7VMJLYpKgrEPlRzAEOMLZJmldniqp/PtlHIWzg==",
   "success": true,
-  "projectFilePath": "D:\\BaiTap\\HK4-2\\ASM_UI\\QuanlySV\\QuanlySV.csproj",
+  "projectFilePath": "D:\\BaicuaVk\\HK4_2\\ASM_UI\\QuanlySV\\QuanlySV.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Admin01\\.nuget\\packages\\microsoft.bcl\\1.1.10\\microsoft.bcl.1.1.10.nupkg.sha512",
     "C:\\Users\\Admin01\\.nuget\\packages\\microsoft.bcl.build\\1.0.14\\microsoft.bcl.build.1.0.14.nupkg.sha512",
