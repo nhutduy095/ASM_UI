@@ -32,7 +32,13 @@
             label1 = new Label();
             panel2 = new Panel();
             panel5 = new Panel();
-            textBox1 = new TextBox();
+            cboSubject = new ComboBox();
+            label6 = new Label();
+            cboMajorT = new ComboBox();
+            label5 = new Label();
+            cboMajorF = new ComboBox();
+            label4 = new Label();
+            txtRemark = new TextBox();
             label3 = new Label();
             cboService = new ComboBox();
             label2 = new Label();
@@ -42,12 +48,6 @@
             btnReg = new Button();
             panel3 = new Panel();
             dataGridView1 = new DataGridView();
-            comboBox1 = new ComboBox();
-            label4 = new Label();
-            comboBox2 = new ComboBox();
-            label5 = new Label();
-            comboBox3 = new ComboBox();
-            label6 = new Label();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             panel5.SuspendLayout();
@@ -90,13 +90,13 @@
             // panel5
             // 
             panel5.BackColor = Color.FromArgb(255, 128, 0);
-            panel5.Controls.Add(comboBox3);
+            panel5.Controls.Add(cboSubject);
             panel5.Controls.Add(label6);
-            panel5.Controls.Add(comboBox2);
+            panel5.Controls.Add(cboMajorT);
             panel5.Controls.Add(label5);
-            panel5.Controls.Add(comboBox1);
+            panel5.Controls.Add(cboMajorF);
             panel5.Controls.Add(label4);
-            panel5.Controls.Add(textBox1);
+            panel5.Controls.Add(txtRemark);
             panel5.Controls.Add(label3);
             panel5.Controls.Add(cboService);
             panel5.Controls.Add(label2);
@@ -106,13 +106,73 @@
             panel5.Size = new Size(520, 117);
             panel5.TabIndex = 1;
             // 
-            // textBox1
+            // cboSubject
             // 
-            textBox1.Anchor = AnchorStyles.None;
-            textBox1.Location = new Point(107, 81);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(401, 23);
-            textBox1.TabIndex = 3;
+            cboSubject.Anchor = AnchorStyles.None;
+            cboSubject.FormattingEnabled = true;
+            cboSubject.Location = new Point(374, 12);
+            cboSubject.Name = "cboSubject";
+            cboSubject.Size = new Size(134, 23);
+            cboSubject.TabIndex = 9;
+            // 
+            // label6
+            // 
+            label6.Anchor = AnchorStyles.None;
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe Print", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
+            label6.Location = new Point(278, 10);
+            label6.Name = "label6";
+            label6.Size = new Size(82, 26);
+            label6.TabIndex = 8;
+            label6.Text = "Môn Học";
+            // 
+            // cboMajorT
+            // 
+            cboMajorT.Anchor = AnchorStyles.None;
+            cboMajorT.FormattingEnabled = true;
+            cboMajorT.Location = new Point(374, 41);
+            cboMajorT.Name = "cboMajorT";
+            cboMajorT.Size = new Size(134, 23);
+            cboMajorT.TabIndex = 7;
+            // 
+            // label5
+            // 
+            label5.Anchor = AnchorStyles.None;
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe Print", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
+            label5.Location = new Point(262, 39);
+            label5.Name = "label5";
+            label5.Size = new Size(105, 26);
+            label5.TabIndex = 6;
+            label5.Text = "Đến ngành:";
+            // 
+            // cboMajorF
+            // 
+            cboMajorF.Anchor = AnchorStyles.None;
+            cboMajorF.FormattingEnabled = true;
+            cboMajorF.Location = new Point(107, 41);
+            cboMajorF.Name = "cboMajorF";
+            cboMajorF.Size = new Size(134, 23);
+            cboMajorF.TabIndex = 5;
+            // 
+            // label4
+            // 
+            label4.Anchor = AnchorStyles.None;
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe Print", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
+            label4.Location = new Point(11, 39);
+            label4.Name = "label4";
+            label4.Size = new Size(95, 26);
+            label4.TabIndex = 4;
+            label4.Text = "Từ Ngành:";
+            // 
+            // txtRemark
+            // 
+            txtRemark.Anchor = AnchorStyles.None;
+            txtRemark.Location = new Point(107, 81);
+            txtRemark.Name = "txtRemark";
+            txtRemark.Size = new Size(401, 23);
+            txtRemark.TabIndex = 3;
             // 
             // label3
             // 
@@ -214,66 +274,6 @@
             dataGridView1.Size = new Size(813, 198);
             dataGridView1.TabIndex = 0;
             // 
-            // comboBox1
-            // 
-            comboBox1.Anchor = AnchorStyles.None;
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(107, 41);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(134, 23);
-            comboBox1.TabIndex = 5;
-            // 
-            // label4
-            // 
-            label4.Anchor = AnchorStyles.None;
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe Print", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
-            label4.Location = new Point(11, 39);
-            label4.Name = "label4";
-            label4.Size = new Size(95, 26);
-            label4.TabIndex = 4;
-            label4.Text = "Từ Ngành:";
-            // 
-            // comboBox2
-            // 
-            comboBox2.Anchor = AnchorStyles.None;
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(374, 41);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(134, 23);
-            comboBox2.TabIndex = 7;
-            // 
-            // label5
-            // 
-            label5.Anchor = AnchorStyles.None;
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe Print", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
-            label5.Location = new Point(262, 39);
-            label5.Name = "label5";
-            label5.Size = new Size(105, 26);
-            label5.TabIndex = 6;
-            label5.Text = "Đến ngành:";
-            // 
-            // comboBox3
-            // 
-            comboBox3.Anchor = AnchorStyles.None;
-            comboBox3.FormattingEnabled = true;
-            comboBox3.Location = new Point(374, 12);
-            comboBox3.Name = "comboBox3";
-            comboBox3.Size = new Size(134, 23);
-            comboBox3.TabIndex = 9;
-            // 
-            // label6
-            // 
-            label6.Anchor = AnchorStyles.None;
-            label6.AutoSize = true;
-            label6.Font = new Font("Segoe Print", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
-            label6.Location = new Point(278, 10);
-            label6.Name = "label6";
-            label6.Size = new Size(82, 26);
-            label6.TabIndex = 8;
-            label6.Text = "Môn Học";
-            // 
             // FormRegService
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -310,12 +310,12 @@
         private Label label2;
         private ComboBox cboService;
         private Label label3;
-        private TextBox textBox1;
-        private ComboBox comboBox2;
+        private TextBox txtRemark;
+        private ComboBox cboMajorT;
         private Label label5;
-        private ComboBox comboBox1;
+        private ComboBox cboMajorF;
         private Label label4;
-        private ComboBox comboBox3;
+        private ComboBox cboSubject;
         private Label label6;
     }
 }
