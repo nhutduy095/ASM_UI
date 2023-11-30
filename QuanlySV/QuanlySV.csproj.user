@@ -37,6 +37,9 @@
     <Compile Update="SrvConfirm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="TeacherManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="UserControlBlank.cs">
       <SubType>UserControl</SubType>
     </Compile>

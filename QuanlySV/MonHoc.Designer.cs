@@ -57,9 +57,9 @@
             label1.ForeColor = Color.FromArgb(192, 0, 0);
             label1.Location = new Point(257, 7);
             label1.Name = "label1";
-            label1.Size = new Size(368, 48);
+            label1.Size = new Size(335, 48);
             label1.TabIndex = 1;
-            label1.Text = "Danh Sách Môn Học";
+            label1.Text = "Quản Lý Môn Học";
             // 
             // groupBox1
             // 
