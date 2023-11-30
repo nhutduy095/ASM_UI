@@ -28,27 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ListService));
             label1 = new Label();
-            panel1 = new Panel();
+            groupBox1 = new GroupBox();
+            textBox1 = new TextBox();
+            label3 = new Label();
+            label2 = new Label();
+            textBox2 = new TextBox();
+            groupBox3 = new GroupBox();
             button6 = new Button();
             button5 = new Button();
+            button7 = new Button();
+            button4 = new Button();
             button3 = new Button();
             button2 = new Button();
-            button1 = new Button();
-            label4 = new Label();
-            label16 = new Label();
-            label15 = new Label();
-            label13 = new Label();
-            label12 = new Label();
-            label11 = new Label();
-            label3 = new Label();
-            label5 = new Label();
-            label10 = new Label();
-            label8 = new Label();
-            label7 = new Label();
-            label6 = new Label();
-            label2 = new Label();
-            panel1.SuspendLayout();
+            dataGridView1 = new DataGridView();
+            groupBox1.SuspendLayout();
+            groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -56,250 +53,187 @@
             label1.AutoSize = true;
             label1.Font = new Font("Script MT Bold", 24F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             label1.ForeColor = Color.FromArgb(192, 0, 0);
-            label1.Location = new Point(325, 9);
+            label1.Location = new Point(269, -3);
             label1.Name = "label1";
-            label1.Size = new Size(410, 48);
+            label1.Size = new Size(377, 48);
             label1.TabIndex = 2;
-            label1.Text = "Danh Sách Các Dịch Vụ";
+            label1.Text = "Quản Lý Các Dịch Vụ";
             // 
-            // panel1
+            // groupBox1
             // 
-            panel1.BorderStyle = BorderStyle.Fixed3D;
-            panel1.Controls.Add(button6);
-            panel1.Controls.Add(button5);
-            panel1.Controls.Add(button3);
-            panel1.Controls.Add(button2);
-            panel1.Controls.Add(button1);
-            panel1.Controls.Add(label4);
-            panel1.Controls.Add(label16);
-            panel1.Controls.Add(label15);
-            panel1.Controls.Add(label13);
-            panel1.Controls.Add(label12);
-            panel1.Controls.Add(label11);
-            panel1.Controls.Add(label3);
-            panel1.Controls.Add(label5);
-            panel1.Controls.Add(label10);
-            panel1.Controls.Add(label8);
-            panel1.Controls.Add(label7);
-            panel1.Controls.Add(label6);
-            panel1.Controls.Add(label2);
-            panel1.Location = new Point(30, 76);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(979, 361);
-            panel1.TabIndex = 4;
+            groupBox1.Controls.Add(textBox2);
+            groupBox1.Controls.Add(textBox1);
+            groupBox1.Controls.Add(label3);
+            groupBox1.Controls.Add(label2);
+            groupBox1.Font = new Font("Times New Roman", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
+            groupBox1.Location = new Point(34, 48);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(860, 97);
+            groupBox1.TabIndex = 11;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "Nhập thông tin";
             // 
-            // button6
+            // textBox1
             // 
-            button6.Font = new Font("Segoe Print", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            button6.ForeColor = Color.FromArgb(255, 128, 0);
-            button6.Location = new Point(775, 283);
-            button6.Name = "button6";
-            button6.Size = new Size(130, 44);
-            button6.TabIndex = 19;
-            button6.Text = "Đăng Ký";
-            button6.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            button5.Font = new Font("Segoe Print", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            button5.ForeColor = Color.FromArgb(255, 128, 0);
-            button5.Location = new Point(775, 221);
-            button5.Name = "button5";
-            button5.Size = new Size(130, 44);
-            button5.TabIndex = 19;
-            button5.Text = "Đăng Ký";
-            button5.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            button3.Font = new Font("Segoe Print", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            button3.ForeColor = Color.FromArgb(255, 128, 0);
-            button3.Location = new Point(775, 165);
-            button3.Name = "button3";
-            button3.Size = new Size(130, 44);
-            button3.TabIndex = 19;
-            button3.Text = "Đăng Ký";
-            button3.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            button2.Font = new Font("Segoe Print", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            button2.ForeColor = Color.FromArgb(255, 128, 0);
-            button2.Location = new Point(775, 106);
-            button2.Name = "button2";
-            button2.Size = new Size(130, 44);
-            button2.TabIndex = 19;
-            button2.Text = "Đăng Ký";
-            button2.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            button1.Font = new Font("Segoe Print", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            button1.ForeColor = Color.FromArgb(255, 128, 0);
-            button1.Location = new Point(775, 41);
-            button1.Name = "button1";
-            button1.Size = new Size(130, 44);
-            button1.TabIndex = 19;
-            button1.Text = "Đăng Ký";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe Script", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label4.Location = new Point(788, 5);
-            label4.Name = "label4";
-            label4.Size = new Size(107, 33);
-            label4.TabIndex = 4;
-            label4.Text = "Đăng Ký";
-            // 
-            // label16
-            // 
-            label16.AutoSize = true;
-            label16.BackColor = SystemColors.Control;
-            label16.CausesValidation = false;
-            label16.Font = new Font("Segoe Script", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label16.ForeColor = Color.Blue;
-            label16.Location = new Point(251, 232);
-            label16.Name = "label16";
-            label16.Size = new Size(274, 33);
-            label16.TabIndex = 5;
-            label16.Text = "Đăng ký cấp bảng điểm";
-            // 
-            // label15
-            // 
-            label15.AutoSize = true;
-            label15.BackColor = SystemColors.Control;
-            label15.CausesValidation = false;
-            label15.Font = new Font("Segoe Script", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label15.ForeColor = Color.Blue;
-            label15.Location = new Point(251, 290);
-            label15.Name = "label15";
-            label15.Size = new Size(163, 33);
-            label15.TabIndex = 6;
-            label15.Text = "Đăng ký khác";
-            // 
-            // label13
-            // 
-            label13.AutoSize = true;
-            label13.BackColor = SystemColors.Control;
-            label13.CausesValidation = false;
-            label13.Font = new Font("Segoe Script", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label13.ForeColor = Color.Blue;
-            label13.Location = new Point(251, 176);
-            label13.Name = "label13";
-            label13.Size = new Size(267, 33);
-            label13.TabIndex = 8;
-            label13.Text = "Đăng ký chuyển ngành";
-            // 
-            // label12
-            // 
-            label12.AutoSize = true;
-            label12.BackColor = SystemColors.Control;
-            label12.CausesValidation = false;
-            label12.Font = new Font("Segoe Script", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label12.ForeColor = Color.Blue;
-            label12.Location = new Point(251, 117);
-            label12.Name = "label12";
-            label12.Size = new Size(230, 33);
-            label12.TabIndex = 9;
-            label12.Text = "Đăng ký cấp lại thẻ";
-            // 
-            // label11
-            // 
-            label11.AutoSize = true;
-            label11.BackColor = SystemColors.Control;
-            label11.CausesValidation = false;
-            label11.Font = new Font("Segoe Script", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label11.ForeColor = Color.Blue;
-            label11.Location = new Point(251, 59);
-            label11.Name = "label11";
-            label11.Size = new Size(323, 33);
-            label11.TabIndex = 10;
-            label11.Text = "Đăng ký xác nhận sinh viên";
+            textBox1.Location = new Point(129, 36);
+            textBox1.Multiline = true;
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(229, 34);
+            textBox1.TabIndex = 1;
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Segoe Script", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.Location = new Point(251, 5);
+            label3.Font = new Font("Script MT Bold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.Location = new Point(436, 46);
             label3.Name = "label3";
-            label3.Size = new Size(99, 33);
-            label3.TabIndex = 11;
-            label3.Text = "Dịch Vụ";
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe Script", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label5.Location = new Point(52, 293);
-            label5.Name = "label5";
-            label5.Size = new Size(30, 33);
-            label5.TabIndex = 12;
-            label5.Text = "5";
-            // 
-            // label10
-            // 
-            label10.AutoSize = true;
-            label10.Font = new Font("Segoe Script", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label10.Location = new Point(52, 232);
-            label10.Name = "label10";
-            label10.Size = new Size(30, 33);
-            label10.TabIndex = 13;
-            label10.Text = "4";
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.Font = new Font("Segoe Script", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label8.Location = new Point(52, 176);
-            label8.Name = "label8";
-            label8.Size = new Size(30, 33);
-            label8.TabIndex = 15;
-            label8.Text = "3";
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Segoe Script", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label7.Location = new Point(52, 117);
-            label7.Name = "label7";
-            label7.Size = new Size(30, 33);
-            label7.TabIndex = 16;
-            label7.Text = "2";
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Segoe Script", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label6.Location = new Point(52, 59);
-            label6.Name = "label6";
-            label6.Size = new Size(30, 33);
-            label6.TabIndex = 17;
-            label6.Text = "1";
+            label3.Size = new Size(110, 24);
+            label3.TabIndex = 0;
+            label3.Text = "Tên Dịch Vụ";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Segoe Script", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(52, 5);
+            label2.Font = new Font("Script MT Bold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.Location = new Point(9, 46);
             label2.Name = "label2";
-            label2.Size = new Size(56, 33);
-            label2.TabIndex = 18;
-            label2.Text = "STT";
+            label2.Size = new Size(109, 24);
+            label2.TabIndex = 0;
+            label2.Text = "Mã Dịch Vụ";
+            // 
+            // textBox2
+            // 
+            textBox2.Location = new Point(552, 36);
+            textBox2.Multiline = true;
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(296, 34);
+            textBox2.TabIndex = 2;
+            // 
+            // groupBox3
+            // 
+            groupBox3.Controls.Add(button6);
+            groupBox3.Controls.Add(button5);
+            groupBox3.Controls.Add(button7);
+            groupBox3.Controls.Add(button4);
+            groupBox3.Controls.Add(button3);
+            groupBox3.Controls.Add(button2);
+            groupBox3.Location = new Point(34, 151);
+            groupBox3.Name = "groupBox3";
+            groupBox3.Size = new Size(860, 99);
+            groupBox3.TabIndex = 12;
+            groupBox3.TabStop = false;
+            // 
+            // button6
+            // 
+            button6.BackColor = Color.FromArgb(255, 192, 192);
+            button6.Font = new Font("Segoe Script", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button6.Image = (Image)resources.GetObject("button6.Image");
+            button6.ImageAlign = ContentAlignment.MiddleLeft;
+            button6.Location = new Point(754, 36);
+            button6.Name = "button6";
+            button6.Size = new Size(94, 38);
+            button6.TabIndex = 0;
+            button6.Text = "Exit";
+            button6.TextAlign = ContentAlignment.MiddleRight;
+            button6.UseVisualStyleBackColor = false;
+            // 
+            // button5
+            // 
+            button5.BackColor = Color.FromArgb(255, 192, 192);
+            button5.Font = new Font("Segoe Script", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button5.Image = (Image)resources.GetObject("button5.Image");
+            button5.ImageAlign = ContentAlignment.MiddleLeft;
+            button5.Location = new Point(607, 36);
+            button5.Name = "button5";
+            button5.Size = new Size(103, 38);
+            button5.TabIndex = 0;
+            button5.Text = "Clear";
+            button5.TextAlign = ContentAlignment.MiddleRight;
+            button5.UseVisualStyleBackColor = false;
+            // 
+            // button7
+            // 
+            button7.BackColor = Color.FromArgb(255, 192, 192);
+            button7.Font = new Font("Segoe Script", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button7.Image = (Image)resources.GetObject("button7.Image");
+            button7.ImageAlign = ContentAlignment.MiddleLeft;
+            button7.Location = new Point(313, 36);
+            button7.Name = "button7";
+            button7.Size = new Size(109, 38);
+            button7.TabIndex = 0;
+            button7.Text = "Delete";
+            button7.TextAlign = ContentAlignment.MiddleRight;
+            button7.UseVisualStyleBackColor = false;
+            // 
+            // button4
+            // 
+            button4.BackColor = Color.FromArgb(255, 192, 192);
+            button4.Font = new Font("Segoe Script", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button4.Image = (Image)resources.GetObject("button4.Image");
+            button4.ImageAlign = ContentAlignment.MiddleLeft;
+            button4.Location = new Point(468, 36);
+            button4.Name = "button4";
+            button4.Size = new Size(95, 38);
+            button4.TabIndex = 0;
+            button4.Text = "Save";
+            button4.TextAlign = ContentAlignment.MiddleRight;
+            button4.UseVisualStyleBackColor = false;
+            // 
+            // button3
+            // 
+            button3.BackColor = Color.FromArgb(255, 192, 192);
+            button3.Font = new Font("Segoe Script", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button3.Image = (Image)resources.GetObject("button3.Image");
+            button3.ImageAlign = ContentAlignment.MiddleLeft;
+            button3.Location = new Point(146, 36);
+            button3.Name = "button3";
+            button3.Size = new Size(117, 38);
+            button3.TabIndex = 0;
+            button3.Text = "Update";
+            button3.TextAlign = ContentAlignment.MiddleRight;
+            button3.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            button2.BackColor = Color.FromArgb(255, 192, 192);
+            button2.Font = new Font("Segoe Script", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button2.Image = (Image)resources.GetObject("button2.Image");
+            button2.ImageAlign = ContentAlignment.MiddleLeft;
+            button2.Location = new Point(9, 36);
+            button2.Name = "button2";
+            button2.Size = new Size(89, 38);
+            button2.TabIndex = 0;
+            button2.Text = "Add";
+            button2.TextAlign = ContentAlignment.MiddleRight;
+            button2.UseVisualStyleBackColor = false;
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Dock = DockStyle.Bottom;
+            dataGridView1.Location = new Point(0, 284);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.RowTemplate.Height = 29;
+            dataGridView1.Size = new Size(920, 294);
+            dataGridView1.TabIndex = 13;
             // 
             // ListService
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1044, 568);
-            Controls.Add(panel1);
+            BackColor = Color.FromArgb(255, 192, 128);
+            ClientSize = new Size(920, 578);
+            Controls.Add(dataGridView1);
+            Controls.Add(groupBox3);
+            Controls.Add(groupBox1);
             Controls.Add(label1);
             Name = "ListService";
             Text = "ListService";
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
+            groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
+            groupBox3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -307,24 +241,18 @@
         #endregion
 
         private Label label1;
-        private Panel panel1;
-        private Button button1;
-        private Label label4;
-        private Label label15;
-        private Label label13;
-        private Label label12;
-        private Label label11;
+        private GroupBox groupBox1;
+        private TextBox textBox2;
+        private TextBox textBox1;
         private Label label3;
-        private Label label10;
-        private Label label8;
-        private Label label7;
-        private Label label6;
         private Label label2;
+        private GroupBox groupBox3;
+        private Button button6;
         private Button button5;
+        private Button button7;
+        private Button button4;
         private Button button3;
         private Button button2;
-        private Button button6;
-        private Label label16;
-        private Label label5;
+        private DataGridView dataGridView1;
     }
 }

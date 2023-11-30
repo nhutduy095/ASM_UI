@@ -21,10 +21,5 @@ namespace QuanlySV
         {
 
         }
-
-        private void studentManageToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
