@@ -1,5 +1,6 @@
 ﻿using QuanlySV.Configuration;
 using QuanlySV.Model;
+using QuanlySV.Model.ModelRequest;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -28,9 +29,33 @@ namespace QuanlySV
                 label18.Text = "Lịch học";
             }
         }
-        private void LoadData()
+        private async void LoadData()
         {
+            //List<Filltering> lstfilltering = new List<Filltering>();
+            //var filltering=new Filltering();
+            //filltering.CollName = "Shift";
+            //filltering.ValueDefault = cboHocKy.Text;
+            //lstfilltering.Add(filltering);
+            //var filltering1 = new Filltering();
+            //filltering1.CollName = "Day";
+            //filltering1.ValueDefault = dateTimePicker1.Value.ToString();
+            //lstfilltering.Add(filltering1);
+            //RequestPaging requestPaging = new RequestPaging();
+            //requestPaging.Page = 1;
+            //requestPaging.PerPage = 100;
+            //requestPaging.Filltering = lstfilltering;
+            ////var data = await CallAPICenter.CallAPIPost(requestPaging);
+            //var data = await CallAPICenter.CallAPIPost(requestPaging, "/api/MasterData/GetCollectionScheduleDtl");
+            //if (data.Status)
+            //{
+            //    if (data.Data != null)
+            //    {
+            //        List<CollectionScheduleDtl> lstDtl = Util.ConvertListToType<CollectionScheduleDtl>(data.Data);
+            //        var list = new BindingList<CollectionScheduleDtl>(lstDtl);
+            //        dataGridView1.DataSource = list;
 
+            //    }
+            //}
         }
         private async void Display()
         {
@@ -41,7 +66,20 @@ namespace QuanlySV
             year = now.Year;
             int days = DateTime.DaysInMonth(now.Year, now.Month);
             int dayofweek = Convert.ToInt32(startofmonth.DayOfWeek.ToString("d"));
-            string url = "/api/MasterData/GetScheduleForUser?userId=" + Config.userId + "&month=" + month + "&year=" + year;
+            string url = "/api/MasterData/GetScheduleForUser?userId=" + Config.userId + "&month=" + month + "&year=" + year + "@shift=" + cboHocKy.SelectedValue;
+            //List<Filltering> lstfilltering = new List<Filltering>();
+            //var filltering = new Filltering();
+            //filltering.CollName = "Shift";
+            //filltering.ValueDefault = cboHocKy.Text;
+            //lstfilltering.Add(filltering);
+            //var filltering1 = new Filltering();
+            //filltering1.CollName = "Day";
+            //filltering1.ValueDefault = dateTimePicker1.Value.ToString();
+            //lstfilltering.Add(filltering1);
+            //RequestPaging requestPaging = new RequestPaging();
+            //requestPaging.Page = 1;
+            //requestPaging.PerPage = 100;
+            //requestPaging.Filltering = lstfilltering;
             var res = await CallAPICenter.CallAPIGet(url);
             List<CollectionScheduleDtl> lstScheduleOfMonth = Util.ConvertListToType<CollectionScheduleDtl>(res.Data);
             for (int i = 0; i < dayofweek; i++)
@@ -115,7 +153,7 @@ namespace QuanlySV
 
         private void btnsearch_Click(object sender, EventArgs e)
         {
-            LoadData();
+            Display();
         }
     }
 }

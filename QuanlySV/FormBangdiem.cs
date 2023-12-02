@@ -20,21 +20,20 @@ namespace QuanlySV
             InitializeComponent();
             LoadData();
         }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-
-        }
         private async void LoadData()
         {
-            var paging = new GetDataPointForReq() { Page = 1, PerPage = 100, userId = Config.userId, subjectName = txtSearch.Text };
+            Filltering filltering = new Filltering();
+            filltering.CollName = "SubjectId";
+            filltering.ValueDefault = txtSubjectId.Text;
+
+            var paging = new GetDataPointForReq() { Page = 1, PerPage = 100, userId = Config.userId, subjectName = txtSubjectId.Text, Filltering=filltering };
             var resData = await CallAPICenter.CallAPIPost(paging, "/api/MasterData/GetDataPointforUser");
             if (!resData.Status)
             {
                 MessageBox.Show(resData.ErrMessage);
                 return;
             }
-            if (resData.Data== null)
+            if (resData.Data == null)
             {
                 MessageBox.Show("Không có dữ liệu để hiển thị");
                 return;
@@ -46,7 +45,7 @@ namespace QuanlySV
             lblpass.Text = data.TotalPass + "";
             lblstuding.Text = data.TotalStuding + "";
             lblnotyet.Text = data.TotalNotYet + "";
-            if(data.Details != null)
+            if (data.Details != null)
             {
                 List<DataPointDtl> lstDtl = Util.ConvertListToType<DataPointDtl>(data.Details);
                 //var lstShow = lstDtl.Select(x => new{ 
@@ -58,19 +57,19 @@ namespace QuanlySV
                 //}).ToList();
                 var list = new BindingList<DataPointDtl>(lstDtl);
                 dataGridView1.DataSource = list;
-                dataGridView1.Columns[0].Visible= false;
-                dataGridView1.Columns[1].Visible= false;
-                dataGridView1.Columns[2].Visible= false;
-                dataGridView1.Columns[3].Visible= false;
-                dataGridView1.Columns[4].Visible= false;
-                dataGridView1.Columns[5].Visible= false;
-                dataGridView1.Columns[6].Visible= false;
-                dataGridView1.Columns[7].Visible= false;
-                dataGridView1.Columns[8].Visible= false;
-                dataGridView1.Columns[9].Visible= false;
-                dataGridView1.Columns[11].Visible= false;
-                dataGridView1.Columns[12].Visible= false;
-                dataGridView1.Columns[10].Name= "AveragePoints";
+                dataGridView1.Columns[0].Visible = false;
+                dataGridView1.Columns[1].Visible = false;
+                dataGridView1.Columns[2].Visible = false;
+                dataGridView1.Columns[3].Visible = false;
+                dataGridView1.Columns[4].Visible = false;
+                dataGridView1.Columns[5].Visible = false;
+                dataGridView1.Columns[6].Visible = false;
+                dataGridView1.Columns[7].Visible = false;
+                dataGridView1.Columns[8].Visible = false;
+                dataGridView1.Columns[9].Visible = false;
+                dataGridView1.Columns[11].Visible = false;
+                dataGridView1.Columns[12].Visible = false;
+                dataGridView1.Columns[10].Name = "AveragePoints";
                 dataGridView1.Columns[10].HeaderText = "Điểm";
                 dataGridView1.Columns[13].Name = "SubjectName";
                 dataGridView1.Columns[13].HeaderText = "Tên Môn";
@@ -81,6 +80,12 @@ namespace QuanlySV
                 dataGridView1.Columns[14].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             }
 
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            LoadData();
+            
         }
     }
 }

@@ -63,7 +63,15 @@ namespace QuanlySV
         }
         private async void LoadData()
         {
-            var data = await CallAPICenter.CallAPIPost(new RequestPaging() { Page = 1, PerPage = 100 }, "/api/MasterData/GetCollectionUserInfo");
+            Filltering filltering = new Filltering();
+            filltering.CollName = "UserId";
+            filltering.ValueDefault = txtUId.Text;
+            RequestPaging requestPaging = new RequestPaging();
+            requestPaging.Page = 1;
+            requestPaging.PerPage = 100;
+            requestPaging.Filltering = filltering;
+            //var data = await CallAPICenter.CallAPIPost(requestPaging);
+            var data = await CallAPICenter.CallAPIPost(requestPaging , "/api/MasterData/GetCollectionUserInfo");
             if (data.Status)
             {
                 if (data.Data != null)
@@ -76,11 +84,11 @@ namespace QuanlySV
             }
         }
 
-        private void btnSearch_Click(object sender, EventArgs e)
+        private async void btnSearch_Click(object sender, EventArgs e)
         {
-            var userinfoReq = new UserInfoRequest();
-            userinfoReq.UserId = txtUId.Text;
             LoadData();
+
+
         }
     }
 }
