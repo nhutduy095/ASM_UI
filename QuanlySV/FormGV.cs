@@ -16,5 +16,23 @@ namespace QuanlySV
         {
             InitializeComponent();
         }
+        private void FormSV_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lịchDạyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormLichhoc frm = new FormLichhoc();
+            frm.ShowDialog();
+        }
+
+        private void bảngĐiểmToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            NhapDiem frm = new NhapDiem();
+            frm.ShowDialog();
+        }
     }
 }

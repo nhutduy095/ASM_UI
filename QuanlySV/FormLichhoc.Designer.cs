@@ -140,6 +140,7 @@
             btnsearch.TabIndex = 35;
             btnsearch.Text = "Search";
             btnsearch.UseVisualStyleBackColor = true;
+            btnsearch.Click += btnsearch_Click;
             // 
             // dateTimePicker1
             // 
@@ -156,7 +157,7 @@
             panel2.Controls.Add(btnNext);
             panel2.Controls.Add(linkLabel1);
             panel2.Dock = DockStyle.Bottom;
-            panel2.Location = new Point(0, 1055);
+            panel2.Location = new Point(0, 983);
             panel2.Margin = new Padding(3, 4, 3, 4);
             panel2.Name = "panel2";
             panel2.Size = new Size(1215, 72);
@@ -192,7 +193,7 @@
             panel3.Location = new Point(0, 175);
             panel3.Margin = new Padding(3, 4, 3, 4);
             panel3.Name = "panel3";
-            panel3.Size = new Size(1215, 880);
+            panel3.Size = new Size(1215, 808);
             panel3.TabIndex = 36;
             // 
             // daycontainer
@@ -201,7 +202,7 @@
             daycontainer.Location = new Point(0, 80);
             daycontainer.Margin = new Padding(3, 4, 3, 4);
             daycontainer.Name = "daycontainer";
-            daycontainer.Size = new Size(1215, 800);
+            daycontainer.Size = new Size(1215, 728);
             daycontainer.TabIndex = 2;
             // 
             // panel5
@@ -311,7 +312,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(255, 224, 192);
-            ClientSize = new Size(1215, 1127);
+            ClientSize = new Size(1215, 1055);
             Controls.Add(panel3);
             Controls.Add(panel2);
             Controls.Add(panel1);

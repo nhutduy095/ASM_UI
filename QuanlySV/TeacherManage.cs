@@ -6,34 +6,17 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace QuanlySV
 {
-    public partial class Student_Manage : Form
+    public partial class TeacherManage : Form
     {
-        public Student_Manage()
+        public TeacherManage()
         {
             InitializeComponent();
-            LoadCombobox();
-        }
-        private async void LoadCombobox()
-        {
-            var resDataComboMajor = await CallAPICenter.CallAPIGet("/api/MasterData/GetCollMajorCombo");
-            if (resDataComboMajor.Status)
-            {
-                if (resDataComboMajor.Data != null)
-                {
-                    var dataCombo = Util.ConvertListToType<CollMajorCombo>(resDataComboMajor.Data);
-                    cboMajor.DataSource = dataCombo;
-                    cboMajor.ValueMember = "MajorID";
-                    cboMajor.DisplayMember = "MajorName";
-
-                }
-            }
         }
 
         private async void btnSave_Click(object sender, EventArgs e)
@@ -43,11 +26,11 @@ namespace QuanlySV
             userinfoReq.FirstName = txtFirstName.Text;
             userinfoReq.LastName = txtLastName.Text;
             userinfoReq.Sex = rdMale.Checked;
-            userinfoReq.UserType = "S";
+            userinfoReq.UserType = "T";
             userinfoReq.Birthday = dtpBirth.Value.ToString("yyyy-MM-dd");
             userinfoReq.IdClass = txtClass.Text;
             userinfoReq.PhoneNumber = txtSdt.Text;
-            userinfoReq.ParentsPhoneNumber = txtSDTPH.Text;
+            userinfoReq.ParentsPhoneNumber = null;
             userinfoReq.Address = txtAdress.Text;
             userinfoReq.MailAddress = txtMail.Text;
 

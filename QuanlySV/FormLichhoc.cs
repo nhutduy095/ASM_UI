@@ -19,6 +19,14 @@ namespace QuanlySV
         {
             InitializeComponent();
             Display();
+            if (Config.userType == "T")
+            {
+                label18.Text = "Lịch dạy";
+            }
+            else
+            {
+                label18.Text = "Lịch học";
+            }
         }
         private void LoadData()
         {
@@ -103,6 +111,11 @@ namespace QuanlySV
                 ucDays.ShowListSchedule(lstScheduleOfDay);
                 daycontainer.Controls.Add(ucDays);
             }
+        }
+
+        private void btnsearch_Click(object sender, EventArgs e)
+        {
+            LoadData();
         }
     }
 }
