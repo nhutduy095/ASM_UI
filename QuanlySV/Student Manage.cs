@@ -63,13 +63,16 @@ namespace QuanlySV
         }
         private async void LoadData()
         {
-            Filltering filltering = new Filltering();
+
+            List<Filltering> lstfilltering = new List<Filltering>();
+            var filltering = new Filltering();
             filltering.CollName = "UserId";
             filltering.ValueDefault = txtUId.Text;
+            lstfilltering.Add(filltering);
             RequestPaging requestPaging = new RequestPaging();
             requestPaging.Page = 1;
             requestPaging.PerPage = 100;
-            requestPaging.Filltering = filltering;
+            requestPaging.Filltering = lstfilltering;
             //var data = await CallAPICenter.CallAPIPost(requestPaging);
             var data = await CallAPICenter.CallAPIPost(requestPaging , "/api/MasterData/GetCollectionUserInfo");
             if (data.Status)

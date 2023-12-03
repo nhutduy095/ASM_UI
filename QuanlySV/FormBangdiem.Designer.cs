@@ -37,6 +37,8 @@
             panel1 = new Panel();
             panel2 = new Panel();
             dataGridView1 = new DataGridView();
+            lblpointavgMst = new Label();
+            lblCredit = new Label();
             label8 = new Label();
             lblfail = new Label();
             lblpass = new Label();
@@ -47,8 +49,6 @@
             label16 = new Label();
             lblstuding = new Label();
             tableLayoutPanel1 = new TableLayoutPanel();
-            lblCredit = new Label();
-            lblpointavgMst = new Label();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -152,6 +152,28 @@
             dataGridView1.RowTemplate.Height = 25;
             dataGridView1.Size = new Size(1001, 361);
             dataGridView1.TabIndex = 0;
+            // 
+            // lblpointavgMst
+            // 
+            lblpointavgMst.AutoSize = true;
+            lblpointavgMst.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            lblpointavgMst.ImageAlign = ContentAlignment.MiddleLeft;
+            lblpointavgMst.Location = new Point(214, 61);
+            lblpointavgMst.Name = "lblpointavgMst";
+            lblpointavgMst.Size = new Size(55, 31);
+            lblpointavgMst.TabIndex = 53;
+            lblpointavgMst.Text = "9.64";
+            // 
+            // lblCredit
+            // 
+            lblCredit.AutoSize = true;
+            lblCredit.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            lblCredit.ImageAlign = ContentAlignment.MiddleLeft;
+            lblCredit.Location = new Point(107, 95);
+            lblCredit.Name = "lblCredit";
+            lblCredit.Size = new Size(342, 31);
+            lblCredit.TabIndex = 52;
+            lblCredit.Text = "60 / 97(Đạt/Tổng) - 0 miễn giảm";
             // 
             // label8
             // 
@@ -268,28 +290,6 @@
             tableLayoutPanel1.Size = new Size(917, 73);
             tableLayoutPanel1.TabIndex = 45;
             // 
-            // lblCredit
-            // 
-            lblCredit.AutoSize = true;
-            lblCredit.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
-            lblCredit.ImageAlign = ContentAlignment.MiddleLeft;
-            lblCredit.Location = new Point(107, 95);
-            lblCredit.Name = "lblCredit";
-            lblCredit.Size = new Size(342, 31);
-            lblCredit.TabIndex = 52;
-            lblCredit.Text = "60 / 97(Đạt/Tổng) - 0 miễn giảm";
-            // 
-            // lblpointavgMst
-            // 
-            lblpointavgMst.AutoSize = true;
-            lblpointavgMst.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
-            lblpointavgMst.ImageAlign = ContentAlignment.MiddleLeft;
-            lblpointavgMst.Location = new Point(214, 61);
-            lblpointavgMst.Name = "lblpointavgMst";
-            lblpointavgMst.Size = new Size(55, 31);
-            lblpointavgMst.TabIndex = 53;
-            lblpointavgMst.Text = "9.64";
-            // 
             // FormBangdiem
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -329,6 +329,8 @@
         private Panel panel1;
         private Panel panel2;
         private DataGridView dataGridView1;
+        private Label lblpointavgMst;
+        private Label lblCredit;
         private Label label8;
         private Label lblfail;
         private Label lblpass;
@@ -339,7 +341,5 @@
         private Label label16;
         private Label lblstuding;
         private TableLayoutPanel tableLayoutPanel1;
-        private Label lblCredit;
-        private Label lblpointavgMst;
     }
 }

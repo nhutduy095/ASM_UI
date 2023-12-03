@@ -22,11 +22,12 @@ namespace QuanlySV
         }
         private async void LoadData()
         {
-            Filltering filltering = new Filltering();
+            List<Filltering> lstfilltering = new List<Filltering>();
+            var filltering = new Filltering();
             filltering.CollName = "SubjectId";
             filltering.ValueDefault = txtSubjectId.Text;
-
-            var paging = new GetDataPointForReq() { Page = 1, PerPage = 100, userId = Config.userId, subjectName = txtSubjectId.Text, Filltering=filltering };
+            lstfilltering.Add(filltering);
+            var paging = new GetDataPointForReq() { Page = 1, PerPage = 100, userId = Config.userId, subjectName = txtSubjectId.Text, Filltering=lstfilltering };
             var resData = await CallAPICenter.CallAPIPost(paging, "/api/MasterData/GetDataPointforUser");
             if (!resData.Status)
             {

@@ -293,7 +293,6 @@
             button1.Text = "Tìm Kiếm";
             button1.TextAlign = ContentAlignment.MiddleRight;
             button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
             // 
             // textBox5
             // 
