@@ -297,7 +297,8 @@ namespace QuanlySV
                 cboSeason.SelectedIndex = lstseason.IndexOf(lstseason.FirstOrDefault(x => x.SeasonId == data.Cells["Season"].Value.ToString()));
                 //cboMajor.sel = data.Cells["Image"].Value.ToString();
 
-                Hanldebutton("Edit");
+                //Hanldebutton("Edit");
+                btnUpdate.Enabled = true;
             }
             catch (Exception ex)
             {
