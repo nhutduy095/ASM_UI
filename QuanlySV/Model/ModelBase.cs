@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace QuanlySV.Model
 {
-    internal class ModelBase
+    public class ModelBase
     {
         public bool IsActive { get; set; } = true;
         public string CreateBy { get; set; }

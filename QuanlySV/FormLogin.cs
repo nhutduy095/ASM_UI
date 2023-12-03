@@ -62,7 +62,13 @@ namespace QuanlySV
             {
                 FormGV frm = new FormGV();
                 frm.Show();
-                this.Close();
+                this.Hide();
+            }
+            else if (userInfo.UserType == "A")
+            {
+                FormQLSV frm = new FormQLSV();
+                frm.Show();
+                this.Hide();
             }
             //res = await CallAPICenter.CallAPIGet("/api/Auth/Test");
             //var req = new RequestPaging()

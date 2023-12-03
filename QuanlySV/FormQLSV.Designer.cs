@@ -33,6 +33,7 @@
             tsManageSys = new ToolStripMenuItem();
             tsLstStudents = new ToolStripMenuItem();
             tsLstSubjects = new ToolStripMenuItem();
+            tsLstTeachers = new ToolStripMenuItem();
             tsServiceManage = new ToolStripMenuItem();
             tsLstService = new ToolStripMenuItem();
             tsServiceConfirm = new ToolStripMenuItem();
@@ -52,7 +53,7 @@
             // tsManageSys
             // 
             tsManageSys.BackColor = Color.FromArgb(255, 128, 0);
-            tsManageSys.DropDownItems.AddRange(new ToolStripItem[] { tsLstStudents, tsLstSubjects });
+            tsManageSys.DropDownItems.AddRange(new ToolStripItem[] { tsLstStudents, tsLstSubjects, tsLstTeachers });
             tsManageSys.Font = new Font("Sylfaen", 22.2F, FontStyle.Bold, GraphicsUnit.Point);
             tsManageSys.Name = "tsManageSys";
             tsManageSys.Size = new Size(296, 52);
@@ -62,15 +63,25 @@
             // 
             tsLstStudents.Font = new Font("Sitka Banner", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point);
             tsLstStudents.Name = "tsLstStudents";
-            tsLstStudents.Size = new Size(404, 54);
-            tsLstStudents.Text = "Danh Sách Sinh Viên";
+            tsLstStudents.Size = new Size(391, 54);
+            tsLstStudents.Text = "Quản Lý Sinh Viên";
+            tsLstStudents.Click += tsLstStudents_Click;
             // 
             // tsLstSubjects
             // 
             tsLstSubjects.Font = new Font("Sitka Banner", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point);
             tsLstSubjects.Name = "tsLstSubjects";
-            tsLstSubjects.Size = new Size(404, 54);
-            tsLstSubjects.Text = "Danh Sách Môn Học";
+            tsLstSubjects.Size = new Size(391, 54);
+            tsLstSubjects.Text = "Quản Lý Môn Học";
+            tsLstSubjects.Click += tsLstSubjects_Click;
+            // 
+            // tsLstTeachers
+            // 
+            tsLstTeachers.Font = new Font("Sitka Banner", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point);
+            tsLstTeachers.Name = "tsLstTeachers";
+            tsLstTeachers.Size = new Size(391, 54);
+            tsLstTeachers.Text = "Quản Lý Giảng Viên";
+            tsLstTeachers.Click += tsLstTeachers_Click;
             // 
             // tsServiceManage
             // 
@@ -87,6 +98,7 @@
             tsLstService.Name = "tsLstService";
             tsLstService.Size = new Size(401, 54);
             tsLstService.Text = "Quản Lý Các Dịch Vụ";
+            tsLstService.Click += tsLstService_Click;
             // 
             // tsServiceConfirm
             // 
@@ -94,6 +106,7 @@
             tsServiceConfirm.Name = "tsServiceConfirm";
             tsServiceConfirm.Size = new Size(401, 54);
             tsServiceConfirm.Text = "Xác Nhận Dịch Vụ";
+            tsServiceConfirm.Click += tsServiceConfirm_Click;
             // 
             // FormQLSV
             // 
@@ -123,5 +136,6 @@
         private ToolStripMenuItem tsLstSubjects;
         private ToolStripMenuItem tsLstService;
         private ToolStripMenuItem tsServiceConfirm;
+        private ToolStripMenuItem tsLstTeachers;
     }
 }

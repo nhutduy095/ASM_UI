@@ -29,14 +29,16 @@
         private void InitializeComponent()
         {
             linkLabel1 = new LinkLabel();
-            button3 = new Button();
+            btnSearch = new Button();
             label4 = new Label();
             label6 = new Label();
             label24 = new Label();
-            txtSearch = new TextBox();
+            txtSubjectId = new TextBox();
             panel1 = new Panel();
             panel2 = new Panel();
             dataGridView1 = new DataGridView();
+            lblpointavgMst = new Label();
+            lblCredit = new Label();
             label8 = new Label();
             lblfail = new Label();
             lblpass = new Label();
@@ -47,8 +49,6 @@
             label16 = new Label();
             lblstuding = new Label();
             tableLayoutPanel1 = new TableLayoutPanel();
-            lblCredit = new Label();
-            lblpointavgMst = new Label();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -67,18 +67,18 @@
             linkLabel1.TabStop = true;
             linkLabel1.Text = "       Hệ quản lý đào tạo";
             // 
-            // button3
+            // btnSearch
             // 
-            button3.BackColor = Color.White;
-            button3.Font = new Font("Script MT Bold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            button3.ImageAlign = ContentAlignment.MiddleLeft;
-            button3.Location = new Point(880, 91);
-            button3.Name = "button3";
-            button3.Size = new Size(82, 33);
-            button3.TabIndex = 34;
-            button3.Text = "Search";
-            button3.UseVisualStyleBackColor = false;
-            button3.Click += button3_Click;
+            btnSearch.BackColor = Color.White;
+            btnSearch.Font = new Font("Script MT Bold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            btnSearch.ImageAlign = ContentAlignment.MiddleLeft;
+            btnSearch.Location = new Point(880, 91);
+            btnSearch.Name = "btnSearch";
+            btnSearch.Size = new Size(82, 33);
+            btnSearch.TabIndex = 34;
+            btnSearch.Text = "Search";
+            btnSearch.UseVisualStyleBackColor = false;
+            btnSearch.Click += btnSearch_Click;
             // 
             // label4
             // 
@@ -113,13 +113,13 @@
             label24.TabIndex = 48;
             label24.Text = "Bảng Điểm";
             // 
-            // txtSearch
+            // txtSubjectId
             // 
-            txtSearch.Location = new Point(712, 93);
-            txtSearch.Margin = new Padding(3, 4, 3, 4);
-            txtSearch.Name = "txtSearch";
-            txtSearch.Size = new Size(161, 27);
-            txtSearch.TabIndex = 49;
+            txtSubjectId.Location = new Point(712, 93);
+            txtSubjectId.Margin = new Padding(3, 4, 3, 4);
+            txtSubjectId.Name = "txtSubjectId";
+            txtSubjectId.Size = new Size(161, 27);
+            txtSubjectId.TabIndex = 49;
             // 
             // panel1
             // 
@@ -152,6 +152,28 @@
             dataGridView1.RowTemplate.Height = 25;
             dataGridView1.Size = new Size(1001, 361);
             dataGridView1.TabIndex = 0;
+            // 
+            // lblpointavgMst
+            // 
+            lblpointavgMst.AutoSize = true;
+            lblpointavgMst.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            lblpointavgMst.ImageAlign = ContentAlignment.MiddleLeft;
+            lblpointavgMst.Location = new Point(214, 61);
+            lblpointavgMst.Name = "lblpointavgMst";
+            lblpointavgMst.Size = new Size(55, 31);
+            lblpointavgMst.TabIndex = 53;
+            lblpointavgMst.Text = "9.64";
+            // 
+            // lblCredit
+            // 
+            lblCredit.AutoSize = true;
+            lblCredit.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            lblCredit.ImageAlign = ContentAlignment.MiddleLeft;
+            lblCredit.Location = new Point(107, 95);
+            lblCredit.Name = "lblCredit";
+            lblCredit.Size = new Size(342, 31);
+            lblCredit.TabIndex = 52;
+            lblCredit.Text = "60 / 97(Đạt/Tổng) - 0 miễn giảm";
             // 
             // label8
             // 
@@ -268,28 +290,6 @@
             tableLayoutPanel1.Size = new Size(917, 73);
             tableLayoutPanel1.TabIndex = 45;
             // 
-            // lblCredit
-            // 
-            lblCredit.AutoSize = true;
-            lblCredit.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
-            lblCredit.ImageAlign = ContentAlignment.MiddleLeft;
-            lblCredit.Location = new Point(107, 95);
-            lblCredit.Name = "lblCredit";
-            lblCredit.Size = new Size(342, 31);
-            lblCredit.TabIndex = 52;
-            lblCredit.Text = "60 / 97(Đạt/Tổng) - 0 miễn giảm";
-            // 
-            // lblpointavgMst
-            // 
-            lblpointavgMst.AutoSize = true;
-            lblpointavgMst.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
-            lblpointavgMst.ImageAlign = ContentAlignment.MiddleLeft;
-            lblpointavgMst.Location = new Point(214, 61);
-            lblpointavgMst.Name = "lblpointavgMst";
-            lblpointavgMst.Size = new Size(55, 31);
-            lblpointavgMst.TabIndex = 53;
-            lblpointavgMst.Text = "9.64";
-            // 
             // FormBangdiem
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -300,13 +300,13 @@
             Controls.Add(lblCredit);
             Controls.Add(panel2);
             Controls.Add(panel1);
-            Controls.Add(txtSearch);
+            Controls.Add(txtSubjectId);
             Controls.Add(label24);
             Controls.Add(tableLayoutPanel1);
             Controls.Add(label8);
             Controls.Add(label6);
             Controls.Add(label4);
-            Controls.Add(button3);
+            Controls.Add(btnSearch);
             Name = "FormBangdiem";
             Text = "FormBangdiem";
             panel1.ResumeLayout(false);
@@ -321,14 +321,16 @@
 
         #endregion
         private LinkLabel linkLabel1;
-        private Button button3;
+        private Button btnSearch;
         private Label label4;
         private Label label6;
         private Label label24;
-        private TextBox txtSearch;
+        private TextBox txtSubjectId;
         private Panel panel1;
         private Panel panel2;
         private DataGridView dataGridView1;
+        private Label lblpointavgMst;
+        private Label lblCredit;
         private Label label8;
         private Label lblfail;
         private Label lblpass;
@@ -339,7 +341,5 @@
         private Label label16;
         private Label lblstuding;
         private TableLayoutPanel tableLayoutPanel1;
-        private Label lblCredit;
-        private Label lblpointavgMst;
     }
 }

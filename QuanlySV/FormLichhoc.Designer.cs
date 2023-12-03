@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             label1 = new Label();
-            comboBox1 = new ComboBox();
+            cboHocKy = new ComboBox();
             label2 = new Label();
             linkLabel1 = new LinkLabel();
             label18 = new Label();
@@ -68,15 +68,15 @@
             label1.TabIndex = 25;
             label1.Text = "         Kỳ học :";
             // 
-            // comboBox1
+            // cboHocKy
             // 
-            comboBox1.Font = new Font("Gabriola", 12F, FontStyle.Italic, GraphicsUnit.Point);
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(358, 57);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(355, 45);
-            comboBox1.TabIndex = 26;
-            comboBox1.Text = "Fall 2023";
+            cboHocKy.Font = new Font("Gabriola", 12F, FontStyle.Italic, GraphicsUnit.Point);
+            cboHocKy.FormattingEnabled = true;
+            cboHocKy.Location = new Point(358, 57);
+            cboHocKy.Name = "cboHocKy";
+            cboHocKy.Size = new Size(355, 45);
+            cboHocKy.TabIndex = 26;
+            cboHocKy.Text = "Fall 2023";
             // 
             // label2
             // 
@@ -118,7 +118,7 @@
             panel1.Controls.Add(btnsearch);
             panel1.Controls.Add(dateTimePicker1);
             panel1.Controls.Add(label18);
-            panel1.Controls.Add(comboBox1);
+            panel1.Controls.Add(cboHocKy);
             panel1.Controls.Add(label2);
             panel1.Controls.Add(label1);
             panel1.Dock = DockStyle.Top;
@@ -140,6 +140,7 @@
             btnsearch.TabIndex = 35;
             btnsearch.Text = "Search";
             btnsearch.UseVisualStyleBackColor = true;
+            btnsearch.Click += btnsearch_Click;
             // 
             // dateTimePicker1
             // 
@@ -156,7 +157,7 @@
             panel2.Controls.Add(btnNext);
             panel2.Controls.Add(linkLabel1);
             panel2.Dock = DockStyle.Bottom;
-            panel2.Location = new Point(0, 1055);
+            panel2.Location = new Point(0, 983);
             panel2.Margin = new Padding(3, 4, 3, 4);
             panel2.Name = "panel2";
             panel2.Size = new Size(1215, 72);
@@ -192,7 +193,7 @@
             panel3.Location = new Point(0, 175);
             panel3.Margin = new Padding(3, 4, 3, 4);
             panel3.Name = "panel3";
-            panel3.Size = new Size(1215, 880);
+            panel3.Size = new Size(1215, 808);
             panel3.TabIndex = 36;
             // 
             // daycontainer
@@ -201,7 +202,7 @@
             daycontainer.Location = new Point(0, 80);
             daycontainer.Margin = new Padding(3, 4, 3, 4);
             daycontainer.Name = "daycontainer";
-            daycontainer.Size = new Size(1215, 800);
+            daycontainer.Size = new Size(1215, 728);
             daycontainer.TabIndex = 2;
             // 
             // panel5
@@ -311,7 +312,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(255, 224, 192);
-            ClientSize = new Size(1215, 1127);
+            ClientSize = new Size(1215, 1055);
             Controls.Add(panel3);
             Controls.Add(panel2);
             Controls.Add(panel1);
@@ -329,7 +330,7 @@
 
         #endregion
         private Label label1;
-        private ComboBox comboBox1;
+        private ComboBox cboHocKy;
         private Label label2;
         private LinkLabel linkLabel1;
         private Label label18;

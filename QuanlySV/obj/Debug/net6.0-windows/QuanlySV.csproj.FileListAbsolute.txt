@@ -58,7 +58,6 @@ D:\BaiTap\HK4-2\ASM_UI\QuanlySV\bin\Debug\net6.0-windows\System.Net.Http.Extensi
 D:\BaiTap\HK4-2\ASM_UI\QuanlySV\bin\Debug\net6.0-windows\System.Net.Http.Primitives.dll
 D:\BaiTap\HK4-2\ASM_UI\QuanlySV\bin\Debug\net6.0-windows\Newtonsoft.Json.dll
 D:\BaiTap\HK4-2\ASM_UI\QuanlySV\obj\Debug\net6.0-windows\QuanlySV.csproj.AssemblyReference.cache
-D:\BaiTap\HK4-2\ASM_UI\QuanlySV\obj\Debug\net6.0-windows\QuanlySV.Form1.resources
 D:\BaiTap\HK4-2\ASM_UI\QuanlySV\obj\Debug\net6.0-windows\QuanlySV.FormBangdiem.resources
 D:\BaiTap\HK4-2\ASM_UI\QuanlySV\obj\Debug\net6.0-windows\QuanlySV.FormGV.resources
 D:\BaiTap\HK4-2\ASM_UI\QuanlySV\obj\Debug\net6.0-windows\QuanlySV.FormLichhoc.resources
@@ -67,7 +66,6 @@ D:\BaiTap\HK4-2\ASM_UI\QuanlySV\obj\Debug\net6.0-windows\QuanlySV.FormQLSV.resou
 D:\BaiTap\HK4-2\ASM_UI\QuanlySV\obj\Debug\net6.0-windows\QuanlySV.FormRegService.resources
 D:\BaiTap\HK4-2\ASM_UI\QuanlySV\obj\Debug\net6.0-windows\QuanlySV.FormScheduleDetail.resources
 D:\BaiTap\HK4-2\ASM_UI\QuanlySV\obj\Debug\net6.0-windows\QuanlySV.FormSV.resources
-D:\BaiTap\HK4-2\ASM_UI\QuanlySV\obj\Debug\net6.0-windows\QuanlySV.ListDiemSV.resources
 D:\BaiTap\HK4-2\ASM_UI\QuanlySV\obj\Debug\net6.0-windows\QuanlySV.MonHoc.resources
 D:\BaiTap\HK4-2\ASM_UI\QuanlySV\obj\Debug\net6.0-windows\QuanlySV.NhapDiem.resources
 D:\BaiTap\HK4-2\ASM_UI\QuanlySV\obj\Debug\net6.0-windows\QuanlySV.Properties.Resources.resources
@@ -122,3 +120,6 @@ D:\BaicuaVk\HK4_2\ASM_UI\QuanlySV\obj\Debug\net6.0-windows\QuanlySV.genruntimeco
 D:\BaicuaVk\HK4_2\ASM_UI\QuanlySV\obj\Debug\net6.0-windows\ref\QuanlySV.dll
 D:\BaicuaVk\HK4_2\ASM_UI\QuanlySV\obj\Debug\net6.0-windows\QuanlySV.ListService.resources
 D:\BaicuaVk\HK4_2\ASM_UI\QuanlySV\obj\Debug\net6.0-windows\QuanlySV.SrvConfirm.resources
+D:\BaiTap\HK4-2\ASM_UI\QuanlySV\obj\Debug\net6.0-windows\QuanlySV.ListService.resources
+D:\BaiTap\HK4-2\ASM_UI\QuanlySV\obj\Debug\net6.0-windows\QuanlySV.SrvConfirm.resources
+D:\BaiTap\HK4-2\ASM_UI\QuanlySV\obj\Debug\net6.0-windows\QuanlySV.TeacherManage.resources

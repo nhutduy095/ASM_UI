@@ -21,5 +21,40 @@ namespace QuanlySV
         {
 
         }
+
+        private void tsLstService_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ListService frm = new ListService();
+            frm.ShowDialog();
+        }
+
+        private void tsServiceConfirm_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            SrvConfirm frm = new SrvConfirm();
+            frm.ShowDialog();
+        }
+
+        private void tsLstStudents_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Student_Manage frm = new Student_Manage();
+            frm.ShowDialog();
+        }
+
+        private void tsLstSubjects_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            MonHoc frm = new MonHoc();
+            frm.ShowDialog();
+        }
+
+        private void tsLstTeachers_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            TeacherManage frm = new TeacherManage();
+            frm.ShowDialog();
+        }
     }
 }

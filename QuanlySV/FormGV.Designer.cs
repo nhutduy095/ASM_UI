@@ -53,6 +53,7 @@
             lịchDạyToolStripMenuItem.Name = "lịchDạyToolStripMenuItem";
             lịchDạyToolStripMenuItem.Size = new Size(146, 52);
             lịchDạyToolStripMenuItem.Text = "Lịch dạy";
+            lịchDạyToolStripMenuItem.Click += lịchDạyToolStripMenuItem_Click;
             // 
             // bảngĐiểmToolStripMenuItem
             // 
@@ -61,6 +62,7 @@
             bảngĐiểmToolStripMenuItem.Name = "bảngĐiểmToolStripMenuItem";
             bảngĐiểmToolStripMenuItem.Size = new Size(225, 52);
             bảngĐiểmToolStripMenuItem.Text = "Quản Lý Điểm";
+            bảngĐiểmToolStripMenuItem.Click += bảngĐiểmToolStripMenuItem_Click;
             // 
             // FormGV
             // 
@@ -74,6 +76,7 @@
             MainMenuStrip = menuStrip1;
             Margin = new Padding(6, 7, 6, 7);
             Name = "FormGV";
+            Text = "FormGV";
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             ResumeLayout(false);
