@@ -8,6 +8,7 @@ namespace QuanlySV.Model
 {
     internal class DataPointDtl
     {
+        public string _Id {  get; set; }
         public int MarkId { get; set; }
         public int MarkDtlId { get; set; }
         public string UserId { get; set; }
@@ -22,7 +23,13 @@ namespace QuanlySV.Model
         public string Teacher { get; set; }
         public string SubjectId { get; set; }
         public string SubjectName { get; set; }
+        public string LastName { get; set; }
+        public string Season { get; set; }
         public string TeacherName { get; set; }
+        public decimal PointASM { get; set; }
+        public decimal PointDiligence { get; set; }
+        public decimal PointProtect { get; set; }
+
 
     }
 }

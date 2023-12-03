@@ -123,3 +123,4 @@ D:\BaicuaVk\HK4_2\ASM_UI\QuanlySV\obj\Debug\net6.0-windows\QuanlySV.SrvConfirm.r
 D:\BaiTap\HK4-2\ASM_UI\QuanlySV\obj\Debug\net6.0-windows\QuanlySV.ListService.resources
 D:\BaiTap\HK4-2\ASM_UI\QuanlySV\obj\Debug\net6.0-windows\QuanlySV.SrvConfirm.resources
 D:\BaiTap\HK4-2\ASM_UI\QuanlySV\obj\Debug\net6.0-windows\QuanlySV.TeacherManage.resources
+D:\BaicuaVk\HK4_2\ASM_UI\QuanlySV\obj\Debug\net6.0-windows\QuanlySV.TeacherManage.resources
