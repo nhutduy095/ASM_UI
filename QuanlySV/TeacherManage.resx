@@ -134,7 +134,7 @@
   <data name="btnClear.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        qgAAAKoBBgpwTwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAL8SURBVEhLpVVb
+        qAAAAKgBefSzxgAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAL8SURBVEhLpVVb
         axNBFM6f8MEr/gDNhaAPik8KUqjFFx8siogoXmoFEenjRuOFoqVatNbUUhWRpu2LoC2WXhAUrRVEsUlR
         UERrIbubbDb37OZ4zmQ27mY36YIffCQ758yZM985M+NphqAgb/KFxLM+QZpExpEZTvqPY2LHlrC0kbu7
         hy8srscAA0gNCatQR0b9QnIzn94cfkHcjxNUUwC3THuFRBsP4wxvSDqHjpSRUwA31L2C2MnDWcEzdx18
@@ -153,7 +153,7 @@
   <data name="btnDelete.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        qQAAAKkBq7NRIgAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAARdSURBVEhLldVp
+        qAAAAKgBefSzxgAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAARdSURBVEhLldVp
         UFVlGMDx89WthbJkKQPRlBRRxCUjjVQE0S81ji22zBSyaZlNIgJmsWSUigR6BVkFBFwQEJu+ZIspUs6k
         ozRNNc7UxxC4zDSXe5Z/z7nnXDwQw9Az8859gff8nvc+z3MvyngxqZXHpraTMaWNi1Pb6Jl2nsH7zjF4
         /xl6HjxN50NNpAecIcQ+PvGY1E6wgK4p7ajyisAIjMAITEAzCM70RnikAf3RkzQH1jPTfnz8mNzBJoHd
@@ -213,7 +213,7 @@
   <data name="btnAdd.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        qQAAAKkBq7NRIgAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAMhSURBVEhLxZVL
+        qAAAAKgBefSzxgAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAMhSURBVEhLxZVL
         TxNhFIa/HbpBdGlivLGSAoIUqIVSiyBQEYSNO3WhhD9gXJhA/B+0IGCvM9PbTO8gcpE2GnGliVGUsEca
         0ejm+J2ZU3qx0JKYeJJZzdvvSd9nzgz7r2OWpJpexTveF3b7+iPOLWvU8eNmdP77YHz2w1D8mTSUnL5v
         XZ4/SfHKx+B2H7cEpcluWdzrUQToVTzAIcAhYI0+Bw6BW7FZ4BC4nZjeGU1OPb63aD9GPz98LJJysSsY

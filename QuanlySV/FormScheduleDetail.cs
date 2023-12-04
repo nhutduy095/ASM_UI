@@ -32,5 +32,12 @@ namespace QuanlySV
             }
 
         }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormLichhoc formLichhoc = new FormLichhoc();
+            formLichhoc.Show();
+        }
     }
 }

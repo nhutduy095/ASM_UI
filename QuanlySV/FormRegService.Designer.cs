@@ -48,6 +48,7 @@
             btnReg = new Button();
             panel3 = new Panel();
             dataGridView1 = new DataGridView();
+            btnExit = new Button();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             panel5.SuspendLayout();
@@ -62,8 +63,9 @@
             panel1.Controls.Add(label1);
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
+            panel1.Margin = new Padding(3, 4, 3, 4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(813, 42);
+            panel1.Size = new Size(963, 56);
             panel1.TabIndex = 0;
             // 
             // label1
@@ -71,9 +73,9 @@
             label1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label1.AutoSize = true;
             label1.Font = new Font("Script MT Bold", 24F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            label1.Location = new Point(304, 2);
+            label1.Location = new Point(347, 3);
             label1.Name = "label1";
-            label1.Size = new Size(220, 38);
+            label1.Size = new Size(274, 48);
             label1.TabIndex = 0;
             label1.Text = "Register Service";
             // 
@@ -82,9 +84,10 @@
             panel2.Controls.Add(panel5);
             panel2.Controls.Add(panel4);
             panel2.Dock = DockStyle.Top;
-            panel2.Location = new Point(0, 42);
+            panel2.Location = new Point(0, 56);
+            panel2.Margin = new Padding(3, 4, 3, 4);
             panel2.Name = "panel2";
-            panel2.Size = new Size(813, 117);
+            panel2.Size = new Size(963, 156);
             panel2.TabIndex = 1;
             // 
             // panel5
@@ -101,18 +104,20 @@
             panel5.Controls.Add(cboService);
             panel5.Controls.Add(label2);
             panel5.Dock = DockStyle.Fill;
-            panel5.Location = new Point(293, 0);
+            panel5.Location = new Point(335, 0);
+            panel5.Margin = new Padding(3, 4, 3, 4);
             panel5.Name = "panel5";
-            panel5.Size = new Size(520, 117);
+            panel5.Size = new Size(628, 156);
             panel5.TabIndex = 1;
             // 
             // cboSubject
             // 
             cboSubject.Anchor = AnchorStyles.None;
             cboSubject.FormattingEnabled = true;
-            cboSubject.Location = new Point(374, 12);
+            cboSubject.Location = new Point(444, 16);
+            cboSubject.Margin = new Padding(3, 4, 3, 4);
             cboSubject.Name = "cboSubject";
-            cboSubject.Size = new Size(134, 23);
+            cboSubject.Size = new Size(153, 28);
             cboSubject.TabIndex = 9;
             // 
             // label6
@@ -120,9 +125,9 @@
             label6.Anchor = AnchorStyles.None;
             label6.AutoSize = true;
             label6.Font = new Font("Segoe Print", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
-            label6.Location = new Point(278, 10);
+            label6.Location = new Point(335, 13);
             label6.Name = "label6";
-            label6.Size = new Size(82, 26);
+            label6.Size = new Size(96, 31);
             label6.TabIndex = 8;
             label6.Text = "Môn Học";
             // 
@@ -130,9 +135,10 @@
             // 
             cboMajorT.Anchor = AnchorStyles.None;
             cboMajorT.FormattingEnabled = true;
-            cboMajorT.Location = new Point(374, 41);
+            cboMajorT.Location = new Point(444, 55);
+            cboMajorT.Margin = new Padding(3, 4, 3, 4);
             cboMajorT.Name = "cboMajorT";
-            cboMajorT.Size = new Size(134, 23);
+            cboMajorT.Size = new Size(153, 28);
             cboMajorT.TabIndex = 7;
             // 
             // label5
@@ -140,9 +146,9 @@
             label5.Anchor = AnchorStyles.None;
             label5.AutoSize = true;
             label5.Font = new Font("Segoe Print", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
-            label5.Location = new Point(262, 39);
+            label5.Location = new Point(316, 52);
             label5.Name = "label5";
-            label5.Size = new Size(105, 26);
+            label5.Size = new Size(123, 31);
             label5.TabIndex = 6;
             label5.Text = "Đến ngành:";
             // 
@@ -150,9 +156,10 @@
             // 
             cboMajorF.Anchor = AnchorStyles.None;
             cboMajorF.FormattingEnabled = true;
-            cboMajorF.Location = new Point(107, 41);
+            cboMajorF.Location = new Point(139, 55);
+            cboMajorF.Margin = new Padding(3, 4, 3, 4);
             cboMajorF.Name = "cboMajorF";
-            cboMajorF.Size = new Size(134, 23);
+            cboMajorF.Size = new Size(153, 28);
             cboMajorF.TabIndex = 5;
             // 
             // label4
@@ -160,18 +167,19 @@
             label4.Anchor = AnchorStyles.None;
             label4.AutoSize = true;
             label4.Font = new Font("Segoe Print", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
-            label4.Location = new Point(11, 39);
+            label4.Location = new Point(30, 52);
             label4.Name = "label4";
-            label4.Size = new Size(95, 26);
+            label4.Size = new Size(112, 31);
             label4.TabIndex = 4;
             label4.Text = "Từ Ngành:";
             // 
             // txtRemark
             // 
             txtRemark.Anchor = AnchorStyles.None;
-            txtRemark.Location = new Point(107, 81);
+            txtRemark.Location = new Point(139, 108);
+            txtRemark.Margin = new Padding(3, 4, 3, 4);
             txtRemark.Name = "txtRemark";
-            txtRemark.Size = new Size(401, 23);
+            txtRemark.Size = new Size(458, 27);
             txtRemark.TabIndex = 3;
             // 
             // label3
@@ -179,9 +187,9 @@
             label3.Anchor = AnchorStyles.None;
             label3.AutoSize = true;
             label3.Font = new Font("Segoe Print", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.Location = new Point(11, 81);
+            label3.Location = new Point(30, 108);
             label3.Name = "label3";
-            label3.Size = new Size(76, 26);
+            label3.Size = new Size(89, 31);
             label3.TabIndex = 2;
             label3.Text = "Ghi chú:";
             // 
@@ -189,9 +197,10 @@
             // 
             cboService.Anchor = AnchorStyles.None;
             cboService.FormattingEnabled = true;
-            cboService.Location = new Point(107, 7);
+            cboService.Location = new Point(139, 9);
+            cboService.Margin = new Padding(3, 4, 3, 4);
             cboService.Name = "cboService";
-            cboService.Size = new Size(134, 23);
+            cboService.Size = new Size(153, 28);
             cboService.TabIndex = 1;
             cboService.SelectedIndexChanged += cboService_SelectedIndexChanged;
             // 
@@ -200,31 +209,34 @@
             label2.Anchor = AnchorStyles.None;
             label2.AutoSize = true;
             label2.Font = new Font("Segoe Print", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(11, 5);
+            label2.Location = new Point(30, 7);
             label2.Name = "label2";
-            label2.Size = new Size(76, 26);
+            label2.Size = new Size(89, 31);
             label2.TabIndex = 0;
             label2.Text = "Dịch vụ:";
             // 
             // panel4
             // 
             panel4.BackColor = Color.FromArgb(255, 128, 0);
+            panel4.Controls.Add(btnExit);
             panel4.Controls.Add(button3);
             panel4.Controls.Add(btndelete);
             panel4.Controls.Add(btnReg);
             panel4.Dock = DockStyle.Left;
             panel4.Location = new Point(0, 0);
+            panel4.Margin = new Padding(3, 4, 3, 4);
             panel4.Name = "panel4";
-            panel4.Size = new Size(293, 117);
+            panel4.Size = new Size(335, 156);
             panel4.TabIndex = 0;
             // 
             // button3
             // 
             button3.Anchor = AnchorStyles.None;
             button3.Font = new Font("Segoe Print", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
-            button3.Location = new Point(70, 70);
+            button3.Location = new Point(18, 94);
+            button3.Margin = new Padding(3, 4, 3, 4);
             button3.Name = "button3";
-            button3.Size = new Size(108, 34);
+            button3.Size = new Size(123, 45);
             button3.TabIndex = 3;
             button3.Text = "Tìm kiếm";
             button3.UseVisualStyleBackColor = true;
@@ -234,9 +246,10 @@
             // 
             btndelete.Anchor = AnchorStyles.None;
             btndelete.Font = new Font("Segoe Print", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
-            btndelete.Location = new Point(130, 15);
+            btndelete.Location = new Point(191, 20);
+            btndelete.Margin = new Padding(3, 4, 3, 4);
             btndelete.Name = "btndelete";
-            btndelete.Size = new Size(108, 34);
+            btndelete.Size = new Size(123, 45);
             btndelete.TabIndex = 1;
             btndelete.Text = "Hủy";
             btndelete.UseVisualStyleBackColor = true;
@@ -246,9 +259,10 @@
             // 
             btnReg.Anchor = AnchorStyles.None;
             btnReg.Font = new Font("Segoe Print", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
-            btnReg.Location = new Point(16, 15);
+            btnReg.Location = new Point(18, 20);
+            btnReg.Margin = new Padding(3, 4, 3, 4);
             btnReg.Name = "btnReg";
-            btnReg.Size = new Size(108, 34);
+            btnReg.Size = new Size(123, 45);
             btnReg.TabIndex = 0;
             btnReg.Text = "Đăng ký dịch vụ";
             btnReg.UseVisualStyleBackColor = true;
@@ -258,9 +272,10 @@
             // 
             panel3.Controls.Add(dataGridView1);
             panel3.Dock = DockStyle.Fill;
-            panel3.Location = new Point(0, 159);
+            panel3.Location = new Point(0, 212);
+            panel3.Margin = new Padding(3, 4, 3, 4);
             panel3.Name = "panel3";
-            panel3.Size = new Size(813, 198);
+            panel3.Size = new Size(963, 324);
             panel3.TabIndex = 2;
             // 
             // dataGridView1
@@ -268,20 +283,35 @@
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Dock = DockStyle.Fill;
             dataGridView1.Location = new Point(0, 0);
+            dataGridView1.Margin = new Padding(3, 4, 3, 4);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(813, 198);
+            dataGridView1.Size = new Size(963, 324);
             dataGridView1.TabIndex = 0;
+            // 
+            // btnExit
+            // 
+            btnExit.Anchor = AnchorStyles.None;
+            btnExit.Font = new Font("Segoe Print", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
+            btnExit.Location = new Point(191, 94);
+            btnExit.Margin = new Padding(3, 4, 3, 4);
+            btnExit.Name = "btnExit";
+            btnExit.Size = new Size(123, 45);
+            btnExit.TabIndex = 3;
+            btnExit.Text = "Thoát";
+            btnExit.UseVisualStyleBackColor = true;
+            btnExit.Click += btnExit_Click;
             // 
             // FormRegService
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(813, 357);
+            ClientSize = new Size(963, 536);
             Controls.Add(panel3);
             Controls.Add(panel2);
             Controls.Add(panel1);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "FormRegService";
             Text = "FormRegService";
             panel1.ResumeLayout(false);
@@ -317,5 +347,6 @@
         private Label label4;
         private ComboBox cboSubject;
         private Label label6;
+        private Button btnExit;
     }
 }

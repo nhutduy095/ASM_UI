@@ -165,10 +165,11 @@
             // 
             // btnPre
             // 
-            btnPre.Location = new Point(913, 20);
+            btnPre.Font = new Font("Segoe Print", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
+            btnPre.Location = new Point(545, 8);
             btnPre.Margin = new Padding(3, 4, 3, 4);
             btnPre.Name = "btnPre";
-            btnPre.Size = new Size(86, 31);
+            btnPre.Size = new Size(95, 45);
             btnPre.TabIndex = 34;
             btnPre.Text = "Previous";
             btnPre.UseVisualStyleBackColor = true;
@@ -176,10 +177,11 @@
             // 
             // btnNext
             // 
-            btnNext.Location = new Point(1006, 20);
+            btnNext.Font = new Font("Segoe Print", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
+            btnNext.Location = new Point(646, 8);
             btnNext.Margin = new Padding(3, 4, 3, 4);
             btnNext.Name = "btnNext";
-            btnNext.Size = new Size(86, 31);
+            btnNext.Size = new Size(98, 45);
             btnNext.TabIndex = 33;
             btnNext.Text = "Next";
             btnNext.UseVisualStyleBackColor = true;

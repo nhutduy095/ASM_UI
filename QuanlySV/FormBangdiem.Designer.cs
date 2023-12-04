@@ -49,6 +49,7 @@
             label16 = new Label();
             lblstuding = new Label();
             tableLayoutPanel1 = new TableLayoutPanel();
+            btnExit = new Button();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -123,6 +124,7 @@
             // 
             // panel1
             // 
+            panel1.Controls.Add(btnExit);
             panel1.Controls.Add(linkLabel1);
             panel1.Dock = DockStyle.Bottom;
             panel1.Location = new Point(0, 631);
@@ -290,6 +292,18 @@
             tableLayoutPanel1.Size = new Size(917, 73);
             tableLayoutPanel1.TabIndex = 45;
             // 
+            // btnExit
+            // 
+            btnExit.Font = new Font("Segoe Print", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
+            btnExit.Location = new Point(891, 4);
+            btnExit.Margin = new Padding(3, 4, 3, 4);
+            btnExit.Name = "btnExit";
+            btnExit.Size = new Size(98, 45);
+            btnExit.TabIndex = 34;
+            btnExit.Text = "Exit";
+            btnExit.UseVisualStyleBackColor = true;
+            btnExit.Click += btnExit_Click;
+            // 
             // FormBangdiem
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -341,5 +355,6 @@
         private Label label16;
         private Label lblstuding;
         private TableLayoutPanel tableLayoutPanel1;
+        private Button btnExit;
     }
 }

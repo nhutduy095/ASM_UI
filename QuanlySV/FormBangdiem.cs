@@ -27,7 +27,7 @@ namespace QuanlySV
             filltering.CollName = "SubjectId";
             filltering.ValueDefault = txtSubjectId.Text;
             lstfilltering.Add(filltering);
-            var paging = new GetDataPointForReq() { Page = 1, PerPage = 100, userId = Config.userId, subjectName = txtSubjectId.Text, Filltering=lstfilltering };
+            var paging = new GetDataPointForReq() { Page = 1, PerPage = 100, userId = Config.userId, subjectName = txtSubjectId.Text, Filltering = lstfilltering };
             var resData = await CallAPICenter.CallAPIPost(paging, "/api/MasterData/GetDataPointforUser");
             if (!resData.Status)
             {
@@ -86,7 +86,14 @@ namespace QuanlySV
         private void btnSearch_Click(object sender, EventArgs e)
         {
             LoadData();
-            
+
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormSV formSV = new FormSV();
+            formSV.Show();
         }
     }
 }

@@ -6,14 +6,17 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace QuanlySV
 {
     public partial class FormRegService : Form
     {
+        private string Event = string.Empty;
         public FormRegService()
         {
             InitializeComponent();
@@ -32,7 +35,7 @@ namespace QuanlySV
                     List<CollectionServiceReg> lstDtl = Util.ConvertListToType<CollectionServiceReg>(data.Data);
                     var list = new BindingList<CollectionServiceReg>(lstDtl);
                     dataGridView1.DataSource = list;
-                    
+
                     /*dataGridView1.Columns[0].Visible = false;
                     dataGridView1.Columns[1].Visible = false;
                     dataGridView1.Columns[2].Visible = false;
@@ -121,14 +124,58 @@ namespace QuanlySV
             LoadData();
         }
 
-        private void cboService_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void btndelete_Click(object sender, EventArgs e)
         {
+            Hanldebutton("Clear");
+        }
 
+        private void cboService_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string selectedVal = cboService.SelectedValue.ToString();
+            if (selectedVal == "SV005")
+            {
+                cboSubject.Enabled = false;
+                cboMajorF.Enabled = true;
+                cboMajorT.Enabled = true;
+
+            }
+            else
+            {
+                cboSubject.Enabled = true;
+                cboMajorF.Enabled = false;
+                cboMajorT.Enabled = false;
+            }
+        }
+        private void Hanldebutton(string even)
+        {
+            Event = even;
+            if (even == "Load")
+            {
+                btnReg.Enabled = true;
+                btndelete.Enabled = false;
+                button3.Enabled = false;
+
+                cboService.Enabled = true;
+                cboSubject.Enabled = false;
+
+            }
+
+            else if (even == "Clear")
+            {
+                btnReg.Enabled = true;
+                btndelete.Enabled = true;
+                button3.Enabled = true;
+
+                cboService.Enabled = true;
+                cboSubject.Enabled = true;
+            }
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormSV formSV = new FormSV();
+            formSV.Show();
         }
     }
 }

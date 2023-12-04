@@ -311,5 +311,12 @@ namespace QuanlySV
         {
             Hanldebutton("Clear");
         }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormGV formGV = new FormGV();
+            formGV.Show();
+        }
     }
 }

@@ -84,6 +84,7 @@
             dataGridView1.RowTemplate.Height = 29;
             dataGridView1.Size = new Size(1404, 280);
             dataGridView1.TabIndex = 2;
+            dataGridView1.CellClick += dataGridView1_CellClick;
             // 
             // label1
             // 
@@ -420,6 +421,7 @@
             btnExit.Text = "Exit";
             btnExit.TextAlign = ContentAlignment.MiddleRight;
             btnExit.UseVisualStyleBackColor = false;
+            btnExit.Click += btnExit_Click;
             // 
             // btnClear
             // 
@@ -434,6 +436,7 @@
             btnClear.Text = "Clear";
             btnClear.TextAlign = ContentAlignment.MiddleRight;
             btnClear.UseVisualStyleBackColor = false;
+            btnClear.Click += btnClear_Click;
             // 
             // btnDelete
             // 
@@ -448,6 +451,7 @@
             btnDelete.Text = "Delete";
             btnDelete.TextAlign = ContentAlignment.MiddleRight;
             btnDelete.UseVisualStyleBackColor = false;
+            btnDelete.Click += btnDelete_Click;
             // 
             // btnSave
             // 
@@ -477,6 +481,7 @@
             btnUpdate.Text = "Update";
             btnUpdate.TextAlign = ContentAlignment.MiddleRight;
             btnUpdate.UseVisualStyleBackColor = false;
+            btnUpdate.Click += btnUpdate_Click;
             // 
             // btnAdd
             // 
@@ -491,6 +496,7 @@
             btnAdd.Text = "Add";
             btnAdd.TextAlign = ContentAlignment.MiddleRight;
             btnAdd.UseVisualStyleBackColor = false;
+            btnAdd.Click += btnAdd_Click;
             // 
             // Student_Manage
             // 

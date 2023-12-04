@@ -32,14 +32,14 @@
             label1 = new Label();
             label3 = new Label();
             label4 = new Label();
-            dateTimePicker1 = new DateTimePicker();
+            dtpRegDay = new DateTimePicker();
             label5 = new Label();
             cboConfirm = new ComboBox();
             label6 = new Label();
-            dateTimePicker2 = new DateTimePicker();
+            dtpFinishDay = new DateTimePicker();
             label7 = new Label();
             label8 = new Label();
-            dateTimePicker3 = new DateTimePicker();
+            dtpCofirmDay = new DateTimePicker();
             cboMajorF = new ComboBox();
             label9 = new Label();
             cboSubject = new ComboBox();
@@ -47,9 +47,9 @@
             label11 = new Label();
             cboMajorT = new ComboBox();
             cboService = new ComboBox();
-            textBox2 = new TextBox();
+            txtLastName = new TextBox();
             label2 = new Label();
-            textBox1 = new TextBox();
+            txtNote = new TextBox();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -95,13 +95,13 @@
             label4.TabIndex = 4;
             label4.Text = "Ngày Đăng Ký";
             // 
-            // dateTimePicker1
+            // dtpRegDay
             // 
-            dateTimePicker1.Font = new Font("Segoe Print", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dateTimePicker1.Location = new Point(699, 67);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(278, 34);
-            dateTimePicker1.TabIndex = 6;
+            dtpRegDay.Font = new Font("Segoe Print", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dtpRegDay.Location = new Point(699, 67);
+            dtpRegDay.Name = "dtpRegDay";
+            dtpRegDay.Size = new Size(278, 34);
+            dtpRegDay.TabIndex = 6;
             // 
             // label5
             // 
@@ -131,13 +131,13 @@
             label6.TabIndex = 4;
             label6.Text = "Ngày Hoàn Thành";
             // 
-            // dateTimePicker2
+            // dtpFinishDay
             // 
-            dateTimePicker2.Font = new Font("Segoe Print", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dateTimePicker2.Location = new Point(699, 289);
-            dateTimePicker2.Name = "dateTimePicker2";
-            dateTimePicker2.Size = new Size(278, 34);
-            dateTimePicker2.TabIndex = 6;
+            dtpFinishDay.Font = new Font("Segoe Print", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dtpFinishDay.Location = new Point(699, 289);
+            dtpFinishDay.Name = "dtpFinishDay";
+            dtpFinishDay.Size = new Size(278, 34);
+            dtpFinishDay.TabIndex = 6;
             // 
             // label7
             // 
@@ -159,13 +159,13 @@
             label8.TabIndex = 4;
             label8.Text = "Ngày Xác Nhận";
             // 
-            // dateTimePicker3
+            // dtpCofirmDay
             // 
-            dateTimePicker3.Font = new Font("Segoe Print", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dateTimePicker3.Location = new Point(699, 231);
-            dateTimePicker3.Name = "dateTimePicker3";
-            dateTimePicker3.Size = new Size(278, 34);
-            dateTimePicker3.TabIndex = 6;
+            dtpCofirmDay.Font = new Font("Segoe Print", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dtpCofirmDay.Location = new Point(699, 231);
+            dtpCofirmDay.Name = "dtpCofirmDay";
+            dtpCofirmDay.Size = new Size(278, 34);
+            dtpCofirmDay.TabIndex = 6;
             // 
             // cboMajorF
             // 
@@ -240,13 +240,13 @@
             cboService.Size = new Size(274, 28);
             cboService.TabIndex = 11;
             // 
-            // textBox2
+            // txtLastName
             // 
-            textBox2.Location = new Point(174, 123);
-            textBox2.Multiline = true;
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(273, 33);
-            textBox2.TabIndex = 5;
+            txtLastName.Location = new Point(174, 123);
+            txtLastName.Multiline = true;
+            txtLastName.Name = "txtLastName";
+            txtLastName.Size = new Size(273, 33);
+            txtLastName.TabIndex = 5;
             // 
             // label2
             // 
@@ -258,13 +258,13 @@
             label2.TabIndex = 4;
             label2.Text = "Ghi Chú";
             // 
-            // textBox1
+            // txtNote
             // 
-            textBox1.Location = new Point(176, 289);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(273, 72);
-            textBox1.TabIndex = 5;
+            txtNote.Location = new Point(176, 289);
+            txtNote.Multiline = true;
+            txtNote.Name = "txtNote";
+            txtNote.Size = new Size(273, 72);
+            txtNote.TabIndex = 5;
             // 
             // SrvConfirm
             // 
@@ -280,11 +280,11 @@
             Controls.Add(cboSubject);
             Controls.Add(label10);
             Controls.Add(cboConfirm);
-            Controls.Add(dateTimePicker3);
-            Controls.Add(dateTimePicker2);
-            Controls.Add(dateTimePicker1);
-            Controls.Add(textBox1);
-            Controls.Add(textBox2);
+            Controls.Add(dtpCofirmDay);
+            Controls.Add(dtpFinishDay);
+            Controls.Add(dtpRegDay);
+            Controls.Add(txtNote);
+            Controls.Add(txtLastName);
             Controls.Add(label8);
             Controls.Add(label6);
             Controls.Add(label2);
@@ -307,14 +307,14 @@
         private Label label1;
         private Label label3;
         private Label label4;
-        private DateTimePicker dateTimePicker1;
+        private DateTimePicker dtpRegDay;
         private Label label5;
         private ComboBox cboConfirm;
         private Label label6;
-        private DateTimePicker dateTimePicker2;
+        private DateTimePicker dtpFinishDay;
         private Label label7;
         private Label label8;
-        private DateTimePicker dateTimePicker3;
+        private DateTimePicker dtpCofirmDay;
         private ComboBox cboMajorF;
         private Label label9;
         private ComboBox cboSubject;
@@ -322,8 +322,8 @@
         private Label label11;
         private ComboBox cboMajorT;
         private ComboBox cboService;
-        private TextBox textBox2;
+        private TextBox txtLastName;
         private Label label2;
-        private TextBox textBox1;
+        private TextBox txtNote;
     }
 }

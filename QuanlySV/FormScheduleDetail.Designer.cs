@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormScheduleDetail));
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
@@ -43,6 +44,7 @@
             lblmonhoc = new Label();
             lblshift = new Label();
             label9 = new Label();
+            btnExit = new Button();
             SuspendLayout();
             // 
             // label1
@@ -197,12 +199,28 @@
             label9.TabIndex = 13;
             label9.Text = "Ca:";
             // 
+            // btnExit
+            // 
+            btnExit.BackColor = Color.FromArgb(255, 192, 192);
+            btnExit.Font = new Font("Segoe Script", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnExit.Image = (Image)resources.GetObject("btnExit.Image");
+            btnExit.ImageAlign = ContentAlignment.MiddleLeft;
+            btnExit.Location = new Point(371, 388);
+            btnExit.Name = "btnExit";
+            btnExit.Size = new Size(94, 37);
+            btnExit.TabIndex = 15;
+            btnExit.Text = "Exit";
+            btnExit.TextAlign = ContentAlignment.MiddleRight;
+            btnExit.UseVisualStyleBackColor = false;
+            btnExit.Click += btnExit_Click;
+            // 
             // FormScheduleDetail
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(255, 192, 128);
             ClientSize = new Size(477, 437);
+            Controls.Add(btnExit);
             Controls.Add(lblshift);
             Controls.Add(label9);
             Controls.Add(lblday);
@@ -242,5 +260,6 @@
         private Label lblmonhoc;
         private Label lblshift;
         private Label label9;
+        private Button btnExit;
     }
 }

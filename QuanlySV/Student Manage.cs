@@ -7,14 +7,19 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Net;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace QuanlySV
 {
     public partial class Student_Manage : Form
     {
+        private string Event = string.Empty;
+        private string _id = string.Empty;
+        private static List<CollMajorCombo> lstMajor = new List<CollMajorCombo>();
         public Student_Manage()
         {
             InitializeComponent();
@@ -74,7 +79,7 @@ namespace QuanlySV
             requestPaging.PerPage = 100;
             requestPaging.Filltering = lstfilltering;
             //var data = await CallAPICenter.CallAPIPost(requestPaging);
-            var data = await CallAPICenter.CallAPIPost(requestPaging , "/api/MasterData/GetCollectionUserInfo");
+            var data = await CallAPICenter.CallAPIPost(requestPaging, "/api/MasterData/GetCollectionUserInfo");
             if (data.Status)
             {
                 if (data.Data != null)
@@ -91,7 +96,139 @@ namespace QuanlySV
         {
             LoadData();
 
+        }
+        private void Hanldebutton(string even)
+        {
+            Event = even;
+            if (even == "Load")
+            {
+                btnAdd.Enabled = true;
+                btnUpdate.Enabled = false;
+                btnDelete.Enabled = false;
+                btnSave.Enabled = false;
 
+                txtFirstName.Enabled = false;
+                txtLastName.Enabled = false;
+                txtUserId.Enabled = false;
+                txtClass.Enabled = false;
+                txtSdt.Enabled = false;
+                cboMajor.Enabled = false;
+                dtpBirth.Enabled = false;
+                txtAdress.Enabled = false;
+                txtMail.Enabled = false;
+                txtSDTPH.Enabled = false;
+            }
+            else if (even == "Add" || even == "Edit")
+            {
+                txtFirstName.Enabled = true;
+                txtLastName.Enabled = true;
+                txtUserId.Enabled = true;
+                txtClass.Enabled = true;
+                txtSdt.Enabled = true;
+                cboMajor.Enabled = true;
+                txtAdress.Enabled = true;
+                txtMail.Enabled = true;
+                txtSDTPH.Enabled = true;
+                if (even == "Add")
+                {
+                    txtFirstName.Text = string.Empty;
+                    txtLastName.Text = string.Empty;
+                    txtUserId.Text = string.Empty;
+                    txtClass.Text = string.Empty;
+                    txtSdt.Text = string.Empty;
+                    txtAdress.Text = string.Empty;
+                    txtMail.Text = string.Empty;
+                    txtSDTPH.Text = string.Empty;
+
+                    btnAdd.Enabled = false;
+                    btnUpdate.Enabled = false;
+                    btnDelete.Enabled = false;
+                    btnSave.Enabled = true;
+                }
+                else
+                {
+                    btnAdd.Enabled = false;
+                    btnUpdate.Enabled = false;
+                    btnDelete.Enabled = false;
+                    btnSave.Enabled = true;
+                }
+            }
+            else if (even == "Clear")
+            {
+                btnAdd.Enabled = true;
+                btnUpdate.Enabled = false;
+                btnDelete.Enabled = false;
+                btnSave.Enabled = false;
+
+                txtFirstName.Text = string.Empty;
+                txtLastName.Text = string.Empty;
+                txtUserId.Text = string.Empty;
+                txtClass.Text = string.Empty;
+                txtSdt.Text = string.Empty;
+                txtAdress.Text = string.Empty;
+                txtMail.Text = string.Empty;
+                txtSDTPH.Text = string.Empty;
+                cboMajor.Enabled = false;
+
+            }
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            Hanldebutton("Add");
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            Hanldebutton("Edit");
+
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            Hanldebutton("Delete");
+
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            Hanldebutton("Clear");
+
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormQLSV formQLSV = new FormQLSV();
+            formQLSV.Show();
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                var data = dataGridView1.Rows[e.RowIndex];
+                _id = data.Cells["_Id"].Value.ToString();
+                txtFirstName.Text = data.Cells["FirstName"].Value.ToString();
+                txtLastName.Text = data.Cells["LastName"].Value.ToString();
+                txtUserId.Text = data.Cells["UserId"].Value.ToString();
+                txtClass.Text = data.Cells["IdClass"].Value.ToString();
+                txtSdt.Text = data.Cells["PhoneNumber"].Value.ToString();
+                rdMale.Checked = bool.Parse(data.Cells["Sex"].Value.ToString());
+                rdFemale.Checked = !(bool.Parse(data.Cells["Sex"].Value.ToString()));
+                dtpBirth.Value = DateTime.Now;
+                txtAdress.Text = data.Cells["Address"].Value.ToString();
+                txtMail.Text = data.Cells["MailAddress"].Value.ToString();
+                txtSDTPH.Text = data.Cells["ParentsPhoneNumber"].Value.ToString();
+                cboMajor.SelectedIndex = lstMajor.IndexOf(lstMajor.FirstOrDefault(x => x.MajorID == data.Cells["MajorID"].Value.ToString()));
+                
+                btnUpdate.Enabled = true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi hệ thống: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
         }
     }
 }
