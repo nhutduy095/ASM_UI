@@ -80,6 +80,9 @@ namespace QuanlySV
             //var a = await CallAPICenter.CallAPIGet("/api/MasterData/GetCollectionClassByID?classId=SD18322");
         }
 
-       
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

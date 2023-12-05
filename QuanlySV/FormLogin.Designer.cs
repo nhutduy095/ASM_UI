@@ -97,6 +97,7 @@
             btnCancel.TabIndex = 11;
             btnCancel.Text = "Cancel";
             btnCancel.UseVisualStyleBackColor = false;
+            btnCancel.Click += btnCancel_Click;
             // 
             // btnSignin
             // 

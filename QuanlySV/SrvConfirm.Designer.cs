@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SrvConfirm));
             dataGridView1 = new DataGridView();
             label1 = new Label();
             label3 = new Label();
@@ -50,19 +51,20 @@
             txtLastName = new TextBox();
             label2 = new Label();
             txtNote = new TextBox();
+            btnSave = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Dock = DockStyle.Bottom;
             dataGridView1.Location = new Point(0, 367);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.RowTemplate.Height = 29;
-            dataGridView1.Size = new Size(1023, 229);
+            dataGridView1.Size = new Size(1023, 280);
             dataGridView1.TabIndex = 0;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // label1
             // 
@@ -89,7 +91,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Script MT Bold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label4.Location = new Point(530, 78);
+            label4.Location = new Point(530, 76);
             label4.Name = "label4";
             label4.Size = new Size(136, 24);
             label4.TabIndex = 4;
@@ -116,7 +118,7 @@
             // cboConfirm
             // 
             cboConfirm.FormattingEnabled = true;
-            cboConfirm.Location = new Point(699, 174);
+            cboConfirm.Location = new Point(699, 177);
             cboConfirm.Name = "cboConfirm";
             cboConfirm.Size = new Size(278, 28);
             cboConfirm.TabIndex = 7;
@@ -171,7 +173,7 @@
             // 
             cboMajorF.Anchor = AnchorStyles.None;
             cboMajorF.FormattingEnabled = true;
-            cboMajorF.Location = new Point(175, 240);
+            cboMajorF.Location = new Point(175, 247);
             cboMajorF.Margin = new Padding(3, 4, 3, 4);
             cboMajorF.Name = "cboMajorF";
             cboMajorF.Size = new Size(274, 28);
@@ -182,7 +184,7 @@
             label9.Anchor = AnchorStyles.None;
             label9.AutoSize = true;
             label9.Font = new Font("Script MT Bold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label9.Location = new Point(44, 244);
+            label9.Location = new Point(44, 251);
             label9.Name = "label9";
             label9.Size = new Size(103, 24);
             label9.TabIndex = 10;
@@ -192,7 +194,7 @@
             // 
             cboSubject.Anchor = AnchorStyles.None;
             cboSubject.FormattingEnabled = true;
-            cboSubject.Location = new Point(699, 128);
+            cboSubject.Location = new Point(699, 130);
             cboSubject.Margin = new Padding(3, 4, 3, 4);
             cboSubject.Name = "cboSubject";
             cboSubject.Size = new Size(278, 28);
@@ -203,7 +205,7 @@
             label10.Anchor = AnchorStyles.None;
             label10.AutoSize = true;
             label10.Font = new Font("Script MT Bold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label10.Location = new Point(530, 132);
+            label10.Location = new Point(530, 134);
             label10.Name = "label10";
             label10.Size = new Size(89, 24);
             label10.TabIndex = 8;
@@ -214,7 +216,7 @@
             label11.Anchor = AnchorStyles.None;
             label11.AutoSize = true;
             label11.Font = new Font("Script MT Bold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label11.Location = new Point(44, 189);
+            label11.Location = new Point(44, 196);
             label11.Name = "label11";
             label11.Size = new Size(95, 24);
             label11.TabIndex = 10;
@@ -224,7 +226,7 @@
             // 
             cboMajorT.Anchor = AnchorStyles.None;
             cboMajorT.FormattingEnabled = true;
-            cboMajorT.Location = new Point(175, 184);
+            cboMajorT.Location = new Point(175, 191);
             cboMajorT.Margin = new Padding(3, 4, 3, 4);
             cboMajorT.Name = "cboMajorT";
             cboMajorT.Size = new Size(274, 28);
@@ -266,12 +268,28 @@
             txtNote.Size = new Size(273, 72);
             txtNote.TabIndex = 5;
             // 
+            // btnSave
+            // 
+            btnSave.BackColor = Color.FromArgb(255, 192, 192);
+            btnSave.Font = new Font("Segoe Script", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnSave.Image = (Image)resources.GetObject("btnSave.Image");
+            btnSave.ImageAlign = ContentAlignment.MiddleLeft;
+            btnSave.Location = new Point(916, 655);
+            btnSave.Name = "btnSave";
+            btnSave.Size = new Size(95, 38);
+            btnSave.TabIndex = 12;
+            btnSave.Text = "Save";
+            btnSave.TextAlign = ContentAlignment.MiddleRight;
+            btnSave.UseVisualStyleBackColor = false;
+            btnSave.Click += btnSave_Click;
+            // 
             // SrvConfirm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(255, 192, 128);
-            ClientSize = new Size(1023, 596);
+            ClientSize = new Size(1023, 700);
+            Controls.Add(btnSave);
             Controls.Add(cboService);
             Controls.Add(cboMajorT);
             Controls.Add(cboMajorF);
@@ -325,5 +343,6 @@
         private TextBox txtLastName;
         private Label label2;
         private TextBox txtNote;
+        private Button btnSave;
     }
 }
