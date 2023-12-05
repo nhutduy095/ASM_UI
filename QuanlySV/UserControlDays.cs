@@ -55,12 +55,16 @@ namespace QuanlySV
 
         private void listBox1_MouseClick(object sender, MouseEventArgs e)
         {
-            int dtlId = int.Parse(listBox1.SelectedValue.ToString());
-            //string aa=a.DtlId as string;
-            var dtl=lstScheduleDtl.FirstOrDefault(x => x.DtlId == dtlId);
-            FormScheduleDetail frm = new FormScheduleDetail(dtl);
-            this.Hide();
-            frm.Show();
+            if(listBox1.SelectedValue != null)
+            {
+                int dtlId = int.Parse(listBox1.SelectedValue.ToString());
+                //string aa=a.DtlId as string;
+                var dtl = lstScheduleDtl.FirstOrDefault(x => x.DtlId == dtlId);
+                FormScheduleDetail frm = new FormScheduleDetail(dtl);
+                this.Hide();
+                frm.Show();
+            }
+            
         }
     }
 }

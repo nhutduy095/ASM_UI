@@ -16,10 +16,27 @@ namespace QuanlySV
     public partial class FormLichhoc : Form
     {
         private int month, year;
+        private static List<SeasonCombo> lstseason = new List<SeasonCombo>();
+
         public FormLichhoc()
         {
             InitializeComponent();
             Display();
+            dateTimePicker1.Value=DateTime.Now;
+            cboHocKy.Items.Clear();
+            cboHocKy.DataSource = lstseason;
+            lstseason.Add(new SeasonCombo { SeasonId = "HKI", SeasonName = "Học kỳ 1" });
+            lstseason.Add(new SeasonCombo { SeasonId = "HKII", SeasonName = "Học kỳ 2" });
+            lstseason.Add(new SeasonCombo { SeasonId = "HKIII", SeasonName = "Học kỳ 3" });
+            lstseason.Add(new SeasonCombo { SeasonId = "HKIV", SeasonName = "Học kỳ 4" });
+            lstseason.Add(new SeasonCombo { SeasonId = "HKV", SeasonName = "Học kỳ 5" });
+            lstseason.Add(new SeasonCombo { SeasonId = "HKVI", SeasonName = "Học kỳ 6" });
+            lstseason.Add(new SeasonCombo { SeasonId = "HKVII", SeasonName = "Học kỳ 7" });
+            cboHocKy.DataSource = lstseason;
+            cboHocKy.ValueMember = "SeasonId";
+            cboHocKy.DisplayMember = "SeasonName";
+            cboHocKy.SelectedIndex = 0;
+            //cboHocKy.SelectedItem= new SeasonCombo { SeasonId = "HKIV", SeasonName = "Học kỳ 4" };
             if (Config.userType == "T")
             {
                 label18.Text = "Lịch dạy";
@@ -60,13 +77,18 @@ namespace QuanlySV
         private async void Display()
         {
             daycontainer.Controls.Clear();
-            DateTime now = DateTime.Now;
+            DateTime now = dateTimePicker1.Value;
             DateTime startofmonth = new DateTime(now.Year, now.Month, 1);
             month = now.Month;
             year = now.Year;
             int days = DateTime.DaysInMonth(now.Year, now.Month);
             int dayofweek = Convert.ToInt32(startofmonth.DayOfWeek.ToString("d"));
-            string url = "/api/MasterData/GetScheduleForUser?userId=" + Config.userId + "&month=" + month + "&year=" + year + "@shift=" + cboHocKy.SelectedValue;
+            string url = "/api/MasterData/GetScheduleForUser?userId=" + Config.userId + "&month=" + month + "&year=" + year;
+            if(cboHocKy.SelectedValue != null)
+            {
+                url +="&shift=" + cboHocKy.SelectedValue.ToString();
+            }
+            
             //List<Filltering> lstfilltering = new List<Filltering>();
             //var filltering = new Filltering();
             //filltering.CollName = "Shift";
@@ -106,6 +128,10 @@ namespace QuanlySV
             int days = DateTime.DaysInMonth(year, month);
             int dayofweek = Convert.ToInt32(startofmonth.DayOfWeek.ToString("d"));
             string url = "/api/MasterData/GetScheduleForUser?userId=" + Config.userId + "&month=" + month + "&year=" + year;
+            if (cboHocKy.SelectedValue != null)
+            {
+                url += "@shift=" + cboHocKy.SelectedValue.ToString();
+            }
             var res = await CallAPICenter.CallAPIGet(url);
             List<CollectionScheduleDtl> lstScheduleOfMonth = Util.ConvertListToType<CollectionScheduleDtl>(res.Data);
             for (int i = 1; i < dayofweek; i++)
@@ -133,6 +159,10 @@ namespace QuanlySV
             int days = DateTime.DaysInMonth(year, month);
             int dayofweek = Convert.ToInt32(startofmonth.DayOfWeek.ToString("d"));
             string url = "/api/MasterData/GetScheduleForUser?userId=" + Config.userId + "&month=" + month + "&year=" + year;
+            if (cboHocKy.SelectedValue != null)
+            {
+                url += "@shift=" + cboHocKy.SelectedValue.ToString();
+            }
             var res = await CallAPICenter.CallAPIGet(url);
             List<CollectionScheduleDtl> lstScheduleOfMonth = Util.ConvertListToType<CollectionScheduleDtl>(res.Data);
             for (int i = 1; i < dayofweek; i++)

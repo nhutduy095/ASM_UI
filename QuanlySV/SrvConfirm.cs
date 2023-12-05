@@ -1,4 +1,5 @@
-﻿using QuanlySV.Model;
+﻿using QuanlySV.Configuration;
+using QuanlySV.Model;
 using QuanlySV.Model.ModelRequest;
 using System;
 using System.Collections.Generic;
@@ -16,10 +17,24 @@ namespace QuanlySV
     public partial class SrvConfirm : Form
     {
         private string _id = string.Empty;
+        private int dtlId = 0;
+        private List<CollServiceForCombo> lstService = new List<CollServiceForCombo>();
+        private List<CollSubjectCombo> lstSubject = new List<CollSubjectCombo>();
+        private List<CollMajorCombo> lstMajorF = new List<CollMajorCombo>();
+        private List<CollMajorCombo> lstMajorT = new List<CollMajorCombo>();
+        private List<ServiceRegStatusCombo> lstStatus = new List<ServiceRegStatusCombo>();
         public SrvConfirm()
         {
             InitializeComponent();
+            txtLastName.Enabled = false;
+            txtNote.Enabled = false;
+            dtpRegDay.Enabled = false;
+            cboMajorF.Enabled = false;
+            cboMajorT.Enabled = false;
+            cboSubject.Enabled = false;
+            cboService.Enabled = false;
             LoadCombobox();
+            LoadData();
         }
         private async void LoadCombobox()
         {
@@ -28,8 +43,8 @@ namespace QuanlySV
             {
                 if (resDataCombo.Data != null)
                 {
-                    var dataCombo = Util.ConvertListToType<CollServiceForCombo>(resDataCombo.Data);
-                    cboService.DataSource = dataCombo;
+                    lstService = Util.ConvertListToType<CollServiceForCombo>(resDataCombo.Data);
+                    cboService.DataSource = lstService;
                     cboService.ValueMember = "ServiceId";
                     cboService.DisplayMember = "ServiceName";
                 }
@@ -52,20 +67,34 @@ namespace QuanlySV
             {
                 if (resDataComboMajor.Data != null)
                 {
-                    var dataCombo = Util.ConvertListToType<CollMajorCombo>(resDataComboMajor.Data);
-                    cboMajorT.DataSource = dataCombo;
-                    cboMajorT.ValueMember = "MajorID";
-                    cboMajorT.DisplayMember = "MajorName";
-                    cboMajorF.DataSource = dataCombo;
+                    lstMajorF = Util.ConvertListToType<CollMajorCombo>(resDataComboMajor.Data);
+                    cboMajorF.DataSource = lstMajorF;
                     cboMajorF.ValueMember = "MajorID";
                     cboMajorF.DisplayMember = "MajorName";
                 }
             }
-            cboConfirm.Items.Clear();
-            cboConfirm.Items.Add(new { Key = "A", Value = "Approve" });
-            cboConfirm.Items.Add(new { Key = "R", Value = "Reject" });
-            cboConfirm.ValueMember = "Key";
-            cboConfirm.DisplayMember = "Value";
+
+            var resDataComboMajorT = await CallAPICenter.CallAPIGet("/api/MasterData/GetCollMajorCombo");
+            if (resDataComboMajorT.Status)
+            {
+                if (resDataComboMajor.Data != null)
+                {
+                    lstMajorT = Util.ConvertListToType<CollMajorCombo>(resDataComboMajorT.Data);
+                    cboMajorT.DataSource = lstMajorT;
+                    cboMajorT.ValueMember = "MajorID";
+                    cboMajorT.DisplayMember = "MajorName";
+                }
+            }
+
+            cboConfirm.DataSource= lstStatus;
+            lstStatus.Add(new ServiceRegStatusCombo{ StatusCode = "A", StatusName = "Approve" });
+            lstStatus.Add(new ServiceRegStatusCombo{ StatusCode = "R", StatusName = "Reject" });
+            lstStatus.Add(new ServiceRegStatusCombo{ StatusCode = "N", StatusName = "New" });
+            lstStatus.Add(new ServiceRegStatusCombo { StatusCode = "C", StatusName = "Cancel" });
+            cboConfirm.DataSource = lstStatus;
+
+            cboConfirm.ValueMember = "StatusCode";
+            cboConfirm.DisplayMember = "StatusName";
 
         }
         private async void LoadData()
@@ -79,7 +108,7 @@ namespace QuanlySV
             requestPaging.Page = 1;
             requestPaging.PerPage = 100;
             requestPaging.Filltering = lstfilltering;
-            var data = await CallAPICenter.CallAPIPost(new RequestPaging() { Page = 1, PerPage = 100 }, "/api/MasterData/GetCollectionServiceReg");
+            var data = await CallAPICenter.CallAPIPost(new RequestPaging() { Page = 1, PerPage = 100, Filltering = lstfilltering }, "/api/MasterData/GetCollectionServiceReg");
             if (data.Status)
             {
                 if (data.Data != null)
@@ -95,18 +124,12 @@ namespace QuanlySV
         private async void btnSave_Click(object sender, EventArgs e)
         {
             var serviceReq = new CollectionServiceReg();
-            serviceReq.ServiceName = cboService.DisplayMember;
-            serviceReq.MajorFromName = cboMajorF.DisplayMember;
-            serviceReq.MajorToName = cboMajorT.DisplayMember;
-            var userInfo = new UserInfo();
-            userInfo.LastName = txtLastName.Text;
-            serviceReq.Remark = txtNote.Text;
-            serviceReq.RequestDate = dtpRegDay.Value.ToString("yyyy-MM-dd");
-            serviceReq.SubjectName = cboSubject.DisplayMember;
-            serviceReq.Status = cboConfirm.DisplayMember;
+            serviceReq.DtlID = dtlId;
+            serviceReq.Remark1 = txRemark1.Text;
+            serviceReq.Status = cboConfirm.SelectedValue.ToString();
             serviceReq.ConfirmDate = dtpCofirmDay.Value.ToString("yyyy-MM-dd");
-            serviceReq.FinishConfirmDate = dtpFinishDay.Value.ToString("yyyy-MM-dd");
-
+            serviceReq.ReciveDate = dtpFinishDay.Value.ToString("yyyy-MM-dd");
+            serviceReq.ConfirmBy = Config.userId;
             var res = await CallAPICenter.CallAPIPost(serviceReq, "/api/MasterData/CreateOrUpdateServiceReg");
             if (!res.Status)
             {
@@ -124,12 +147,44 @@ namespace QuanlySV
             {
                 var data = dataGridView1.Rows[e.RowIndex];
                 _id = data.Cells["_Id"].Value.ToString();
+                dtlId = int.Parse(data.Cells["DtlID"].Value.ToString());
 
-                cboService.DisplayMember = data.Cells["ServiceName"].Value.ToString();
-                cboMajorF.DisplayMember = data.Cells["MajorFromName"].Value.ToString();
-                cboMajorT.DisplayMember = data.Cells["MajorFromName"].Value.ToString();
-                txtLastName.Text = data.Cells["LastName"].Value.ToString();
-                txtNote.Text = data.Cells["LastName"].Value.ToString();
+
+                txtLastName.Text = data.Cells["RequestName"].Value.ToString();
+                txtNote.Text = data.Cells["Remark"].Value.ToString();
+                if (data.Cells["RequestDate"].Value == null || string.IsNullOrEmpty(data.Cells["RequestDate"].Value.ToString()))
+                {
+                    dtpCofirmDay.Value = DateTime.Now;
+                }
+                else
+                {
+                    dtpRegDay.Value = DateTime.Parse(data.Cells["RequestDate"].Value.ToString());
+                }
+                
+                //cboService.SelectedIndex = lstService.IndexOf(lstService.FirstOrDefault(x => x.ServiceId == data.Cells["ServiceId"].Value.ToString()));
+                //cboSubject.SelectedIndex = lstSubject.IndexOf(lstSubject.FirstOrDefault(x => x.SubjectId == data.Cells["SubjectId"].Value.ToString()));
+                cboService.SelectedIndex = data.Cells["ServiceId"].Value == null ? 0 : string.IsNullOrEmpty(data.Cells["ServiceId"].Value.ToString()) ? 0 : lstService.IndexOf(lstService.FirstOrDefault(x => x.ServiceId == data.Cells["ServiceId"].Value.ToString()));
+                cboSubject.SelectedIndex = data.Cells["SubjectId"].Value == null ? 0 : string.IsNullOrEmpty(data.Cells["SubjectId"].Value.ToString()) ? 0 : lstSubject.IndexOf(lstSubject.FirstOrDefault(x => x.SubjectId == data.Cells["SubjectId"].Value.ToString()));
+                cboMajorF.SelectedIndex = data.Cells["MajorFrom"].Value == null ? 0 : string.IsNullOrEmpty(data.Cells["MajorFrom"].Value.ToString()) ? 0 : lstMajorF.IndexOf(lstMajorF.FirstOrDefault(x => x.MajorID == data.Cells["MajorFrom"].Value.ToString()));
+                cboMajorT.SelectedIndex = data.Cells["MajorTo"].Value == null ? 0 : string.IsNullOrEmpty(data.Cells["MajorTo"].Value.ToString()) ? 0 : lstMajorT.IndexOf(lstMajorT.FirstOrDefault(x => x.MajorID == data.Cells["MajorTo"].Value.ToString()));
+                cboConfirm.SelectedIndex = data.Cells["Status"].Value == null ? 0 : string.IsNullOrEmpty(data.Cells["Status"].Value.ToString()) ? 0 : lstStatus.IndexOf(lstStatus.FirstOrDefault(x => x.StatusCode == data.Cells["Status"].Value.ToString()));
+                if (data.Cells["ConfirmDate"].Value==null || string.IsNullOrEmpty(data.Cells["ConfirmDate"].Value.ToString())){
+                    dtpCofirmDay.Value = DateTime.Now;
+                }
+                else
+                {
+                    dtpCofirmDay.Value = DateTime.Parse(data.Cells["ConfirmDate"].Value.ToString());
+                }
+                if (data.Cells["ReciveDate"].Value == null || string.IsNullOrEmpty(data.Cells["ReciveDate"].Value.ToString()))
+                {
+                    dtpCofirmDay.Value = DateTime.Now;
+                }
+                else
+                {
+                    dtpFinishDay.Value = DateTime.Parse(data.Cells["FinishConfirmDate"].Value.ToString());
+                }
+                //cboConfirm.ValueMember = data.Cells["Status"].Value.ToString();
+
                 //dtpRegDay.Value = data.Cells["RequestDate"].Value.ToString();
             }
             catch (Exception ex)

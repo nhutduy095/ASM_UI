@@ -19,6 +19,8 @@ namespace QuanlySV
         public TeacherManage()
         {
             InitializeComponent();
+            Hanldebutton("Load");
+            LoadData();
         }
 
         private async void btnSave_Click(object sender, EventArgs e)
@@ -35,7 +37,7 @@ namespace QuanlySV
             userinfoReq.ParentsPhoneNumber = null;
             userinfoReq.Address = txtAdress.Text;
             userinfoReq.MailAddress = txtMail.Text;
-
+            userinfoReq.IsActive=Event== "Delete"?false:true;
             var res = await CallAPICenter.CallAPIPost(userinfoReq, "/api/MasterData/CreateOrUpdateUserInfo");
             if (!res.Status)
             {
@@ -44,6 +46,7 @@ namespace QuanlySV
             else
             {
                 LoadData();
+                Hanldebutton("Load");
             }
         }
         private async void LoadData()
@@ -53,11 +56,15 @@ namespace QuanlySV
             filltering.CollName = "UserId";
             filltering.ValueDefault = txtUId.Text;
             lstfilltering.Add(filltering);
+            var filltering1 = new Filltering();
+            filltering1.CollName = "UserType";
+            filltering1.ValueDefault = "T";
+            lstfilltering.Add(filltering1);
             RequestPaging requestPaging = new RequestPaging();
             requestPaging.Page = 1;
             requestPaging.PerPage = 100;
             requestPaging.Filltering = lstfilltering;
-            var data = await CallAPICenter.CallAPIPost(new RequestPaging() { Page = 1, PerPage = 100 }, "/api/MasterData/GetCollectionUserInfo");
+            var data = await CallAPICenter.CallAPIPost(new RequestPaging() { Page = 1, PerPage = 100 ,Filltering= lstfilltering }, "/api/MasterData/GetCollectionUserInfo");
             if (data.Status)
             {
                 if (data.Data != null)
@@ -83,6 +90,7 @@ namespace QuanlySV
                 btnUpdate.Enabled = false;
                 btnDelete.Enabled = false;
                 btnSave.Enabled = false;
+                btnClear.Enabled = false;   
                 txtFirstName.Enabled = false;
                 txtLastName.Enabled = false;
                 txtUserId.Enabled = false;
@@ -91,6 +99,14 @@ namespace QuanlySV
                 dtpBirth.Enabled = false;
                 txtAdress.Enabled = false;
                 txtMail.Enabled = false;
+                txtFirstName.Text = string.Empty;
+                txtLastName.Text = string.Empty;
+                txtUserId.Text = string.Empty;
+                txtClass.Text = string.Empty;
+                txtSdt.Text = string.Empty;
+                txtAdress.Text = string.Empty;
+                txtMail.Text = string.Empty;
+                dtpBirth.Value=DateTime.Now;
 
             }
             else if (even == "Add" || even == "Edit")
@@ -102,6 +118,8 @@ namespace QuanlySV
                 txtSdt.Enabled = true;
                 txtAdress.Enabled = true;
                 txtMail.Enabled = true;
+                dtpBirth.Enabled = true;
+                btnClear.Enabled=true;
                 if (even == "Add")
                 {
                     txtFirstName.Text = string.Empty;
@@ -119,9 +137,11 @@ namespace QuanlySV
                 }
                 else
                 {
+                    txtUserId.Enabled= false;
                     btnAdd.Enabled = false;
                     btnUpdate.Enabled = false;
                     btnDelete.Enabled = false;
+                    btnAdd.Enabled = false;
                     btnSave.Enabled = true;
                 }
             }
@@ -131,7 +151,7 @@ namespace QuanlySV
                 btnUpdate.Enabled = false;
                 btnDelete.Enabled = false;
                 btnSave.Enabled = false;
-
+                btnClear.Enabled = false;
                 txtFirstName.Text = string.Empty;
                 txtLastName.Text = string.Empty;
                 txtUserId.Text = string.Empty;
@@ -139,6 +159,7 @@ namespace QuanlySV
                 txtSdt.Text = string.Empty;
                 txtAdress.Text = string.Empty;
                 txtMail.Text = string.Empty;
+                dtpBirth.Enabled = false;
 
             }
         }
@@ -178,7 +199,7 @@ namespace QuanlySV
             try
             {
                 var data = dataGridView1.Rows[e.RowIndex];
-                _id = data.Cells["_Id"].Value.ToString();
+                _id = data.Cells["_id"].Value.ToString();
                 txtFirstName.Text = data.Cells["FirstName"].Value.ToString();
                 txtLastName.Text = data.Cells["LastName"].Value.ToString();
                 txtUserId.Text = data.Cells["UserId"].Value.ToString();
@@ -186,10 +207,10 @@ namespace QuanlySV
                 txtSdt.Text = data.Cells["PhoneNumber"].Value.ToString();
                 rdMale.Checked = bool.Parse(data.Cells["Sex"].Value.ToString());
                 rdFemale.Checked = !(bool.Parse(data.Cells["Sex"].Value.ToString()));
-                dtpBirth.Value = DateTime.Now;
+                dtpBirth.Value =DateTime.Parse(data.Cells["Birthday"].Value.ToString());
                 txtAdress.Text = data.Cells["Address"].Value.ToString();
                 txtMail.Text = data.Cells["MailAddress"].Value.ToString();
-
+                btnDelete.Enabled = true;
                 btnUpdate.Enabled = true;
             }
             catch (Exception ex)

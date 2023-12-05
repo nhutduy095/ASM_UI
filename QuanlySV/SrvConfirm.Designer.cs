@@ -52,13 +52,15 @@
             label2 = new Label();
             txtNote = new TextBox();
             btnSave = new Button();
+            txRemark1 = new TextBox();
+            label12 = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(0, 367);
+            dataGridView1.Location = new Point(2, 421);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.RowTemplate.Height = 29;
@@ -256,16 +258,16 @@
             label2.Font = new Font("Script MT Bold", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label2.Location = new Point(45, 298);
             label2.Name = "label2";
-            label2.Size = new Size(74, 24);
+            label2.Size = new Size(106, 24);
             label2.TabIndex = 4;
-            label2.Text = "Ghi Chú";
+            label2.Text = "Ghi Chú GV";
             // 
             // txtNote
             // 
             txtNote.Location = new Point(176, 289);
             txtNote.Multiline = true;
             txtNote.Name = "txtNote";
-            txtNote.Size = new Size(273, 72);
+            txtNote.Size = new Size(273, 34);
             txtNote.TabIndex = 5;
             // 
             // btnSave
@@ -274,14 +276,32 @@
             btnSave.Font = new Font("Segoe Script", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnSave.Image = (Image)resources.GetObject("btnSave.Image");
             btnSave.ImageAlign = ContentAlignment.MiddleLeft;
-            btnSave.Location = new Point(916, 655);
+            btnSave.Location = new Point(878, 358);
             btnSave.Name = "btnSave";
-            btnSave.Size = new Size(95, 38);
+            btnSave.Size = new Size(99, 38);
             btnSave.TabIndex = 12;
             btnSave.Text = "Save";
             btnSave.TextAlign = ContentAlignment.MiddleRight;
             btnSave.UseVisualStyleBackColor = false;
             btnSave.Click += btnSave_Click;
+            // 
+            // txRemark1
+            // 
+            txRemark1.Location = new Point(174, 349);
+            txRemark1.Multiline = true;
+            txRemark1.Name = "txRemark1";
+            txRemark1.Size = new Size(273, 34);
+            txRemark1.TabIndex = 14;
+            // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.Font = new Font("Script MT Bold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label12.Location = new Point(43, 358);
+            label12.Name = "label12";
+            label12.Size = new Size(108, 24);
+            label12.TabIndex = 13;
+            label12.Text = "Ghi Chú HS";
             // 
             // SrvConfirm
             // 
@@ -289,6 +309,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(255, 192, 128);
             ClientSize = new Size(1023, 700);
+            Controls.Add(txRemark1);
+            Controls.Add(label12);
             Controls.Add(btnSave);
             Controls.Add(cboService);
             Controls.Add(cboMajorT);
@@ -344,5 +366,7 @@
         private Label label2;
         private TextBox txtNote;
         private Button btnSave;
+        private TextBox txRemark1;
+        private Label label12;
     }
 }

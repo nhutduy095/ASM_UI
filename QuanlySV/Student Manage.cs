@@ -20,10 +20,13 @@ namespace QuanlySV
         private string Event = string.Empty;
         private string _id = string.Empty;
         private static List<CollMajorCombo> lstMajor = new List<CollMajorCombo>();
+
         public Student_Manage()
         {
             InitializeComponent();
             LoadCombobox();
+            Hanldebutton("Load");
+            LoadData();
         }
         private async void LoadCombobox()
         {
@@ -32,8 +35,8 @@ namespace QuanlySV
             {
                 if (resDataComboMajor.Data != null)
                 {
-                    var dataCombo = Util.ConvertListToType<CollMajorCombo>(resDataComboMajor.Data);
-                    cboMajor.DataSource = dataCombo;
+                    lstMajor = Util.ConvertListToType<CollMajorCombo>(resDataComboMajor.Data);
+                    cboMajor.DataSource = lstMajor;
                     cboMajor.ValueMember = "MajorID";
                     cboMajor.DisplayMember = "MajorName";
 
@@ -55,7 +58,7 @@ namespace QuanlySV
             userinfoReq.ParentsPhoneNumber = txtSDTPH.Text;
             userinfoReq.Address = txtAdress.Text;
             userinfoReq.MailAddress = txtMail.Text;
-
+            userinfoReq.MajorID = cboMajor.SelectedValue.ToString();
             var res = await CallAPICenter.CallAPIPost(userinfoReq, "/api/MasterData/CreateOrUpdateUserInfo");
             if (!res.Status)
             {
@@ -63,6 +66,7 @@ namespace QuanlySV
             }
             else
             {
+                Hanldebutton("Load");
                 LoadData();
             }
         }
@@ -74,12 +78,16 @@ namespace QuanlySV
             filltering.CollName = "UserId";
             filltering.ValueDefault = txtUId.Text;
             lstfilltering.Add(filltering);
+            var filltering1 = new Filltering();
+            filltering1.CollName = "UserType";
+            filltering1.ValueDefault = "S";
+            lstfilltering.Add(filltering1);
             RequestPaging requestPaging = new RequestPaging();
             requestPaging.Page = 1;
             requestPaging.PerPage = 100;
             requestPaging.Filltering = lstfilltering;
             //var data = await CallAPICenter.CallAPIPost(requestPaging);
-            var data = await CallAPICenter.CallAPIPost(requestPaging, "/api/MasterData/GetCollectionUserInfo");
+            var data = await CallAPICenter.CallAPIPost(requestPaging,  "/api/MasterData/GetCollectionUserInfo");
             if (data.Status)
             {
                 if (data.Data != null)
@@ -106,7 +114,7 @@ namespace QuanlySV
                 btnUpdate.Enabled = false;
                 btnDelete.Enabled = false;
                 btnSave.Enabled = false;
-
+                btnClear.Enabled = false;
                 txtFirstName.Enabled = false;
                 txtLastName.Enabled = false;
                 txtUserId.Enabled = false;
@@ -129,6 +137,7 @@ namespace QuanlySV
                 txtAdress.Enabled = true;
                 txtMail.Enabled = true;
                 txtSDTPH.Enabled = true;
+                dtpBirth.Enabled=true;
                 if (even == "Add")
                 {
                     txtFirstName.Text = string.Empty;
@@ -144,13 +153,18 @@ namespace QuanlySV
                     btnUpdate.Enabled = false;
                     btnDelete.Enabled = false;
                     btnSave.Enabled = true;
+                    btnClear.Enabled = true;
                 }
                 else
                 {
+                    txtUserId.Enabled= false;
                     btnAdd.Enabled = false;
                     btnUpdate.Enabled = false;
                     btnDelete.Enabled = false;
                     btnSave.Enabled = true;
+                    btnClear.Enabled = true;
+                    btnAdd.Enabled = false;
+
                 }
             }
             else if (even == "Clear")
@@ -159,7 +173,7 @@ namespace QuanlySV
                 btnUpdate.Enabled = false;
                 btnDelete.Enabled = false;
                 btnSave.Enabled = false;
-
+                btnClear.Enabled = false;
                 txtFirstName.Text = string.Empty;
                 txtLastName.Text = string.Empty;
                 txtUserId.Text = string.Empty;
@@ -216,13 +230,15 @@ namespace QuanlySV
                 txtSdt.Text = data.Cells["PhoneNumber"].Value.ToString();
                 rdMale.Checked = bool.Parse(data.Cells["Sex"].Value.ToString());
                 rdFemale.Checked = !(bool.Parse(data.Cells["Sex"].Value.ToString()));
-                dtpBirth.Value = DateTime.Now;
+                dtpBirth.Value = DateTime.Parse(data.Cells["Birthday"].Value.ToString());
                 txtAdress.Text = data.Cells["Address"].Value.ToString();
                 txtMail.Text = data.Cells["MailAddress"].Value.ToString();
                 txtSDTPH.Text = data.Cells["ParentsPhoneNumber"].Value.ToString();
-                cboMajor.SelectedIndex = lstMajor.IndexOf(lstMajor.FirstOrDefault(x => x.MajorID == data.Cells["MajorID"].Value.ToString()));
+                bool aa = data.Cells["MajorID"].Value==null ?true : string.IsNullOrEmpty(data.Cells["MajorID"].Value.ToString())?true:false;
+                cboMajor.SelectedIndex = aa ? 0: lstMajor.IndexOf(lstMajor.FirstOrDefault(x => x.MajorID == data.Cells["MajorID"].Value.ToString()));
                 
                 btnUpdate.Enabled = true;
+                btnAdd.Enabled = false;
             }
             catch (Exception ex)
             {
@@ -230,5 +246,5 @@ namespace QuanlySV
                 return;
             }
         }
-    }
+}
 }

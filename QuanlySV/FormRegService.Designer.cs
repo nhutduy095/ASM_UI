@@ -43,12 +43,12 @@
             cboService = new ComboBox();
             label2 = new Label();
             panel4 = new Panel();
+            btnExit = new Button();
             button3 = new Button();
             btndelete = new Button();
             btnReg = new Button();
             panel3 = new Panel();
             dataGridView1 = new DataGridView();
-            btnExit = new Button();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             panel5.SuspendLayout();
@@ -229,6 +229,19 @@
             panel4.Size = new Size(335, 156);
             panel4.TabIndex = 0;
             // 
+            // btnExit
+            // 
+            btnExit.Anchor = AnchorStyles.None;
+            btnExit.Font = new Font("Segoe Print", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
+            btnExit.Location = new Point(191, 94);
+            btnExit.Margin = new Padding(3, 4, 3, 4);
+            btnExit.Name = "btnExit";
+            btnExit.Size = new Size(123, 45);
+            btnExit.TabIndex = 3;
+            btnExit.Text = "Thoát";
+            btnExit.UseVisualStyleBackColor = true;
+            btnExit.Click += btnExit_Click;
+            // 
             // button3
             // 
             button3.Anchor = AnchorStyles.None;
@@ -289,19 +302,7 @@
             dataGridView1.RowTemplate.Height = 25;
             dataGridView1.Size = new Size(963, 324);
             dataGridView1.TabIndex = 0;
-            // 
-            // btnExit
-            // 
-            btnExit.Anchor = AnchorStyles.None;
-            btnExit.Font = new Font("Segoe Print", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
-            btnExit.Location = new Point(191, 94);
-            btnExit.Margin = new Padding(3, 4, 3, 4);
-            btnExit.Name = "btnExit";
-            btnExit.Size = new Size(123, 45);
-            btnExit.TabIndex = 3;
-            btnExit.Text = "Thoát";
-            btnExit.UseVisualStyleBackColor = true;
-            btnExit.Click += btnExit_Click;
+            dataGridView1.CellClick += dataGridView1_CellClick;
             // 
             // FormRegService
             // 

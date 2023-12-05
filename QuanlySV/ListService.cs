@@ -19,15 +19,18 @@ namespace QuanlySV
         public ListService()
         {
             InitializeComponent();
+            Hanldebutton("Load");
+            LoadData();
+
         }
 
         private async void btnSave_Click(object sender, EventArgs e)
         {
-            var serviceReq = new CollectionServiceReg();
-            serviceReq.ServiceId = txtSId.Text;
+            var serviceReq = new CollectionServiceMst();
+            serviceReq.IdService = txtSId.Text;
             serviceReq.ServiceName = txtSName.Text;
 
-            var res = await CallAPICenter.CallAPIPost(serviceReq, "/api/MasterData/CreateOrUpdateServiceReg");
+            var res = await CallAPICenter.CallAPIPost(serviceReq, "/api/MasterData/CreateOrUpdateServiceMst");
             if (!res.Status)
             {
                 MessageBox.Show(res.ErrMessage);
@@ -48,13 +51,13 @@ namespace QuanlySV
             requestPaging.Page = 1;
             requestPaging.PerPage = 100;
             requestPaging.Filltering = lstfilltering;
-            var data = await CallAPICenter.CallAPIPost(new RequestPaging() { Page = 1, PerPage = 100 }, "/api/MasterData/GetCollectionServiceReg");
+            var data = await CallAPICenter.CallAPIPost(requestPaging, "/api/MasterData/GetCollectionServiceMst");
             if (data.Status)
             {
                 if (data.Data != null)
                 {
-                    List<CollectionServiceReg> lstDtl = Util.ConvertListToType<CollectionServiceReg>(data.Data);
-                    var list = new BindingList<CollectionServiceReg>(lstDtl);
+                    List<CollectionServiceMst> lstDtl = Util.ConvertListToType<CollectionServiceMst>(data.Data);
+                    var list = new BindingList<CollectionServiceMst>(lstDtl);
                     dataGridView1.DataSource = list;
 
                 }
@@ -153,7 +156,7 @@ namespace QuanlySV
                 var data = dataGridView1.Rows[e.RowIndex];
                 _id = data.Cells["_Id"].Value.ToString();
 
-                txtSId.Text = data.Cells["ServiceId"].Value.ToString(); 
+                txtSId.Text = data.Cells["IdService"].Value.ToString(); 
                 txtSName.Text = data.Cells["ServiceName"].Value.ToString();
 
                 btnUpdate.Enabled = true;

@@ -28,6 +28,8 @@ namespace QuanlySV
         public MonHoc()
         {
             InitializeComponent();
+            Hanldebutton("Load");
+            LoadData();
         }
 
         private async void btnSave_Click(object sender, EventArgs e)
@@ -36,7 +38,7 @@ namespace QuanlySV
             subjectReq.SubjectId = txtSubjectId.Text;
             subjectReq.SubjectName = txtSubjectName.Text;
             subjectReq.NumberOfCredits = int.Parse(txtTinchi.Text);
-
+            subjectReq.IsActive=Event== "Delete"?false:true;
             var res = await CallAPICenter.CallAPIPost(subjectReq, "/api/MasterData/CreateOrUpdateSubject");
             if (!res.Status)
             {
@@ -44,6 +46,7 @@ namespace QuanlySV
             }
             else
             {
+                Hanldebutton("Load");
                 LoadData();
             }
         }
@@ -58,7 +61,7 @@ namespace QuanlySV
             requestPaging.Page = 1;
             requestPaging.PerPage = 100;
             requestPaging.Filltering = lstfilltering;
-            var data = await CallAPICenter.CallAPIPost(new RequestPaging() { Page = 1, PerPage = 100 }, "/api/MasterData/GetCollectionSubject");
+            var data = await CallAPICenter.CallAPIPost(requestPaging, "/api/MasterData/GetCollectionSubject");
             if (data.Status)
             {
                 if (data.Data != null)
@@ -129,6 +132,10 @@ namespace QuanlySV
                 txtSubjectName.Text = string.Empty;
                 txtTinchi.Text = string.Empty;
             }
+            else
+            {
+                btnSave.Enabled = true;
+            }
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -173,6 +180,8 @@ namespace QuanlySV
                 txtTinchi.Text = numberOfCredits+"";
 
                 btnUpdate.Enabled = true;
+                btnDelete.Enabled = true;
+                btnAdd.Enabled = false;
             }
             catch (Exception ex)
             {

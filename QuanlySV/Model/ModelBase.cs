@@ -8,6 +8,7 @@ namespace QuanlySV.Model
 {
     public class ModelBase
     {
+        public string _Id {  get; set; }    
         public bool IsActive { get; set; } = true;
         public string CreateBy { get; set; }
         public string CreateDate { get; set; }
