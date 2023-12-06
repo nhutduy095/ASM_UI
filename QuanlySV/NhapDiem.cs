@@ -31,18 +31,6 @@ namespace QuanlySV
         }
         private async void LoadDataCombo()
         {
-            //var resDataComboMajor = await CallAPICenter.CallAPIGet("/api/MasterData/GetCollMajorCombo");
-            //if (resDataComboMajor.Status)
-            //{
-            //    if (resDataComboMajor.Data != null)
-            //    {
-            //        var dataCombo = Util.ConvertListToType<CollMajorCombo>(resDataComboMajor.Data);
-            //        cboMajor.DataSource = dataCombo;
-            //        cboMajor.ValueMember = "MajorID";
-            //        cboMajor.DisplayMember = "MajorName";
-
-            //    }
-            //}
 
             cboSeason.Items.Clear();
             lstseason.Add(new SeasonCombo { SeasonId = "HKI", SeasonName = "Học kỳ 1" });
@@ -71,18 +59,6 @@ namespace QuanlySV
                 }
             }
 
-            //var resDataComboDept = await CallAPICenter.CallAPIGet("/api/MasterData/GetColDeptForCombo");
-            //if (resDataComboDept.Status)
-            //{
-            //    if (resDataComboDept.Data != null)
-            //    {
-            //        var dataCombo = Util.ConvertListToType<ColDeptCombo>(resDataComboDept.Data);
-            //        cboDept.DataSource = dataCombo;
-            //        cboDept.ValueMember = "DeptId";
-            //        cboDept.DisplayMember = "DeptName";
-
-            //    }
-            //}
         }
         private void textBox_TextChanged(object sender, EventArgs e)
         {

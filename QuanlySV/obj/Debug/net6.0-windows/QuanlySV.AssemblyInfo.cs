@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("QuanlySV")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2bb1e0dc2809c3bc4cc3d193335fe25928996042")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fe15135eddeda626aeb88bcb175457a9ac823193")]
 [assembly: System.Reflection.AssemblyProductAttribute("QuanlySV")]
 [assembly: System.Reflection.AssemblyTitleAttribute("QuanlySV")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

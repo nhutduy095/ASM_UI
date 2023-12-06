@@ -258,9 +258,9 @@
             label2.Font = new Font("Script MT Bold", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label2.Location = new Point(45, 298);
             label2.Name = "label2";
-            label2.Size = new Size(106, 24);
+            label2.Size = new Size(62, 24);
             label2.TabIndex = 4;
-            label2.Text = "Ghi Chú GV";
+            label2.Text = "Lý Do";
             // 
             // txtNote
             // 
@@ -299,9 +299,9 @@
             label12.Font = new Font("Script MT Bold", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label12.Location = new Point(43, 358);
             label12.Name = "label12";
-            label12.Size = new Size(108, 24);
+            label12.Size = new Size(79, 24);
             label12.TabIndex = 13;
-            label12.Text = "Ghi Chú HS";
+            label12.Text = "Ghi Chú ";
             // 
             // SrvConfirm
             // 
