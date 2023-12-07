@@ -168,6 +168,7 @@ namespace QuanlySV
 
         private async void btnSave_Click(object sender, EventArgs e)
         {
+
             var pointReq = new InputPointRequest()
             {
                 _Id = _id,
