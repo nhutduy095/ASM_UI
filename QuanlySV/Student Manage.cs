@@ -60,6 +60,7 @@ namespace QuanlySV
             userinfoReq.MailAddress = txtMail.Text;
             userinfoReq.MajorID = cboMajor.SelectedValue.ToString();
             var res = await CallAPICenter.CallAPIPost(userinfoReq, "/api/MasterData/CreateOrUpdateUserInfo");
+            
             if (!res.Status)
             {
                 MessageBox.Show(res.ErrMessage);
